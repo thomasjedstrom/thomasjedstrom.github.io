@@ -21,18 +21,17 @@
 
 </head>
 <body>
-<div id="wrapper">
+<div id="skrollr-body">
 	<div id="navbar">
 		
 	</div>
 
 	<!-- SECTION 1 -->
 
-	<section id="slide-1" class="homeSlide">
+	<section id="slide-1">
 		<div id="masthead"
-			data-center="background-position: 50% 0px;"
-			data-top-bottom="background-position: 50% -200px;"
-			data-anchor-target="#slide-1">
+			data-start="background-position: 50% 0%;"
+			data-top-bottom="background-position: 50% 100%;">
 			<div id="mastheadBanner" class="fade-out">
 				<h1 id="greeting" class="tlt">Hey!</h1><br>
 				<div id="textHolder">
@@ -46,26 +45,40 @@
 	<!-- SECTION 2 -->
 
 	<div id="section_two">
-		<div id="bio"
-			data-35p-bottom-top="right:-100%; top: 60vh; opacity:1;"
-			data--75p-bottom-top="right:-40%; top: 60vh; opacity:1;" 
-			data--35p-top-top="right:-40%; top: 60vh; opacity:1;" 
-			data--50p-top-top="opacity:0;">
+		<div id="bio" class="fixed"
+			data-top-bottom="right:-100%; top:40%;"
+			data--1000-top-bottom="right:10%; top:40%;"
+			data--2000-top-bottom=""
+			data--3000-top-bottom="right:4%; top: 55%;"
+			data-anchor-target="#masthead">
+
 			<div id="bio_container">
-				<p>Thomas is a <b>full stack developer</b> in the Dallas / Ft Worth area seeking opportunities for collaboration in inovative environments.</p>
-				<p>Currently enrolled at the Coding Dojo of Dallas, Thomas is a designer of elegant solutions to complex problems.  Gifted in aesthic </p>
+				<p>Thomas makes computers do amazing things.</p>
 			</div>
 
 		</div>
-		<div id="thomas_picture"
-			data-35p-bottom-top="left:-50%; top: 35vh; opacity:1; background-position: -50% 35vh"
-			data--75p-bottom-top="left:15%; top: 35vh; opacity:1; background-position: 15% 35vh" 
-			data--35p-top-top="left:15%; top: 35vh; opacity:1; background-position: 15% 35vh" 
-			data--50p-top-top="opacity:0;">
+
+		<div id="thomas_picture" class="fixed"
+			data-top-bottom="left:-100%; top:35%;"
+			data--1000-top-bottom="left:15%; top:35%;"
+			data--2000-top-bottom=""
+			data--3000-top-bottom="left:8%; top: 50%;"
+
+			data-anchor-target="#masthead">
 			<div id="thomas_picture_container">
 				<img src="img/thomas_holder.jpg" alt="picture of Thomas">
 			</div>
 		</div>
+		<img src="img/sky/asteroid.png" alt="asteroid" id="asteroid" class="fixed"
+			data--3000-top-bottom="left:10%; top:-100%; transform: scale(5) rotate(0deg);"
+			data--5500-top-bottom="left:60%; top:100%; transform:scale(1) rotate(1440deg);"
+			data-anchor-target="#masthead">
+
+		<img src="img/sky/shooting_star.png" alt="asteroid" id="asteroid" class="fixed"
+			data--2000-top-bottom="right:-50%; top:0%;"
+			data--3500-top-bottom="right:100%; top:50%;"
+			data-anchor-target="#masthead">
+
 	</div>
 
 
@@ -90,6 +103,15 @@
 
 
 
+
+	<div id="properties" 
+		data-1700="top:100%;" 
+		data-2200="top:0%;" 
+		data-3000="display:block;" 
+		data-3700="top:-100%;">
+		<h2>all numeric properties</h2>
+		<p>width, height, padding, font-size, z-index, blah blah blah</p>
+	</div>	
 
 
 
