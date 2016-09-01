@@ -13,14 +13,10 @@
 	
 <!--JS JQuery-->
 	<script src="https://code.jquery.com/jquery-3.0.0.js" integrity="sha256-jrPLZ+8vDxt2FnE1zvZXCkCcebI/C8Dt5xyaQBjxQIo=" crossorigin="anonymous"></script>
-<!--JS Parallax -->
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-	<script src="js/parallax.min.js"></script>
 <!--JS Scroller -->
-	<!-- <script src="js/skrollr.min.js"></script> -->
+	<script src="js/skrollr.js"></script>
 <!--JS My App-->
 	<script src="js/app.js"></script>
-	
 
 
 </head>
@@ -29,32 +25,99 @@
 	<div id="navbar">
 		
 	</div>
-	<div id="masthead" class="parallax-window fade-out" data-parallax="scroll" data-image-src="img/masthead_background.jpg">
-		<div id="mastheadBanner">
-			<h1 id="greeting" class="tlt">Hey!</h1><br>
-			<div id="textHolder">
-				<h2 id="myName">I'm Thomas Edstrom,</h2><br>
-				<h2 id="myTitle">a full stack Rails developer.</h2>
+
+	<!-- SECTION 1 -->
+
+	<section id="slide-1" class="homeSlide">
+		<div id="masthead"
+			data-center="background-position: 50% 0px;"
+			data-top-bottom="background-position: 50% -200px;"
+			data-anchor-target="#slide-1">
+			<div id="mastheadBanner" class="fade-out">
+				<h1 id="greeting" class="tlt">Hey!</h1><br>
+				<div id="textHolder">
+					<h2 id="myName">I'm Thomas Edstrom,</h2><br>
+					<h2 id="myTitle">a full stack Rails developer.</h2>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- SECTION 2 -->
+
+	<div id="section_two">
+		<div id="bio"
+			data-35p-bottom-top="right:-100%; top: 60vh; opacity:1;"
+			data--75p-bottom-top="right:-40%; top: 60vh; opacity:1;" 
+			data--35p-top-top="right:-40%; top: 60vh; opacity:1;" 
+			data--50p-top-top="opacity:0;">
+			<div id="bio_container">
+				<p>Thomas is a <b>full stack developer</b> in the Dallas / Ft Worth area seeking opportunities for collaboration in inovative environments.</p>
+				<p>Currently enrolled at the Coding Dojo of Dallas, Thomas is a designer of elegant solutions to complex problems.  Gifted in aesthic </p>
+			</div>
+
+		</div>
+		<div id="thomas_picture"
+			data-35p-bottom-top="left:-50%; top: 35vh; opacity:1; background-position: -50% 35vh"
+			data--75p-bottom-top="left:15%; top: 35vh; opacity:1; background-position: 15% 35vh" 
+			data--35p-top-top="left:15%; top: 35vh; opacity:1; background-position: 15% 35vh" 
+			data--50p-top-top="opacity:0;">
+			<div id="thomas_picture_container">
+				<img src="img/thomas_holder.jpg" alt="picture of Thomas">
 			</div>
 		</div>
 	</div>
-	
-	<div id="contents" class="parallax-window" data-parallax="scroll" data-image-src="img/textured_background.png">
-		<div id="message">
+
+
+
+	<!-- SECTION 3 -->
+
+<section id="slide-3" class="homeSlide">
+    <div class="bcg"
+        data-center="background-position: 0px 50%;"
+        data-bottom-top="background-position: 0px 40%;"
+        data-top-bottom="background-position: -40px 50%;"
+        data-anchor-target="#slide-3"
+    >
+        <div class="hsContainer">
+            <div class="hsContent">
+
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+	<!-- CONSTRUCTION -->
+
+	<div id="construction">
+		<div id="message"
+			data-0p-top="left:-100%; opacity:.5;"
+			data-50p-top="left:0%; opacity:.5;" 
+			data-120p-top="left:0%; opacity:.5;" 
+			data-150p-top="opacity:0;"
+			data-anchort-target="#slide-2">
 			<p>This site is currently under construction but should be up and running shortly!</p>
 
 			<p>In the mean time, please visit me at my <a href="http://www.github.com/thomasjedstrom/" target="_blank" style="target-new: tab;">GitHub</a>, find me on <a href="http://www.linkedin.com/in/thomasjedstrom/" target="_blank" style="target-new: tab;">LinkedIn</a>, or checkout <a href="http://www.thomaswrotethis.com/" target="_blank" style="target-new: tab;">my blog</a></p>
 		</div>
 	</div>
-	
-	
-	
-	
-	
-	
-	
-	
-	
+
+
+
+
+
 </div>
 </body>
 </html>
