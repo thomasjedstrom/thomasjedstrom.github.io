@@ -8,6 +8,7 @@ html, body {
 
 /*=======Section 1=========*/
 #masthead{
+	z-index: 10;
 	width: 100vw;
 	height: 100vh;
 	background-image:url('../img/masthead_background.jpg');
@@ -31,6 +32,19 @@ html, body {
 	box-shadow: 0px 0px 100px black;
 	width: 400px;
 	text-align: center;
+}
+#curtain{
+	width: 100vw;
+	height: 300vh;
+	background: black url('../img/floors/woodfloor2.jpg');
+	background-position: 0% 100%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100vw 15vh;
+}
+#curtain>img{
+	width: 50vw;
+	height: 100vh;
 }
 #textHolder{
 	height: 120px;

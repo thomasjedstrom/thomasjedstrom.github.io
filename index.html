@@ -28,21 +28,99 @@
 
 	<!-- SECTION 1 -->
 
-	<section id="slide-1">
-		<div id="masthead"
-			data-start="background-position: 50% 0%;"
-			data-top-bottom="background-position: 50% 100%;">
-			<div id="mastheadBanner" class="fade-out">
-				<h1 id="greeting" class="tlt">Hey!</h1><br>
-				<div id="textHolder">
-					<h2 id="myName">I'm Thomas Edstrom,</h2><br>
-					<h2 id="myTitle">a full stack Rails developer.</h2>
-				</div>
+	<div id="masthead"
+		data-start="
+			z-index: 2;
+			position: absolute;
+			clip: rect(0vw,100vw,100vh,0vh);
+			background-position: 50% 50%;"
+		data-top-bottom="
+			clip: rect(0vw,100vw,00vh,0vh)
+			background-position: 50% 100%;">
+		<div id="mastheadBanner" class="fade-out">
+			<h1 id="greeting" class="tlt">Hey!</h1><br>
+			<div id="textHolder">
+				<h2 id="myName">I'm Thomas Edstrom,</h2><br>
+				<h2 id="myTitle">a full stack Rails developer.</h2>
 			</div>
 		</div>
-	</section>
+	</div>
 
 	<!-- SECTION 2 -->
+
+	<div id="curtain">
+		<img src="img/curtain/curtain1.jpg" alt="curtain" class="fixed" 
+			data-50p-top-bottom="
+				z-index:1;
+				top:0%;
+				left:0%"
+			data--100p-top-bottom="
+				top:0%;
+				left:-50%"
+			data-anchor-target="#masthead">
+		<img src="img/curtain/curtain2.jpg" alt="curtain" class="fixed" 
+			data-50p-top-bottom="
+				z-index:1;
+				top:0%;
+				left:50%"
+			data--100p-top-bottom="
+				top:0%;
+				left:100%"
+			data-anchor-target="#masthead">
+	</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	<!-- OTHER SHIT -->
+
 
 	<div id="section_two">
 		<div id="bio" class="fixed"
@@ -80,6 +158,17 @@
 			data-anchor-target="#masthead">
 
 	</div>
+
+
+
+
+
+
+
+
+
+
+
 
 
 
