@@ -96,13 +96,13 @@ html, body {
 	height: 100vh;
 }
 
-.star{
+/*=========STAR A==========*/
+#starA{
     -moz-animation: 3s ease 0s normal none infinite swing;
     -moz-transform-origin: center top;
     -webkit-animation:swing 3s infinite ease-in-out;
     -webkit-transform-origin:top;
 }
-
 @-moz-keyframes swing{
     0%{-moz-transform:rotate(-3deg)}
     50%{-moz-transform:rotate(3deg)}
@@ -113,8 +113,88 @@ html, body {
     50%{-webkit-transform:rotate(3deg)}
     100%{-webkit-transform:rotate(-3deg)}
 }
-#star_one{
-	transform: scale(.3);
+/*=========STAR B==========*/
+#starB{
+    -moz-animation: 3.3s ease 0s normal none infinite swing;
+    -moz-transform-origin: center top;
+    -webkit-animation:swing 3.3s infinite ease-in-out;
+    -webkit-transform-origin:top;
 }
-
-
+@-moz-keyframes swing{
+    0%{-moz-transform:rotate(-3.5deg)}
+    50%{-moz-transform:rotate(3.5deg)}
+    100%{-moz-transform:rotate(-3.5deg)}
+}
+@-webkit-keyframes swing{
+    0%{-webkit-transform:rotate(-3.5deg)}
+    50%{-webkit-transform:rotate(3.5deg)}
+    100%{-webkit-transform:rotate(-3.5deg)}
+}
+/*=========STAR C==========*/
+#starC{
+    -moz-animation: 2.7s ease 0s normal none infinite swing;
+    -moz-transform-origin: center top;
+    -webkit-animation:swing 2.7s infinite ease-in-out;
+    -webkit-transform-origin:top;
+}
+@-moz-keyframes swing{
+    0%{-moz-transform:rotate(-2.5deg)}
+    50%{-moz-transform:rotate(2.5deg)}
+    100%{-moz-transform:rotate(-2.5deg)}
+}
+@-webkit-keyframes swing{
+    0%{-webkit-transform:rotate(-2.5deg)}
+    50%{-webkit-transform:rotate(2.5deg)}
+    100%{-webkit-transform:rotate(-2.5deg)}
+}
+/*=========STAR D==========*/
+#starD{
+    -moz-animation: 2.8s ease 0s normal none infinite swing;
+    -moz-transform-origin: center top;
+    -webkit-animation:swing 2.8s infinite ease-in-out;
+    -webkit-transform-origin:top;
+}
+@-moz-keyframes swing{
+    0%{-moz-transform:rotate(-3deg)}
+    50%{-moz-transform:rotate(3deg)}
+    100%{-moz-transform:rotate(-3deg)}
+}
+@-webkit-keyframes swing{
+    0%{-webkit-transform:rotate(-3deg)}
+    50%{-webkit-transform:rotate(3deg)}
+    100%{-webkit-transform:rotate(-3deg)}
+}
+/*=========STAR E==========*/
+#starE{
+    -moz-animation: 2s ease 0s normal none infinite swing;
+    -moz-transform-origin: center top;
+    -webkit-animation:swing 2s infinite ease-in-out;
+    -webkit-transform-origin:top;
+}
+@-moz-keyframes swing{
+    0%{-moz-transform:rotate(-2deg)}
+    50%{-moz-transform:rotate(2deg)}
+    100%{-moz-transform:rotate(-2deg)}
+}
+@-webkit-keyframes swing{
+    0%{-webkit-transform:rotate(-2deg)}
+    50%{-webkit-transform:rotate(2deg)}
+    100%{-webkit-transform:rotate(-2deg)}
+}
+/*=========STAR F==========*/
+#starF{
+    -moz-animation: 2.2s ease 0s normal none infinite swing;
+    -moz-transform-origin: center top;
+    -webkit-animation:swing 2.2s infinite ease-in-out;
+    -webkit-transform-origin:top;
+}
+@-moz-keyframes swing{
+    0%{-moz-transform:rotate(-2deg)}
+    50%{-moz-transform:rotate(2deg)}
+    100%{-moz-transform:rotate(-2deg)}
+}
+@-webkit-keyframes swing{
+    0%{-webkit-transform:rotate(-2deg)}
+    50%{-webkit-transform:rotate(2deg)}
+    100%{-webkit-transform:rotate(-2deg)}
+}
