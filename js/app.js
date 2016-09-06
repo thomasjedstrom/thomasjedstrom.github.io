@@ -23,8 +23,33 @@ $(function () {
         }
     });
 
+    $('#moon').hover(function(){
+		$('#moonshadow').fadeIn("slow");
+	})
+    $('#moon').mouseout(function(){
+		$('#moonshadow').fadeOut("slow");
+	})
 
+	$('#deathstar').hover(function(){
+		$('#deathstarshadow').fadeIn("slow");
+	})	
+	$('#deathstar').mouseout(function(){
+		$('#deathstarshadow').fadeOut("slow");
+	})
 
-    // SLIDE IN effects
- 
+	$('#donut').hover(function(){
+		$('#donutshadow').fadeIn("slow");
+	})	
+	$('#donut').mouseout(function(){
+		$('#donutshadow').fadeOut("slow");
+	})
+
+	$('#enterprise').hover(function(){
+		$('#enterpriseshadow').fadeIn("slow");
+	})	
+	$('#enterprise').mouseout(function(){
+		$('#enterpriseshadow').fadeOut("slow");
+	})
+
 })
+

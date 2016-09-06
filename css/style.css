@@ -58,7 +58,7 @@ html, body {
 	display: none;
 	position: relative;
 	top: 30%;
-	left: 60%;
+	left: 40%;
 	background: rgba(255, 255, 255, 0.5);
 	padding: 10px;
 	border-radius: 5px;
@@ -95,6 +95,51 @@ html, body {
 	width: 50vw;
 	height: 100vh;
 }
+.dim{
+	-webkit-filter: brightness(0.6);
+	filter: brightness(0.6);	
+}
+.icon{
+	-webkit-filter: brightness(0.4);
+	filter: brightness(0.4);
+
+	transition: .6s filter linear;
+	-webkit-transition: .6s -webkit-filter linear;
+	-moz-transition: .6s -moz-filter linear;
+	-moz-transition: .6s filter linear;
+	-ms-transition: .6s -ms-filter linear;
+	-o-transition: .6s -o-filter linear;	
+}
+.icon:hover{
+	-webkit-filter: brightness(1);
+	filter: brightness(1);
+}
+
+.shadow{
+	position: fixed;
+	width: 350px;
+	height: 40px;
+	border-radius: 100%;
+	background: rgba(255,255,255,.4);
+	z-index: 10;
+	display: none;
+}
+#moonshadow{
+	top: 95vh;
+	left: 5vw;
+}
+#deathstarshadow{
+	top: 95vh;
+	left: 27vw;
+}
+#donutshadow{
+	top: 95vh;
+	left: 49vw;
+}
+#enterpriseshadow{
+	top: 95vh;
+	left: 73vw;
+}
 
 /*=========STAR A==========*/
 #starA{
@@ -115,9 +160,9 @@ html, body {
 }
 /*=========STAR B==========*/
 #starB{
-    -moz-animation: 3.3s ease 0s normal none infinite swing;
+    -moz-animation: 3.5s ease 0s normal none infinite swing;
     -moz-transform-origin: center top;
-    -webkit-animation:swing 3.3s infinite ease-in-out;
+    -webkit-animation:swing 3.5s infinite ease-in-out;
     -webkit-transform-origin:top;
 }
 @-moz-keyframes swing{
@@ -132,26 +177,26 @@ html, body {
 }
 /*=========STAR C==========*/
 #starC{
-    -moz-animation: 2.7s ease 0s normal none infinite swing;
+    -moz-animation: 3.1s ease 0s normal none infinite swing;
     -moz-transform-origin: center top;
-    -webkit-animation:swing 2.7s infinite ease-in-out;
+    -webkit-animation:swing 3.1s infinite ease-in-out;
     -webkit-transform-origin:top;
 }
 @-moz-keyframes swing{
-    0%{-moz-transform:rotate(-2.5deg)}
-    50%{-moz-transform:rotate(2.5deg)}
-    100%{-moz-transform:rotate(-2.5deg)}
+    0%{-moz-transform:rotate(-3.1deg)}
+    50%{-moz-transform:rotate(3.1deg)}
+    100%{-moz-transform:rotate(-3.1deg)}
 }
 @-webkit-keyframes swing{
-    0%{-webkit-transform:rotate(-2.5deg)}
-    50%{-webkit-transform:rotate(2.5deg)}
-    100%{-webkit-transform:rotate(-2.5deg)}
+    0%{-webkit-transform:rotate(-3.1deg)}
+    50%{-webkit-transform:rotate(3.1deg)}
+    100%{-webkit-transform:rotate(-3.1deg)}
 }
 /*=========STAR D==========*/
 #starD{
-    -moz-animation: 2.8s ease 0s normal none infinite swing;
+    -moz-animation: 3.3s ease 0s normal none infinite swing;
     -moz-transform-origin: center top;
-    -webkit-animation:swing 2.8s infinite ease-in-out;
+    -webkit-animation:swing 3.3s infinite ease-in-out;
     -webkit-transform-origin:top;
 }
 @-moz-keyframes swing{
@@ -166,9 +211,9 @@ html, body {
 }
 /*=========STAR E==========*/
 #starE{
-    -moz-animation: 2s ease 0s normal none infinite swing;
+    -moz-animation: 3.7s ease 0s normal none infinite swing;
     -moz-transform-origin: center top;
-    -webkit-animation:swing 2s infinite ease-in-out;
+    -webkit-animation:swing 3.7s infinite ease-in-out;
     -webkit-transform-origin:top;
 }
 @-moz-keyframes swing{
@@ -183,9 +228,9 @@ html, body {
 }
 /*=========STAR F==========*/
 #starF{
-    -moz-animation: 2.2s ease 0s normal none infinite swing;
+    -moz-animation: 2.9s ease 0s normal none infinite swing;
     -moz-transform-origin: center top;
-    -webkit-animation:swing 2.2s infinite ease-in-out;
+    -webkit-animation:swing 2.9s infinite ease-in-out;
     -webkit-transform-origin:top;
 }
 @-moz-keyframes swing{
@@ -197,4 +242,58 @@ html, body {
     0%{-webkit-transform:rotate(-2deg)}
     50%{-webkit-transform:rotate(2deg)}
     100%{-webkit-transform:rotate(-2deg)}
+}
+
+
+
+
+
+
+
+
+
+
+
+/*======Twinkle Stars========*/
+@keyframes move-twink-back {
+    from {background-position:0 0;}
+    to {background-position:-10000px 5000px;}
+}
+@-webkit-keyframes move-twink-back {
+    from {background-position:0 0;}
+    to {background-position:-10000px 5000px;}
+}
+@-moz-keyframes move-twink-back {
+    from {background-position:0 0;}
+    to {background-position:-10000px 5000px;}
+}
+@-ms-keyframes move-twink-back {
+    from {background-position:0 0;}
+    to {background-position:-10000px 5000px;}
+}
+
+
+.stars, .twinkling{
+  position: fixed;
+  top: 0%;
+  z-index: 0;
+  width:100vw;
+  height: 90vh;
+  display:block;
+}
+
+.stars {
+  background:#000 url(http://www.script-tutorials.com/demos/360/images/stars.png) repeat top center;
+  z-index:0;
+}
+
+.twinkling{
+  background:transparent url(http://www.script-tutorials.com/demos/360/images/twinkling.png) repeat top center;
+  z-index:1;
+
+  -moz-animation:move-twink-back 200s linear infinite;
+  -ms-animation:move-twink-back 200s linear infinite;
+  -o-animation:move-twink-back 200s linear infinite;
+  -webkit-animation:move-twink-back 200s linear infinite;
+  animation:move-twink-back 200s linear infinite;
 }

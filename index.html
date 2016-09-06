@@ -30,7 +30,7 @@
 
 	<div id="masthead"
 		data-start="
-			z-index: 2;
+			z-index: 3;
 			position: absolute;
 			clip: rect(0vw,100vw,100vh,0vh);
 			background-position: 50% 50%;"
@@ -51,7 +51,7 @@
 	<div id="curtain">
 		<img src="img/curtain/curtain1.jpg" alt="curtain" class="fixed" 
 			data-50p-top-bottom="
-				z-index:1;
+				z-index:2;
 				top:0%;
 				left:0%"
 			data--100p-top-bottom="
@@ -60,7 +60,7 @@
 			data-anchor-target="#masthead">
 		<img src="img/curtain/curtain2.jpg" alt="curtain" class="fixed" 
 			data-50p-top-bottom="
-				z-index:1;
+				z-index:2;
 				top:0%;
 				left:50%"
 			data--100p-top-bottom="
@@ -68,12 +68,19 @@
 				left:100%"
 			data-anchor-target="#masthead">
 
-		<div class="stars">
 
+		<!-- TWINKLE STARS -->
+		<div class="fixed stars"></div>
+		<div class="fixed twinkling"></div>
+
+
+
+		<!-- HANGING STARS -->
+		<div>
 		<!-- STAR 1 -->
-			<img src="img/sky/Planets_Star_3.png" alt="star 1" class="fixed" id="starA" 
+			<img src="img/sky/Planets_Star_3.png" alt="star 1" class="fixed dim" id="starA" 
 				data-50p-top-bottom="
-					z-index:0;
+					z-index:1;
 					top: -350%;
 					left: 5%"
 				data--100p-top-bottom="
@@ -81,29 +88,29 @@
 				data-anchor-target="#masthead">
 
 		<!-- STAR 2 -->
-			<img src="img/sky/Planets_Star_1.png" alt="star 1" class="fixed" id="starB"
+			<img src="img/sky/Planets_Star_1.png" alt="star 1" class="fixed dim" id="starB"
 				data-50p-top-bottom="
-					z-index:0;
-					top: -200%;
+					z-index:1;
+					top: -400%;
 					left: 20%"
 				data--100p-top-bottom="
 					top: -20%;"
 				data-anchor-target="#masthead">
 
 		<!-- STAR 3 -->
-			<img src="img/sky/Planets_Star_2.png" alt="star 1" class="fixed" id="starC"
+			<img src="img/sky/Planets_Star_2.png" alt="star 1" class="fixed dim" id="starC"
 				data-50p-top-bottom="
-					z-index:0;
+					z-index:1;
 					top: -350%;
 					left: 40%"
 				data--100p-top-bottom="
-					top: -60%;"
+					top: -35%;"
 				data-anchor-target="#masthead">
 
 		<!-- STAR 4 -->
-			<img src="img/sky/Planets_Star_3.png" alt="star 1" class="fixed" id="starD" 
+			<img src="img/sky/Planets_Star_3.png" alt="star 1" class="fixed dim" id="starD" 
 				data-50p-top-bottom="
-					z-index:0;
+					z-index:1;
 					top: -350%;
 					left: 60%"
 				data--100p-top-bottom="
@@ -111,9 +118,9 @@
 				data-anchor-target="#masthead">
 
 		<!-- STAR 5 -->
-			<img src="img/sky/Planets_Star_4.png" alt="star 1" class="fixed" id="starE"
+			<img src="img/sky/Planets_Star_4.png" alt="star 1" class="fixed dim" id="starE"
 				data-50p-top-bottom="
-					z-index:0;
+					z-index:1;
 					top: -300%;
 					left: 70%"
 				data--100p-top-bottom="
@@ -121,35 +128,66 @@
 				data-anchor-target="#masthead">
 
 		<!-- STAR 6 -->
-			<img src="img/sky/Planets_Star_5.png" alt="star 1" class="fixed" id="starF"
+			<img src="img/sky/Planets_Star_5.png" alt="star 1" class="fixed dim" id="starF"
 				data-50p-top-bottom="
-					z-index:0;
-					top: -250%;
+					z-index:1;
+					top: -550%;
 					left: 90%"
 				data--100p-top-bottom="
-					top: -55%;"
+					top: -60%;"
 				data-anchor-target="#masthead">
 
 		<!-- MOON -->
-			<img src="img/sky/Planets_Moon.png" alt="star 1" class="fixed" 
+			<img src="img/sky/Planets_Moon.png" alt="star 1" class="fixed icon" id="moon" 
 				data-50p-top-bottom="
-					z-index:0;
-					transform: scale(.6);
-					top: -350%;
-					left: -10%"
-				data--100p-top-bottom="
-					top: -155%;"
+					z-index:1;
+					top: -150%;
+					left: 5%"
+				data--75p-top-bottom="
+					top: -50%;"
 				data-anchor-target="#masthead">	
+
+			<div class="shadow" id="moonshadow"></div>
+
+
 		<!-- DEATH STAR -->
-			<img src="img/sky/Planets_Death_Star.png" alt="star 1" class="fixed"
+			<img src="img/sky/Planets_Death_Star.png" alt="star 1" class="fixed icon" id="deathstar" 
 				data-50p-top-bottom="
-					z-index:0;
-					transform: scale(.3);
-					top: -350%;
+					z-index:1;
+					top: -150%;
 					left: 30%"
-				data--100p-top-bottom="
-					top: -280%;"
+				data--75p-top-bottom="
+					top: -60%;"
 				data-anchor-target="#masthead">
+
+			<div class="shadow" id="deathstarshadow"></div>
+
+
+		<!-- DONUT -->
+			<img src="img/sky/Planets_Donut.png" alt="star 1" class="fixed icon" id="donut" 
+				data-50p-top-bottom="
+					z-index:1;
+					top: -150%;
+					left: 50%"
+				data--75p-top-bottom="
+					top: -60%;"
+				data-anchor-target="#masthead">
+
+			<div class="shadow" id="donutshadow"></div>
+
+		<!-- PIANO -->
+			<img src="img/sky/Piano.png" alt="star 1" class="fixed icon" id="enterprise" 
+				data-50p-top-bottom="
+					z-index:1;
+					top: -150%;
+					left: 73%"
+				data--75p-top-bottom="
+					top: -85%;"
+				data-anchor-target="#masthead">
+
+			<div class="shadow" id="enterpriseshadow"></div>
+
+
 		</div>
 	</div>
 
