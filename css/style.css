@@ -39,7 +39,7 @@ html, body {
 
 
 
-/*=======Section 1=========*/
+/*=======LANDING=========*/
 #masthead{
 	z-index: 10;
 	width: 100vw;
@@ -49,6 +49,7 @@ html, body {
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
+    z-index: 6;
 }
 #mastheadBanner h1, h2{
 	display: inline-block;
@@ -81,20 +82,23 @@ html, body {
 
 
 
-/*=======Section 2=========*/
+/*=======STAGE=========*/
 #curtain{
 	width: 100vw;
 	height: 300vh;
-	background: black url('../img/floors/woodfloor2.jpg');
+	background: black url('../img/floor/woodfloor.jpg');
 	background-position: 0% 100%;
     background-repeat: no-repeat;
     background-attachment: fixed;
-    background-size: 100vw 15vh;
+    background-size: 100vw 25vh;
+    z-index: 4;
 }
 #curtain>img{
 	width: 50vw;
 	height: 100vh;
 }
+
+/*=========ICONS=========*/
 .dim{
 	-webkit-filter: brightness(0.6);
 	filter: brightness(0.6);	
@@ -115,30 +119,65 @@ html, body {
 	filter: brightness(1);
 }
 
+
+/*======WORDS========*/
+.words{
+	position: absolute;
+	z-index: 3;
+	top: 100vh;
+
+	-webkit-filter: brightness(0.4);
+	filter: brightness(0.4);
+
+	transition: .6s filter linear;
+	-webkit-transition: .6s -webkit-filter linear;
+	-moz-transition: .6s -moz-filter linear;
+	-moz-transition: .6s filter linear;
+	-ms-transition: .6s -ms-filter linear;
+	-o-transition: .6s -o-filter linear;
+}
+.icon:hover + .words{
+	-webkit-filter: brightness(1);
+	filter: brightness(1);
+}
+#blogword{
+}
+#linkedinword{
+	left: -33%;
+}
+#portfolioword{
+}
+#githubword{
+	left: -16%;
+}
+#musicword{
+}
+
+/*========SHADOWS========*/
 .shadow{
 	position: fixed;
 	width: 350px;
 	height: 40px;
 	border-radius: 100%;
 	background: rgba(255,255,255,.4);
-	z-index: 10;
+	z-index: 2;
 	display: none;
-}
-#moonshadow{
 	top: 95vh;
-	left: 5vw;
 }
-#deathstarshadow{
-	top: 95vh;
-	left: 27vw;
+#newspapershadow{
+	left: 1vw;
 }
-#donutshadow{
-	top: 95vh;
-	left: 49vw;
+#suitshadow{
+	left: 19vw;
 }
-#enterpriseshadow{
-	top: 95vh;
-	left: 73vw;
+#briefcaseshadow{
+	left: 40vw;
+}
+#octocatshadow{
+	left: 60vw;
+}
+#pianoshadow{
+	left: 81vw;
 }
 
 /*=========STAR A==========*/

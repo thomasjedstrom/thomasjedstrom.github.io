@@ -3,8 +3,8 @@ $(function () {
 	// MASTHEAD fade in effects
 
 	$('#mastheadBanner').fadeIn(2000);
-	$('#myName').delay(2000).fadeIn(3000);
-	$('#myTitle').delay(4000).fadeIn(3000);
+	$('#myName').delay(1500).fadeIn(3000);
+	$('#myTitle').delay(2500).fadeIn(3000);
 
 
 	// MASTHEAD fade out effects
@@ -23,32 +23,39 @@ $(function () {
         }
     });
 
-    $('#moon').hover(function(){
-		$('#moonshadow').fadeIn("slow");
+    $('#newspaper').hover(function(){
+		$('#newspapershadow').fadeIn("slow");
 	})
-    $('#moon').mouseout(function(){
-		$('#moonshadow').fadeOut("slow");
-	})
-
-	$('#deathstar').hover(function(){
-		$('#deathstarshadow').fadeIn("slow");
-	})	
-	$('#deathstar').mouseout(function(){
-		$('#deathstarshadow').fadeOut("slow");
+    $('#newspaper').mouseout(function(){
+		$('#newspapershadow').fadeOut("slow");
 	})
 
-	$('#donut').hover(function(){
-		$('#donutshadow').fadeIn("slow");
+	$('#suit').hover(function(){
+		$('#suitshadow').fadeIn("slow");
 	})	
-	$('#donut').mouseout(function(){
-		$('#donutshadow').fadeOut("slow");
+	$('#suit').mouseout(function(){
+		$('#suitshadow').fadeOut("slow");
 	})
 
-	$('#enterprise').hover(function(){
-		$('#enterpriseshadow').fadeIn("slow");
+	$('#briefcase').hover(function(){
+		$('#briefcaseshadow').fadeIn("slow");
 	})	
-	$('#enterprise').mouseout(function(){
-		$('#enterpriseshadow').fadeOut("slow");
+	$('#briefcase').mouseout(function(){
+		$('#briefcaseshadow').fadeOut("slow");
+	})
+
+	$('#octocat').hover(function(){
+		$('#octocatshadow').fadeIn("slow");
+	})	
+	$('#octocat').mouseout(function(){
+		$('#octocatshadow').fadeOut("slow");
+	})
+
+	$('#piano').hover(function(){
+		$('#pianoshadow').fadeIn("slow");
+	})	
+	$('#piano').mouseout(function(){
+		$('#pianoshadow').fadeOut("slow");
 	})
 
 })

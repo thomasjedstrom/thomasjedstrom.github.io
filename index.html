@@ -26,11 +26,11 @@
 		
 	</div>
 
-	<!-- SECTION 1 -->
+	<!-- LANDING -->
 
 	<div id="masthead"
 		data-start="
-			z-index: 3;
+			z-index: 9;
 			position: absolute;
 			clip: rect(0vw,100vw,100vh,0vh);
 			background-position: 50% 50%;"
@@ -46,12 +46,12 @@
 		</div>
 	</div>
 
-	<!-- SECTION 2 -->
+	<!-- STAGE -->
 
 	<div id="curtain">
 		<img src="img/curtain/curtain1.jpg" alt="curtain" class="fixed" 
 			data-50p-top-bottom="
-				z-index:2;
+				z-index:4;
 				top:0%;
 				left:0%"
 			data--100p-top-bottom="
@@ -60,7 +60,7 @@
 			data-anchor-target="#masthead">
 		<img src="img/curtain/curtain2.jpg" alt="curtain" class="fixed" 
 			data-50p-top-bottom="
-				z-index:2;
+				z-index:4;
 				top:0%;
 				left:50%"
 			data--100p-top-bottom="
@@ -78,7 +78,7 @@
 		<!-- HANGING STARS -->
 		<div>
 		<!-- STAR 1 -->
-			<img src="img/sky/Planets_Star_3.png" alt="star 1" class="fixed dim" id="starA" 
+			<img src="img/stars/Planets_Star_3.png" alt="star 1" class="fixed dim" id="starA" 
 				data-50p-top-bottom="
 					z-index:1;
 					top: -350%;
@@ -88,7 +88,7 @@
 				data-anchor-target="#masthead">
 
 		<!-- STAR 2 -->
-			<img src="img/sky/Planets_Star_1.png" alt="star 1" class="fixed dim" id="starB"
+			<img src="img/stars/Planets_Star_1.png" alt="star 1" class="fixed dim" id="starB"
 				data-50p-top-bottom="
 					z-index:1;
 					top: -400%;
@@ -98,7 +98,7 @@
 				data-anchor-target="#masthead">
 
 		<!-- STAR 3 -->
-			<img src="img/sky/Planets_Star_2.png" alt="star 1" class="fixed dim" id="starC"
+			<img src="img/stars/Planets_Star_2.png" alt="star 1" class="fixed dim" id="starC"
 				data-50p-top-bottom="
 					z-index:1;
 					top: -350%;
@@ -108,7 +108,7 @@
 				data-anchor-target="#masthead">
 
 		<!-- STAR 4 -->
-			<img src="img/sky/Planets_Star_3.png" alt="star 1" class="fixed dim" id="starD" 
+			<img src="img/stars/Planets_Star_3.png" alt="star 1" class="fixed dim" id="starD" 
 				data-50p-top-bottom="
 					z-index:1;
 					top: -350%;
@@ -118,7 +118,7 @@
 				data-anchor-target="#masthead">
 
 		<!-- STAR 5 -->
-			<img src="img/sky/Planets_Star_4.png" alt="star 1" class="fixed dim" id="starE"
+			<img src="img/stars/Planets_Star_4.png" alt="star 1" class="fixed dim" id="starE"
 				data-50p-top-bottom="
 					z-index:1;
 					top: -300%;
@@ -128,7 +128,7 @@
 				data-anchor-target="#masthead">
 
 		<!-- STAR 6 -->
-			<img src="img/sky/Planets_Star_5.png" alt="star 1" class="fixed dim" id="starF"
+			<img src="img/stars/Planets_Star_5.png" alt="star 1" class="fixed dim" id="starF"
 				data-50p-top-bottom="
 					z-index:1;
 					top: -550%;
@@ -137,55 +137,97 @@
 					top: -60%;"
 				data-anchor-target="#masthead">
 
-		<!-- MOON -->
-			<img src="img/sky/Planets_Moon.png" alt="star 1" class="fixed icon" id="moon" 
+
+
+		<!-- ================ICONS================ -->
+
+
+		<!-- Newspaper -->
+			<div class="fixed" 
 				data-50p-top-bottom="
 					z-index:1;
 					top: -150%;
 					left: 5%"
 				data--75p-top-bottom="
-					top: -50%;"
-				data-anchor-target="#masthead">	
+					top: -38%;"
+				data-anchor-target="#masthead">
 
-			<div class="shadow" id="moonshadow"></div>
+				<img src="img/icons/newspaper.png" alt="newspaper" class="icon" id="newspaper">	
+				<img src="img/words/blog.png" alt="blog" class="words" id="blogword">
+			</div>
+
+			<div class="shadow" id="newspapershadow"></div>
+			
 
 
-		<!-- DEATH STAR -->
-			<img src="img/sky/Planets_Death_Star.png" alt="star 1" class="fixed icon" id="deathstar" 
+		<!-- Suit -->
+			<div class="fixed"
 				data-50p-top-bottom="
 					z-index:1;
 					top: -150%;
-					left: 30%"
+					left: 25%"
 				data--75p-top-bottom="
-					top: -60%;"
+					top: -38%;"
 				data-anchor-target="#masthead">
 
-			<div class="shadow" id="deathstarshadow"></div>
+				<img src="img/icons/suit.png" alt="suit" class="icon" id="suit">
+				<img src="img/words/linkedin.png" alt="linkedin" class="words" id="linkedinword">
+			</div>
+
+			<div class="shadow" id="suitshadow"></div>
+			
 
 
-		<!-- DONUT -->
-			<img src="img/sky/Planets_Donut.png" alt="star 1" class="fixed icon" id="donut" 
+		<!-- Briefcase / Portfolio -->
+			<div class="fixed"
 				data-50p-top-bottom="
 					z-index:1;
 					top: -150%;
-					left: 50%"
+					left: 42%"
 				data--75p-top-bottom="
-					top: -60%;"
+					top: -38%;"
+				data-anchor-target="#masthead">
+				
+				<img src="img/icons/briefcase.png" alt="briefcase" class="icon" id="briefcase">
+				<img src="img/words/portfolio.png" alt="portfolio" class="words" id="portfolioword">
+			</div>
+
+			<div class="shadow" id="briefcaseshadow"></div>
+
+			
+
+		<!-- Octocate -->
+			<div class="fixed"
+				data-50p-top-bottom="
+					z-index:1;
+					top: -150%;
+					left: 65%"
+				data--75p-top-bottom="
+					top: -38%;"
 				data-anchor-target="#masthead">
 
-			<div class="shadow" id="donutshadow"></div>
+				<img src="img/icons/octocat.png" alt="star 1" class="icon" id="octocat">
+				<img src="img/words/github.png" alt="music" class="words" id="githubword">
+			</div>
+
+			<div class="shadow" id="octocatshadow"></div>
+			
 
 		<!-- PIANO -->
-			<img src="img/sky/Piano.png" alt="star 1" class="fixed icon" id="enterprise" 
+			<div class="fixed"
 				data-50p-top-bottom="
 					z-index:1;
 					top: -150%;
-					left: 73%"
+					left: 85%"
 				data--75p-top-bottom="
-					top: -85%;"
+					top: -38%;"
 				data-anchor-target="#masthead">
 
-			<div class="shadow" id="enterpriseshadow"></div>
+				<img src="img/icons/piano.png" alt="star 1" class="icon" id="piano">
+				<img src="img/words/music.png" alt="music" class="words" id="musicword">
+			</div>
+			<div class="shadow" id="pianoshadow"></div>
+			
 
 
 		</div>
