@@ -23,38 +23,38 @@ $(function () {
         }
     });
 
-    $('#newspaper').hover(function(){
+    $('#newspaperclicker').hover(function(){
 		$('#newspapershadow').fadeIn("slow");
 	})
-    $('#newspaper').mouseout(function(){
+    $('#newspaperclicker').mouseout(function(){
 		$('#newspapershadow').fadeOut("slow");
 	})
 
-	$('#suit').hover(function(){
+	$('#suitclicker').hover(function(){
 		$('#suitshadow').fadeIn("slow");
 	})	
-	$('#suit').mouseout(function(){
+	$('#suitclicker').mouseout(function(){
 		$('#suitshadow').fadeOut("slow");
 	})
 
-	$('#briefcase').hover(function(){
+	$('#briefcaseclicker').hover(function(){
 		$('#briefcaseshadow').fadeIn("slow");
 	})	
-	$('#briefcase').mouseout(function(){
+	$('#briefcaseclicker').mouseout(function(){
 		$('#briefcaseshadow').fadeOut("slow");
 	})
 
-	$('#octocat').hover(function(){
+	$('#octocatclicker').hover(function(){
 		$('#octocatshadow').fadeIn("slow");
 	})	
-	$('#octocat').mouseout(function(){
+	$('#octocatclicker').mouseout(function(){
 		$('#octocatshadow').fadeOut("slow");
 	})
 
-	$('#piano').hover(function(){
+	$('#pianoclicker').hover(function(){
 		$('#pianoshadow').fadeIn("slow");
 	})	
-	$('#piano').mouseout(function(){
+	$('#pianoclicker').mouseout(function(){
 		$('#pianoshadow').fadeOut("slow");
 	})
 

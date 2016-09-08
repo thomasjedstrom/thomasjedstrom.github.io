@@ -114,11 +114,39 @@ html, body {
 	-ms-transition: .6s -ms-filter linear;
 	-o-transition: .6s -o-filter linear;	
 }
-.icon:hover{
+.clicker:hover ~ .icon{
 	-webkit-filter: brightness(1);
 	filter: brightness(1);
 }
 
+/*=====ICON CLICKABLE AREA========*/
+.clicker{
+    width: 300px;
+    height: 300px;
+
+    z-index: 20;
+    display: inline-block;
+    border-radius: 100%;
+
+    position: absolute;
+    top: 77vh;
+    
+}
+#newspaperclicker{
+	left: -28%;
+}
+#suitclicker{
+	left: -63%;
+}
+#briefcaseclicker{
+	left: -5%;
+}
+#octocatclicker{
+	left: -36%;
+}
+#pianoclicker{
+	left: -40%;
+}
 
 /*======WORDS========*/
 .words{
@@ -136,7 +164,7 @@ html, body {
 	-ms-transition: .6s -ms-filter linear;
 	-o-transition: .6s -o-filter linear;
 }
-.icon:hover + .words{
+.clicker:hover ~ .words{
 	-webkit-filter: brightness(1);
 	filter: brightness(1);
 }
