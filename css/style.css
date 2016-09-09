@@ -98,6 +98,34 @@ html, body {
 	height: 100vh;
 }
 
+/*======DONUT CONTACT========*/
+#donutcontainer:hover > .icon{
+	-webkit-filter: brightness(1);
+	filter: brightness(1);
+	cursor: pointer;
+	cursor: hand;
+}
+
+#donut{
+    -moz-animation: 3.1s ease 0s normal none infinite swing;
+    -moz-transform-origin: center top;
+    -webkit-animation:swing 3.1s infinite ease-in-out;
+    -webkit-transform-origin:top;
+}
+@-moz-keyframes swing{
+    0%{-moz-transform:rotate(-3.1deg)}
+    50%{-moz-transform:rotate(3.1deg)}
+    100%{-moz-transform:rotate(-3.1deg)}
+}
+@-webkit-keyframes swing{
+    0%{-webkit-transform:rotate(-3.1deg)}
+    50%{-webkit-transform:rotate(3.1deg)}
+    100%{-webkit-transform:rotate(-3.1deg)}
+}
+#donut:hover{
+	-webkit-filter: brightness(1);
+	filter: brightness(1);
+}
 /*=========ICONS=========*/
 .dim{
 	-webkit-filter: brightness(0.6);
@@ -130,7 +158,8 @@ html, body {
 
     position: absolute;
     top: 77vh;
-    
+    cursor: pointer;
+    cursor: hand;
 }
 #newspaperclicker{
 	left: -28%;
@@ -152,7 +181,7 @@ html, body {
 .words{
 	position: absolute;
 	z-index: 3;
-	top: 100vh;
+	top: 103%;
 
 	-webkit-filter: brightness(0.4);
 	filter: brightness(0.4);
@@ -180,6 +209,9 @@ html, body {
 }
 #musicword{
 }
+#contactword{
+	left: -60%;
+}
 
 /*========SHADOWS========*/
 .shadow{
@@ -202,7 +234,7 @@ html, body {
 	left: 40vw;
 }
 #octocatshadow{
-	left: 60vw;
+	left: 61vw;
 }
 #pianoshadow{
 	left: 81vw;
@@ -312,15 +344,6 @@ html, body {
 }
 
 
-
-
-
-
-
-
-
-
-
 /*======Twinkle Stars========*/
 @keyframes move-twink-back {
     from {background-position:0 0;}
@@ -364,3 +387,46 @@ html, body {
   -webkit-animation:move-twink-back 200s linear infinite;
   animation:move-twink-back 200s linear infinite;
 }
+
+
+
+/*========POP UPS=============*/
+/* The Modal (background) */
+.popup {
+    display: none;
+    position: fixed;
+    z-index: 20;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.4);
+}
+
+/* Modal Content/Box */
+.popup-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 40%; /
+}
+
+/* The Close Button */
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+
