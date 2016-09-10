@@ -15,6 +15,8 @@
 	<script src="https://code.jquery.com/jquery-3.0.0.js" integrity="sha256-jrPLZ+8vDxt2FnE1zvZXCkCcebI/C8Dt5xyaQBjxQIo=" crossorigin="anonymous"></script>
 <!--JS Scroller -->
 	<script src="js/skrollr.min.js"></script>
+<!--JS ScrollTo  -->
+	<script src="js/jquery.scrollTo.min.js"></script>
 <!--JS My App-->
 	<script src="js/app.js"></script>
 
@@ -38,20 +40,33 @@
 		data-top-bottom="
 			clip: rect(0vw,100vw,00vh,0vh)
 			background-position: 50% 100%;">
+
 		<div id="mastheadBanner" class="fade-out">
-			<h1 id="greeting" class="tlt">Hey!</h1><br>
-			<div id="textHolder">
-				<h2 id="myName">I'm Thomas Edstrom,</h2><br>
-				<h2 id="myTitle">a full stack Rails developer.</h2>
+			<div id="textholder">
+				<h1 id="myName">Thomas Edstrom</h1><br>
+				<h2 id="myTitle">full-stack developer</h2>
 			</div>
+
 		</div>
+
+		<button id="enter_here" class="btn fixed">Enter Site Here</button>
+
 	</div>
 
 	<!-- STAGE -->
 
 	<div id="curtain">
+
+		<button id="back_to_landing" class="btn fixed"
+			data-0p-top-bottom="
+				z-index: 5;
+				top: 10%;"
+			data--20p-top-bottom="
+				top: -10%;"
+			data-anchor-target="#masthead">Back to Landing</button>
+
 		<img src="img/curtain/curtain1.jpg" alt="curtain" class="fixed" 
-			data-50p-top-bottom="
+			data-0p-top-bottom="
 				z-index:4;
 				top:0%;
 				left:0%"
@@ -60,7 +75,7 @@
 				left:-50%"
 			data-anchor-target="#masthead">
 		<img src="img/curtain/curtain2.jpg" alt="curtain" class="fixed" 
-			data-50p-top-bottom="
+			data-0p-top-bottom="
 				z-index:4;
 				top:0%;
 				left:50%"
@@ -68,6 +83,39 @@
 				top:0%;
 				left:100%"
 			data-anchor-target="#masthead">
+
+
+		<div id="bioSection">
+			
+			<img src="img/thomas_holder.jpg" alt="Picture of Thomas">
+
+			<div id="bio">
+				<p>Thomas Edstrom lives in Dallas, TX and doesn't like speaking in third person.</p>
+				<p>Me in a sentence: "I get results."</p>
+				<p>How else can I explain this other than to say that I over achieve.  I don't like to compare myself to others, but at the end of the day, the reality is that I get more done in less time at a higher level of excellence than expected.</p>
+				<p></p>
+			</div>
+
+
+
+			<button id="to_connections" class="btn fixed"
+				data-0p-top-bottom="
+					z-index: 5;
+					top: 90%;"
+				data--20p-top-bottom="
+					top: 110%;"
+				data-anchor-target="#masthead">To Connection</button>
+
+		</div>
+
+
+		<button id="back_to_bio" class="btn fixed"
+				data--80p-top-bottom="
+					z-index: 5;
+					top: -10%;"
+				data--100p-top-bottom="
+					top: 10%;"
+				data-anchor-target="#masthead">To Connection</button>
 
 
 		<!-- TWINKLE STARS -->
@@ -155,7 +203,10 @@
 				data-50p-top-bottom="
 					z-index:1;
 					top: -150%;
-					left: 5%"
+					left: 10%;
+					-ms-transform: translate(-50%, 0%);
+					-webkit-tranform: translate(-50%, 0%); 
+					transform: translate(-50%, 0%);"
 				data--75p-top-bottom="
 					top: -18%;"
 				data-anchor-target="#masthead">
@@ -176,7 +227,10 @@
 				data-50p-top-bottom="
 					z-index:1;
 					top: -150%;
-					left: 25%"
+					left: 30%;
+					-ms-transform: translate(-50%, 0%);
+					-webkit-tranform: translate(-50%, 0%); 
+					transform: translate(-50%, 0%);"
 				data--75p-top-bottom="
 					top: -18%;"
 				data-anchor-target="#masthead">
@@ -197,7 +251,10 @@
 				data-50p-top-bottom="
 					z-index:1;
 					top: -150%;
-					left: 46%"
+					left: 50%;
+					-ms-transform: translate(-50%, 0%);
+					-webkit-tranform: translate(-50%, 0%); 
+					transform: translate(-50%, 0%);"
 				data--75p-top-bottom="
 					top: -18%;"
 				data-anchor-target="#masthead">
@@ -219,7 +276,10 @@
 				data-50p-top-bottom="
 					z-index:1;
 					top: -150%;
-					left: 65%"
+					left: 72%;
+					-ms-transform: translate(-50%, 0%);
+					-webkit-tranform: translate(-50%, 0%); 
+					transform: translate(-50%, 0%);"
 				data--75p-top-bottom="
 					top: -18%;"
 				data-anchor-target="#masthead">
@@ -239,7 +299,10 @@
 				data-50p-top-bottom="
 					z-index:1;
 					top: -150%;
-					left: 85%"
+					left: 90%;
+					-ms-transform: translate(-50%, 0%);
+					-webkit-tranform: translate(-50%, 0%); 
+					transform: translate(-50%, 0%);"
 				data--75p-top-bottom="
 					top: -18%;"
 				data-anchor-target="#masthead">
