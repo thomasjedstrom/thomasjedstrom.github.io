@@ -34,7 +34,6 @@ html, body {
 
 .fixed{
 	position: fixed;
-	z-index: 100;
 }
 
 /*=======NAVIGATION BUTTONS=========*/
@@ -44,12 +43,11 @@ html, body {
 	transform: translate(-50%, 0%);
 
 	left: 50vw;
-}
-.btn:hover{
-	-webkit-filter: brightness(1);
-	filter: brightness(1);
-	cursor: pointer;
-	cursor: hand;
+	height: 16vh;
+	width: auto;
+
+	-webkit-filter: brightness(0.4);
+	filter: brightness(0.4);
 
 	transition: .6s filter linear;
 	-webkit-transition: .6s -webkit-filter linear;
@@ -57,6 +55,16 @@ html, body {
 	-moz-transition: .6s filter linear;
 	-ms-transition: .6s -ms-filter linear;
 	-o-transition: .6s -o-filter linear;	
+}
+.btn:hover{
+	-webkit-filter: brightness(1);
+	filter: brightness(1);
+	cursor: pointer;
+	cursor: hand;
+}
+#enter_here{
+	position: absolute;
+	top: 80%;
 }
 
 
@@ -115,18 +123,18 @@ html, body {
 
 
 /*=======BIO SECTION=========*/
-#bioSection{
-	z-index: 6;
-	position: fixed;
-	top: 20%;
-	left: 20%;
-}
 #self_portrait{
-	position: fixed;
-	top: 20%;
-	left: 10%;
 	height: 40vh;
 	width: auto;
+	z-index: 4;
+}
+#bio{
+	font-weight: bold;
+	width: 30vw;
+	border: 3px solid white;
+	font-size: 1.5em;
+	background: rgba(255, 255, 255, 0.5);
+	z-index: 4;
 }
 
 
