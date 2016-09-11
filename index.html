@@ -8,6 +8,11 @@
 	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/4.1.1/normalize.css">
 <!--CSS Google Marker Font -->
 	<link href="https://fonts.googleapis.com/css?family=Permanent+Marker" rel="stylesheet">
+
+	<link href="https://fonts.googleapis.com/css?family=Archivo+Narrow" rel="stylesheet">
+
+
+
 <!--CSS My Style-->
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 	
@@ -41,7 +46,7 @@
 			clip: rect(0vw,100vw,00vh,0vh)
 			background-position: 50% 100%;">
 
-		<div id="mastheadBanner" class="fade-out">
+		<div id="mastheadBanner" class="fade-out centered">
 			<div id="textholder">
 				<h1 id="myName">Thomas Edstrom</h1><br>
 				<h2 id="myTitle">full-stack developer</h2>
@@ -49,7 +54,7 @@
 
 		</div>
 
-		<img src="img/navigation/enter.png" alt="Enter Here" id="enter_here" class="btn">
+		<img src="img/navigation/enter.png" alt="Enter Here" id="enter_here" class="btn centered">
 
 	</div>
 
@@ -58,7 +63,7 @@
 	<div id="curtain">
 
 		<!-- NAVIGATION BUTTON = Back (to landing page) -->
-		<img src="img/navigation/back.png" alt="Back" id="back_to_landing" class="btn fixed"
+		<img src="img/navigation/back.png" alt="Back" id="back_to_landing" class="btn centered fixed"
 			data-0p-top-bottom="
 				z-index: 5;
 				top: 1%;"
@@ -91,43 +96,54 @@
 		<!-- BIO SECTION -->
 		<div id="bioSection">
 			
-			<img src="img/thomas_holder.jpg" alt="Picture of Thomas" id="self_portrait" class="fixed" 
+			<img src="img/thomas.png" alt="Picture of Thomas" id="self_portrait" class="fixed" 
 				data-start="
-					top: 20%;
+					top: 25%;
 					left: -30%;"
 				data-0p-top-bottom="
-					top: 20%;
-					left: 20%"
+					left: 10%"
 				data--100p-top-bottom="
-					top: 20%;
 					left: -30%"
 				data-anchor-target="#masthead">
 
-			<div id="bio" class="fixed" 
-				data-start="
-					top: 20%;
-					left: 150%"
+			<div id="bio" class="fixed centered" 
+				data-75p-top-bottom="
+					opacity: 0;
+					top: 25%;
+					left: 50%"
 				data-0p-top-bottom="
-					top: 20%;
-					left: 60%"
+					z-index: 4;
+					opacity: 1;"
+				data--75p-top-bottom="
+					opacity: 0;"
 				data--100p-top-bottom="
-					top: 20%;
-					left: 110%"
+					z-index: -1;"
 				data-anchor-target="#masthead">
 				
-				<p>Profession: Full-Stack Developer</p>
-				<p>Location: Dallas, Tx</p>
-				<p>Hobbies:</p>
-				<ul>
-					<li>Open Source</li>
-					<li>Reading/Learning</li>
-					<li>Making Music</li>
-					<li>The Outdoors</li>
-				</ul>
+				<p>I am a full stack developer</p>
+				<p>I am a father of 3</p>
+				<p>I am an artist</p>
+				<p>I am an engineer</p>
+				<p>I am a musician</p>
+				<p>I am living in Dallas, TX</p>
+				<p>I am tired of trying to write this bio.</p>
+
+
 			</div>
 
+			<img src="img/marquee.png" alt="star" class="marquee fixed"
+				data-start="
+					top: 30%;
+					left: 150%"
+				data-0p-top-bottom="
+					left: 70%"
+				data--100p-top-bottom="
+					left: 110%"
+				data-anchor-target="#masthead">
+
+
 			<!-- NAVIGATION BUTTON = More -->
-			<img src="img/navigation/more.png" alt="onward ho!" id="to_connections" class="btn fixed"
+			<img src="img/navigation/more.png" alt="onward ho!" id="to_connections" class="btn centered fixed"
 				data-0p-top-bottom="
 					z-index: 5;
 					top: 80%;"
@@ -138,7 +154,7 @@
 		</div>
 
 		<!-- NAVIGATION BUTTON = Back -->
-		<img src="img/navigation/bio.png" alt="back go bio" id="back_to_bio" class="btn fixed"
+		<img src="img/navigation/bio.png" alt="back go bio" id="back_to_bio" class="btn centered fixed"
 				data--80p-top-bottom="
 					z-index: 5;
 					top: -20%;"
@@ -170,7 +186,7 @@
 				data-50p-top-bottom="
 					z-index:1;
 					top: -400%;
-					left: 15%"
+					left: 18%"
 				data--100p-top-bottom="
 					top: -20%;"
 				data-anchor-target="#masthead">
@@ -190,9 +206,9 @@
 				data-50p-top-bottom="
 					z-index:1;
 					top: -350%;
-					left: 55%"
+					left: 59%"
 				data--100p-top-bottom="
-					top: -23%;"
+					top: -25%;"
 				data-anchor-target="#masthead">
 
 		<!-- STAR 5 -->
@@ -200,7 +216,7 @@
 				data-50p-top-bottom="
 					z-index:1;
 					top: -300%;
-					left: 76%"
+					left: 78%"
 				data--100p-top-bottom="
 					top: -20%;"
 				data-anchor-target="#masthead">
@@ -247,7 +263,7 @@
 				
 			</div>
 
-			<div class="shadow" id="newspapershadow"></div>
+			<div class="shadow centered" id="newspapershadow"></div>
 			
 
 
@@ -271,7 +287,7 @@
 				
 			</div>
 
-			<div class="shadow" id="suitshadow"></div>
+			<div class="shadow centered" id="suitshadow"></div>
 			
 
 
@@ -296,7 +312,7 @@
 
 			</div>
 
-			<div class="shadow" id="briefcaseshadow"></div>
+			<div class="shadow centered" id="briefcaseshadow"></div>
 
 			
 
@@ -320,7 +336,7 @@
 
 			</div>
 
-			<div class="shadow" id="octocatshadow"></div>
+			<div class="shadow centered" id="octocatshadow"></div>
 			
 
 		<!-- PIANO -->
@@ -343,7 +359,7 @@
 				<img src="img/words/music.png" alt="music" class="words" id="musicword">
 
 			</div>
-			<div class="shadow" id="pianoshadow"></div>
+			<div class="shadow centered" id="pianoshadow"></div>
 			
 
 
