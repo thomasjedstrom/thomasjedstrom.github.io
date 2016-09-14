@@ -17,6 +17,11 @@ html, body {
 	-webkit-tranform: translate(-50%, 0%); 
 	transform: translate(-50%, 0%);
 }
+.fullcentered{
+	-ms-transform: translate(-50%, -50%);
+	-webkit-tranform: translate(-50%, -50%); 
+	transform: translate(-50%, -50%);	
+}
 .dim{
 	-webkit-filter: brightness(0.6);
 	filter: brightness(0.6);	
@@ -104,9 +109,10 @@ html, body {
 
 /*=======BIO SECTION=========*/
 #self_portrait{
-	height: 40vh;
+	height: 20vh;
 	width: auto;
 	z-index: 4;
+	border-radius: 100%
 }
 #bio{
 	width: 30vw;
@@ -519,7 +525,14 @@ html, body {
     border: 1px solid #888;
     width: 40%; /
 }
-
+.popup-content h3{
+	text-align: center
+}
+.category{
+	display: inline-block;
+	width: 15vw;
+	text-align: left;
+}
 /* The Close Button */
 .close {
     color: #aaa;

@@ -17,6 +17,11 @@ html, body {
 	-webkit-tranform: translate(-50%, 0%); 
 	transform: translate(-50%, 0%);
 }
+.fullcentered{
+	-ms-transform: translate(-50%, -50%);
+	-webkit-tranform: translate(-50%, -50%); 
+	transform: translate(-50%, -50%);	
+}
 .dim{
 	-webkit-filter: brightness(0.6);
 	filter: brightness(0.6);	
@@ -78,15 +83,24 @@ html, body {
 	background: gray url('../img/texture/textured_background.png') repeat center;
 	background-attachment: fixed;
 	width: 100vw;
-	height: 180vh;
+	height: 100vh;
 	overflow: auto;
 }
+@media only screen and (max-width: 500px) {
+    #sectionTwo{
+		background: gray url('../img/texture/textured_background.png') repeat center;
+		background-attachment: fixed;
+		width: 100vw;
+		height: 130vh;
+		overflow: auto;
+	}
+}
 #thomasImage{
-	width: 80vw;
+	width: 45vw;
 	height: auto;
 	position: relative;
 	left: 50%;
-	top: 20vh;
+	top: 5vh;
 	border-radius: 100%;
 }
 
@@ -98,7 +112,7 @@ html, body {
 	font-family: 'Archivo Narrow';
 	padding: 1%;
 	position: relative;
-	margin-top: 30vh;
+	top: 10vh;
 	min-width: 80vw;
 	position: relative;
 	left: 50%;
@@ -111,7 +125,7 @@ html, body {
 	width: auto;
 	position: relative;
 	left: 50%;
-	top: 10vh;
+	top: 15vh;
 }
 
 
@@ -119,6 +133,7 @@ html, body {
 #sectionThree{
 	height: 100vh;
 	position: relative;
+	overflow: hidden;
 }
 
 
@@ -130,27 +145,33 @@ html, body {
 
 	height: auto;
 	width: 75vw;
-
-	-ms-transform: translate(-50%, -50%);
-	-webkit-tranform: translate(-50%, -50%); 
-	transform: translate(-50%, -50%);
-
 }
 
 #blogwordMobile{
-	top: 16.7%;
+	top: 12.7%;
 }
 #linkedinwordMobile{
-	top: 33.3%;
+	top: 28.3%;
 }
 #portfoliowordMobile{
-	top: 50%;
+	top: 44%;
 }
 #githubwordMobile{
-	top: 66.6%;
+	top: 59.6%;
 }
 #musicwordMobile{
-	top: 83.3%;
+	top: 75.3%;
+}
+#contactMe{
+	width: 60vw;
+	top: 92%;
+	background: white;
+	text-align: center;
+	border-radius: 20px;
+	padding: 0px;
+}
+#contactMe h1{
+	margin: 0px;
 }
 
 
@@ -213,7 +234,7 @@ html, body {
 .popup {
     display: none;
     position: fixed;
-    z-index: 20;
+    z-index: 100;
     left: 0;
     top: 0;
     width: 100%;
@@ -226,10 +247,20 @@ html, body {
 /* Modal Content/Box */
 .popup-content {
     background-color: #fefefe;
-    margin: 15% auto;
-    padding: 20px;
+    padding: 5vw;
     border: 1px solid #888;
-    width: 40%; /
+    width: 90vw;
+    position: relative;
+    top: 50%;
+    left: 50%;
+}
+.popup-content h3{
+	text-align: center
+}
+.category{
+	display: inline-block;
+	width: 15vw;
+	text-align: left;
 }
 
 /* The Close Button */

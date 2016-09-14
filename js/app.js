@@ -158,7 +158,30 @@ $(function () {
 
 
 
+// POPUPS
+	$(".close").click(function(){
+		portfolioMobile[0].style.display = "none";
+		musicMobile[0].style.display = "none";
+		contactMe[0].style.display = "none";
+	})
+	
+	// PORTFOLIO
+	var portfolioMobile = $("#portfolio-boxMobile")
+	$("#portfolioClickerMobile").click(function(){
+		portfolioMobile[0].style.display = "block";
+	})
 
+	// MUSIC
+	var musicMobile = $("#music-boxMobile")
+	$("#musicClickerMobile").click(function(){
+		musicMobile[0].style.display = "block";
+	})
+
+	// CONTACT
+	var contactMe = $('#contact-boxMobile');
+	$("#contactMe").click(function(){
+		contactMe[0].style.display = "block";
+	})
 
 
 
