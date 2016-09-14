@@ -64,12 +64,17 @@ $(function () {
 
 	// SKROLLR initialization
 
-    var s = skrollr.init({
-        render: function(data) {
-            //Debugging - Log the current scroll position.
-            //console.log(data.curTop);
-        }
-    });
+	var mq = window.matchMedia( "(min-width: 1025px)" );
+
+	if (mq.matches){
+	    var s = skrollr.init({
+	        render: function(data) {
+	            //Debugging - Log the current scroll position.
+	            //console.log(data.curTop);
+	        }
+	    });		
+	}
+
 
     $('#newspaperclicker').hover(function(){
 		$('#newspapershadow').fadeIn("slow");
@@ -136,6 +141,25 @@ $(function () {
 	$("#pianoclicker").click(function(){
 		music[0].style.display = "block";
 	})	
+
+
+
+
+
+
+
+// ====================== MOBILE =========================
+
+	// MASTHEAD fade in effects
+
+	$('#landingBanner').fadeIn(2000).css("display", "inline-block");
+	$('#name').css('display', 'inline-block').hide().delay(1500).fadeIn(3000);
+	$('#title').css('display', 'inline-block').hide().delay(2500).fadeIn(3000);
+
+
+
+
+
 
 
 })
