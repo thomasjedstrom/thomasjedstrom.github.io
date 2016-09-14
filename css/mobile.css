@@ -8,6 +8,7 @@ html, body {
 	height:100%;
 	padding:0;
 	margin:0;
+	/*overflow: hidden*/
 }
 .fixed{
 	position: fixed;
@@ -66,7 +67,7 @@ html, body {
 	font-family: 'Permanent Marker', sans-serif;
 }
 #bannerText{
-	width: 30em;
+	width: 90vw;
 	height: 12em;
 }
 #bannerText h1, h2{
