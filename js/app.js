@@ -1,58 +1,74 @@
 $(function () {
 
 
-	// PREVENT SCROLLING
-	var keys = {37: 1, 38: 1, 39: 1, 40: 1};
+	// MEDIA QUERY FOR SKROLLR AND SCROLLING
+	var mq = window.matchMedia( "(min-width: 1025px)" );
 
-	function preventDefault(e) {
-		e = e || window.event;
-		if (e.preventDefault){
-			e.preventDefault();
-			e.returnValue = false;
-		}  
-	}
-	function preventDefaultForScrollKeys(e) {
-		if (keys[e.keyCode]) {
-			preventDefault(e);
-			return false;
+	if (mq.matches){
+
+		// PREVENT SCROLLING
+		var keys = {37: 1, 38: 1, 39: 1, 40: 1};
+
+		function preventDefault(e) {
+			e = e || window.event;
+			if (e.preventDefault){
+				e.preventDefault();
+				e.returnValue = false;
+			}  
 		}
-	}
-	function disableScroll() {
-		if (window.addEventListener){
-			window.addEventListener('DOMMouseScroll', preventDefault, false);
+		function preventDefaultForScrollKeys(e) {
+			if (keys[e.keyCode]) {
+				preventDefault(e);
+				return false;
+			}
 		}
-		window.onwheel = preventDefault;
-		window.onmousewheel = document.onmousewheel = preventDefault;
-		window.ontouchmove  = preventDefault;
-		document.onkeydown  = preventDefaultForScrollKeys;
+		function disableScroll() {
+			if (window.addEventListener){
+				window.addEventListener('DOMMouseScroll', preventDefault, false);
+			}
+			window.onwheel = preventDefault;
+			window.onmousewheel = document.onmousewheel = preventDefault;
+			window.ontouchmove  = preventDefault;
+			document.onkeydown  = preventDefaultForScrollKeys;
+		}
+
+		disableScroll();
+
+		// BUTTONS TO SCROLL
+
+		$('#enter_here').click(function(){
+			$(window).scrollTo('50%', 1300);	
+		})
+		$('#back_to_landing').click(function(){
+			$(window).scrollTo('0%', 1300);	
+		})
+		$('#to_connections').click(function(){
+			$(window).scrollTo('100%', 1300);	
+		})
+		$('#to_connections').click(function(){
+			$(window).scrollTo('100%', 1300);	
+		})
+		$('#back_to_bio').click(function(){
+			$(window).scrollTo('50%', 1300);	
+		})
+
+
+		// SKROLLR initialization
+
+	    var s = skrollr.init({
+	        render: function(data) {
+	            //Debugging - Log the current scroll position.
+	            //console.log(data.curTop);
+	        }
+	    });		
 	}
-
-	disableScroll();
-
-	// BUTTONS TO SCROLL
-
-	$('#enter_here').click(function(){
-		$(window).scrollTo('50%', 1300);	
-	})
-	$('#back_to_landing').click(function(){
-		$(window).scrollTo('0%', 1300);	
-	})
-	$('#to_connections').click(function(){
-		$(window).scrollTo('100%', 1300);	
-	})
-	$('#to_connections').click(function(){
-		$(window).scrollTo('100%', 1300);	
-	})
-	$('#back_to_bio').click(function(){
-		$(window).scrollTo('50%', 1300);	
-	})
-
 
 	// MASTHEAD fade in effects
 
 	$('#mastheadBanner').fadeIn(2000).css("display", "inline-block");
 	$('#myName').css('display', 'inline-block').hide().delay(1500).fadeIn(3000);
 	$('#myTitle').css('display', 'inline-block').hide().delay(2500).fadeIn(3000);
+
 
 
 	// MASTHEAD fade out effects
@@ -62,19 +78,8 @@ $(function () {
 	});
 
 
-	// SKROLLR initialization
 
-	var mq = window.matchMedia( "(min-width: 1025px)" );
-
-	if (mq.matches){
-	    var s = skrollr.init({
-	        render: function(data) {
-	            //Debugging - Log the current scroll position.
-	            //console.log(data.curTop);
-	        }
-	    });		
-	}
-
+	// LINKS CLICKABLE AREA
 
     $('#newspaperclicker').hover(function(){
 		$('#newspapershadow').fadeIn("slow");
