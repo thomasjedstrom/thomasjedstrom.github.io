@@ -84,7 +84,7 @@ html, body {
 	background: gray url('../img/texture/textured_background.png') repeat center;
 	background-attachment: fixed;
 	width: 100vw;
-	height: 100vh;
+	height: 140vh;
 	overflow: auto;
 }
 @media only screen and (max-width: 500px) {
@@ -118,7 +118,14 @@ html, body {
 	position: relative;
 	left: 50%;
 }
-#bioMobile h3{
+.sendMeALine{
+	color: #6d1c1c;
+	cursor: pointer;
+	cursor: hand;
+}
+.bioHeader{
+	font-family: 'Permanent Marker', sans-serif;
+	font-size: 1.6em;
 	text-align: center;
 }
 #marqueeMobile{
@@ -250,8 +257,9 @@ html, body {
     background-color: #fefefe;
     padding: 5vw;
     border: 1px solid #888;
-    width: 90vw;
-    position: relative;
+    width: 50vw;
+    max-width: 90vw;
+    position: fixed;
     top: 50%;
     left: 50%;
 }

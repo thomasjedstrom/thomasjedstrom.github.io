@@ -72,10 +72,10 @@ html, body {
 	height: 100vh;
 	background-image:url('../img/masthead_background.jpg');
 	background-position: center;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: cover;
-    z-index: 6;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-size: cover;
+	z-index: 6;
 }
 #mastheadBanner{
 	display: none;
@@ -109,10 +109,10 @@ html, body {
 
 /*=======BIO SECTION=========*/
 #self_portrait{
-	height: 20vh;
+	height: 40vh;
 	width: auto;
 	z-index: 4;
-	border-radius: 100%
+	border-radius: 30%;
 }
 #bio{
 	width: 30vw;
@@ -122,7 +122,16 @@ html, body {
 	z-index: 4;
 	font-family: 'Archivo Narrow';
 	padding: 1%;
+}
+.bioHeader{
+	font-family: 'Permanent Marker', sans-serif;
+	font-size: 1.6em;
 	text-align: center;
+}
+.sendMeALine{
+	color: #6d1c1c;
+	cursor: pointer;
+	cursor: hand;
 }
 #marquee{
 	top: 25%;
@@ -140,10 +149,10 @@ html, body {
 	height: 300vh;
 	background: black url('../img/floor/woodfloor.jpg');
 	background-position: 0% 100%;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: 100vw 25vh;
-    z-index: 4;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-size: 100vw 25vh;
+	z-index: 4;
 }
 .curtain{
 	width: 50vw;
@@ -190,20 +199,20 @@ html, body {
 	-ms-transition: .6s -ms-filter linear;
 	-o-transition: .6s -o-filter linear;
 
-    -moz-animation: 3.1s ease 0s normal none infinite swing;
-    -moz-transform-origin: center top;
-    -webkit-animation:swing 3.1s infinite ease-in-out;
-    -webkit-transform-origin:top;
+	-moz-animation: 3.1s ease 0s normal none infinite swing;
+	-moz-transform-origin: center top;
+	-webkit-animation:swing 3.1s infinite ease-in-out;
+	-webkit-transform-origin:top;
 }
 @-moz-keyframes swing{
-    0%{-moz-transform:rotate(-3.1deg)}
-    50%{-moz-transform:rotate(3.1deg)}
-    100%{-moz-transform:rotate(-3.1deg)}
+	0%{-moz-transform:rotate(-3.1deg)}
+	50%{-moz-transform:rotate(3.1deg)}
+	100%{-moz-transform:rotate(-3.1deg)}
 }
 @-webkit-keyframes swing{
-    0%{-webkit-transform:rotate(-3.1deg)}
-    50%{-webkit-transform:rotate(3.1deg)}
-    100%{-webkit-transform:rotate(-3.1deg)}
+	0%{-webkit-transform:rotate(-3.1deg)}
+	50%{-webkit-transform:rotate(3.1deg)}
+	100%{-webkit-transform:rotate(-3.1deg)}
 }
 #donut:hover{
 	-webkit-filter: brightness(1);
@@ -238,18 +247,18 @@ html, body {
 /*=====ICON CLICKABLE AREA========*/
 .clicker{
 	min-width: 100%;
-    max-width: 100%;
-    min-height: 30%;
-    max-height: 30%;
+	max-width: 100%;
+	min-height: 30%;
+	max-height: 30%;
 
-    z-index: 20;
-    display: inline-block;
-    border-radius: 10%;
+	z-index: 20;
+	display: inline-block;
+	border-radius: 10%;
 
-    position: absolute;
-    top: 60vh;
-    cursor: pointer;
-    cursor: hand;
+	position: absolute;
+	top: 60vh;
+	cursor: pointer;
+	cursor: hand;
 }
 #newspaperclicker{
 	/*left: -28%;*/
@@ -347,105 +356,105 @@ html, body {
 
 /*=========STAR A==========*/
 #starA{
-    -moz-animation: 3s ease 0s normal none infinite swing;
-    -moz-transform-origin: center top;
-    -webkit-animation:swing 3s infinite ease-in-out;
-    -webkit-transform-origin:top;
+	-moz-animation: 3s ease 0s normal none infinite swing;
+	-moz-transform-origin: center top;
+	-webkit-animation:swing 3s infinite ease-in-out;
+	-webkit-transform-origin:top;
 }
 @-moz-keyframes swing{
-    0%{-moz-transform:rotate(-3deg)}
-    50%{-moz-transform:rotate(3deg)}
-    100%{-moz-transform:rotate(-3deg)}
+	0%{-moz-transform:rotate(-3deg)}
+	50%{-moz-transform:rotate(3deg)}
+	100%{-moz-transform:rotate(-3deg)}
 }
 @-webkit-keyframes swing{
-    0%{-webkit-transform:rotate(-3deg)}
-    50%{-webkit-transform:rotate(3deg)}
-    100%{-webkit-transform:rotate(-3deg)}
+	0%{-webkit-transform:rotate(-3deg)}
+	50%{-webkit-transform:rotate(3deg)}
+	100%{-webkit-transform:rotate(-3deg)}
 }
 /*=========STAR B==========*/
 #starB{
-    -moz-animation: 3.5s ease 0s normal none infinite swing;
-    -moz-transform-origin: center top;
-    -webkit-animation:swing 3.5s infinite ease-in-out;
-    -webkit-transform-origin:top;
+	-moz-animation: 3.5s ease 0s normal none infinite swing;
+	-moz-transform-origin: center top;
+	-webkit-animation:swing 3.5s infinite ease-in-out;
+	-webkit-transform-origin:top;
 }
 @-moz-keyframes swing{
-    0%{-moz-transform:rotate(-3.5deg)}
-    50%{-moz-transform:rotate(3.5deg)}
-    100%{-moz-transform:rotate(-3.5deg)}
+	0%{-moz-transform:rotate(-3.5deg)}
+	50%{-moz-transform:rotate(3.5deg)}
+	100%{-moz-transform:rotate(-3.5deg)}
 }
 @-webkit-keyframes swing{
-    0%{-webkit-transform:rotate(-3.5deg)}
-    50%{-webkit-transform:rotate(3.5deg)}
-    100%{-webkit-transform:rotate(-3.5deg)}
+	0%{-webkit-transform:rotate(-3.5deg)}
+	50%{-webkit-transform:rotate(3.5deg)}
+	100%{-webkit-transform:rotate(-3.5deg)}
 }
 /*=========STAR C==========*/
 #starC{
-    -moz-animation: 3.1s ease 0s normal none infinite swing;
-    -moz-transform-origin: center top;
-    -webkit-animation:swing 3.1s infinite ease-in-out;
-    -webkit-transform-origin:top;
+	-moz-animation: 3.1s ease 0s normal none infinite swing;
+	-moz-transform-origin: center top;
+	-webkit-animation:swing 3.1s infinite ease-in-out;
+	-webkit-transform-origin:top;
 }
 @-moz-keyframes swing{
-    0%{-moz-transform:rotate(-3.1deg)}
-    50%{-moz-transform:rotate(3.1deg)}
-    100%{-moz-transform:rotate(-3.1deg)}
+	0%{-moz-transform:rotate(-3.1deg)}
+	50%{-moz-transform:rotate(3.1deg)}
+	100%{-moz-transform:rotate(-3.1deg)}
 }
 @-webkit-keyframes swing{
-    0%{-webkit-transform:rotate(-3.1deg)}
-    50%{-webkit-transform:rotate(3.1deg)}
-    100%{-webkit-transform:rotate(-3.1deg)}
+	0%{-webkit-transform:rotate(-3.1deg)}
+	50%{-webkit-transform:rotate(3.1deg)}
+	100%{-webkit-transform:rotate(-3.1deg)}
 }
 /*=========STAR D==========*/
 #starD{
-    -moz-animation: 3.3s ease 0s normal none infinite swing;
-    -moz-transform-origin: center top;
-    -webkit-animation:swing 3.3s infinite ease-in-out;
-    -webkit-transform-origin:top;
+	-moz-animation: 3.3s ease 0s normal none infinite swing;
+	-moz-transform-origin: center top;
+	-webkit-animation:swing 3.3s infinite ease-in-out;
+	-webkit-transform-origin:top;
 }
 @-moz-keyframes swing{
-    0%{-moz-transform:rotate(-3deg)}
-    50%{-moz-transform:rotate(3deg)}
-    100%{-moz-transform:rotate(-3deg)}
+	0%{-moz-transform:rotate(-3deg)}
+	50%{-moz-transform:rotate(3deg)}
+	100%{-moz-transform:rotate(-3deg)}
 }
 @-webkit-keyframes swing{
-    0%{-webkit-transform:rotate(-3deg)}
-    50%{-webkit-transform:rotate(3deg)}
-    100%{-webkit-transform:rotate(-3deg)}
+	0%{-webkit-transform:rotate(-3deg)}
+	50%{-webkit-transform:rotate(3deg)}
+	100%{-webkit-transform:rotate(-3deg)}
 }
 /*=========STAR E==========*/
 #starE{
-    -moz-animation: 3.7s ease 0s normal none infinite swing;
-    -moz-transform-origin: center top;
-    -webkit-animation:swing 3.7s infinite ease-in-out;
-    -webkit-transform-origin:top;
+	-moz-animation: 3.7s ease 0s normal none infinite swing;
+	-moz-transform-origin: center top;
+	-webkit-animation:swing 3.7s infinite ease-in-out;
+	-webkit-transform-origin:top;
 }
 @-moz-keyframes swing{
-    0%{-moz-transform:rotate(-2deg)}
-    50%{-moz-transform:rotate(2deg)}
-    100%{-moz-transform:rotate(-2deg)}
+	0%{-moz-transform:rotate(-2deg)}
+	50%{-moz-transform:rotate(2deg)}
+	100%{-moz-transform:rotate(-2deg)}
 }
 @-webkit-keyframes swing{
-    0%{-webkit-transform:rotate(-2deg)}
-    50%{-webkit-transform:rotate(2deg)}
-    100%{-webkit-transform:rotate(-2deg)}
+	0%{-webkit-transform:rotate(-2deg)}
+	50%{-webkit-transform:rotate(2deg)}
+	100%{-webkit-transform:rotate(-2deg)}
 }
 /*=========STAR F==========*/
 #starF{
-    -moz-animation: 2.9s ease 0s normal none infinite swing;
-    -moz-transform-origin: center top;
-    -webkit-animation:swing 2.9s infinite ease-in-out;
-    -webkit-transform-origin:top;
+	-moz-animation: 2.9s ease 0s normal none infinite swing;
+	-moz-transform-origin: center top;
+	-webkit-animation:swing 2.9s infinite ease-in-out;
+	-webkit-transform-origin:top;
 }
 @-moz-keyframes swing{
-    0%{-moz-transform:rotate(-2deg)}
-    50%{-moz-transform:rotate(2deg)}
-    100%{-moz-transform:rotate(-2deg)}
+	0%{-moz-transform:rotate(-2deg)}
+	50%{-moz-transform:rotate(2deg)}
+	100%{-moz-transform:rotate(-2deg)}
 }
 @-webkit-keyframes swing{
-    0%{-webkit-transform:rotate(-2deg)}
-    50%{-webkit-transform:rotate(2deg)}
-    100%{-webkit-transform:rotate(-2deg)}
+	0%{-webkit-transform:rotate(-2deg)}
+	50%{-webkit-transform:rotate(2deg)}
+	100%{-webkit-transform:rotate(-2deg)}
 }
 
 
@@ -454,20 +463,20 @@ html, body {
 /**************** TWINKLE STARS ********************/
 
 @keyframes move-twink-back {
-    from {background-position:0 0;}
-    to {background-position:-10000px 5000px;}
+	from {background-position:0 0;}
+	to {background-position:-10000px 5000px;}
 }
 @-webkit-keyframes move-twink-back {
-    from {background-position:0 0;}
-    to {background-position:-10000px 5000px;}
+	from {background-position:0 0;}
+	to {background-position:-10000px 5000px;}
 }
 @-moz-keyframes move-twink-back {
-    from {background-position:0 0;}
-    to {background-position:-10000px 5000px;}
+	from {background-position:0 0;}
+	to {background-position:-10000px 5000px;}
 }
 @-ms-keyframes move-twink-back {
-    from {background-position:0 0;}
-    to {background-position:-10000px 5000px;}
+	from {background-position:0 0;}
+	to {background-position:-10000px 5000px;}
 }
 
 
@@ -505,45 +514,53 @@ html, body {
 /*========POP UPS=============*/
 /* The Modal (background) */
 .popup {
-    display: none;
-    position: fixed;
-    z-index: 20;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    overflow: auto;
-    background-color: rgb(0,0,0);
-    background-color: rgba(0,0,0,0.4);
+	display: none;
+	position: fixed;
+	z-index: 20;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	overflow: auto;
+	background-color: rgb(0,0,0);
+	background-color: rgba(0,0,0,0.4);
 }
 
 /* Modal Content/Box */
 .popup-content {
-    background-color: #fefefe;
-    margin: 15% auto;
-    padding: 20px;
-    border: 1px solid #888;
-    width: 40%; /
+	background-color: #fefefe;
+	padding: 20px;
+	border: 1px solid #888;
+	width: 40%;
+	position: fixed;
+	top: 50%;
+	left: 50%;
 }
 .popup-content h3{
 	text-align: center
 }
 .category{
 	display: inline-block;
-	width: 15vw;
+	width: 3.5em;
 	text-align: left;
 }
+#contact-content{
+	width: 30%;
+	font-size: 1.3em;
+}
+
+
 /* The Close Button */
 .close {
-    color: #aaa;
-    float: right;
-    font-size: 28px;
-    font-weight: bold;
+	color: #aaa;
+	float: right;
+	font-size: 28px;
+	font-weight: bold;
 }
 
 .close:hover,
 .close:focus {
-    color: black;
-    text-decoration: none;
-    cursor: pointer;
+	color: black;
+	text-decoration: none;
+	cursor: pointer;
 }

@@ -127,6 +127,10 @@ $(function () {
 		contact[0].style.display = "none";
 		portfolio[0].style.display = "none";
 		music[0].style.display = "none";
+
+		portfolioMobile[0].style.display = "none";
+		musicMobile[0].style.display = "none";
+		contactMe[0].style.display = "none";
 	})
 
 	// CONTACT
@@ -167,11 +171,6 @@ $(function () {
 
 
 // POPUPS
-	$(".close").click(function(){
-		portfolioMobile[0].style.display = "none";
-		musicMobile[0].style.display = "none";
-		contactMe[0].style.display = "none";
-	})
 	
 	// PORTFOLIO
 	var portfolioMobile = $("#portfolio-boxMobile")
@@ -190,7 +189,10 @@ $(function () {
 	$("#contactMe").click(function(){
 		contactMe[0].style.display = "block";
 	})
-
+	$(".sendMeALine").click(function(){
+		contact[0].style.display = "block";
+		contactMe[0].style.display = "block";
+	})
 
 
 })
