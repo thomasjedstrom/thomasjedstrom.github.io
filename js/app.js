@@ -1,5 +1,8 @@
 $(function () {
 
+	// On Window Resize....Refresh
+	$(window).resize(function(){location.reload();});
+
 
 	// MEDIA QUERY FOR SKROLLR AND SCROLLING
 	var mq = window.matchMedia( "(min-width: 1025px)" );
