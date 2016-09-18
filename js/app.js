@@ -1,13 +1,14 @@
 $(function () {
 
-	// On Window Resize....Refresh
-	$(window).resize(function(){location.reload();});
-
 
 	// MEDIA QUERY FOR SKROLLR AND SCROLLING
 	var mq = window.matchMedia( "(min-width: 1025px)" );
 
 	if (mq.matches){
+
+		$(window).resize(function(){
+			location.reload();
+		});		
 
 		// PREVENT SCROLLING
 		var keys = {37: 1, 38: 1, 39: 1, 40: 1};
@@ -35,7 +36,7 @@ $(function () {
 			document.onkeydown  = preventDefaultForScrollKeys;
 		}
 
-		disableScroll();
+		// disableScroll();
 
 		// BUTTONS TO SCROLL
 
