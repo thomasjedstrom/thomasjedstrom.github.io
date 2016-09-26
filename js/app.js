@@ -1,6 +1,13 @@
 $(function () {
 
 
+	// LOADING PAGE
+	setTimeout(function(){
+		$('body').addClass('loaded');
+	}, 1000);
+
+
+
 	// MEDIA QUERY FOR SKROLLR AND SCROLLING
 	var mq = window.matchMedia( "(min-width: 1025px)" );
 
