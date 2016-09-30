@@ -162,7 +162,7 @@
 			<!-- PIANO -->
 				<div id="pianoContainer" class="fixed iconContainer centered">
 					<!-- Clickable -->
-					<div id="pianoclicker" class="clicker"></div>
+					<a href="http://wearemostlyghostly.bandcamp.com/" id="pianoclicker" class="clicker" target="_blank" style="target-new: tab;"></a>
 					<!-- Icon -->
 					<img src="img/icons/piano.png" alt="star 1" class="icon" id="piano">
 					<!-- Word -->
@@ -195,15 +195,40 @@
 	<div id="portfolio-box" class="popup">
 		<div id="portfolio-content" class="popup-content fullcentered">
 			<span class="close">x</span>
-			<h3>Projects coming soon!</h3>
+			<h1 id="railsTag" class="portfolioType">RAILS</h1>
+			<h1 id="meanTag" class="portfolioType">MEAN</h1>
+			<h1 id="djangoTag" class="portfolioType">DJANGO</h1>
 		</div>
 	</div>
 
-	<!-- Music -->
-	<div id="music-box" class="popup">
-		<div id="music-content" class="popup-content fullcentered">
-			<span class="close">x</span>
-			<h3>Music page coming soon!</h3>
+	<div id="rails-box" class="popup">
+		<div id="rails-content" class="popup-content fullcentered">
+			<span class="pclose">x</span>
+			<div class="portfolioClicker">
+				<a href="http://eventtracking.thomasjedstrom.com"  target="_blank" style="target-new: tab;">
+					<h2 class="portfolioTitle">Event Tracking</h2><br>
+					<img src="img/thumbnails/eventtracking.jpg" alt="rails event tracking" class="portfolioImage">
+				</a>
+			</div>
+		</div>
+	</div>
+
+	<div id="mean-box" class="popup">
+		<div id="mean-content" class="popup-content fullcentered">
+			<span class="pclose">x</span>
+			<div class="portfolioClicker">
+				<a href="http://meanonlinestore.thomasjedstrom.com"  target="_blank" style="target-new: tab;">
+					<h2 class="portfolioTitle">Online Store</h2><br>
+					<img src="img/thumbnails/mean_onlinestore.jpg" alt="mean online store" class="portfolioImage">
+				</a>	
+			</div>
+		</div>
+	</div>
+
+	<div id="django-box" class="popup">
+		<div id="django-content" class="popup-content fullcentered">
+			<span class="pclose">x</span>
+			<h2>Coming Soon</h2>
 		</div>
 	</div>
 </div>
@@ -277,9 +302,9 @@
 		</a>
 
 		<!-- Music -->
-		<div id="musicClickerMobile" class="clicker">
+		<a href="http://wearemostlyghostly.bandcamp.com/" id="musicClickerMobile" class="clicker" target="_blank" style="target-new: tab;">
 			<img src="img/words/music.png" alt="music" class="words fullcentered" id="musicwordMobile">
-		</div>
+		</a>
 
 		<!-- Contact Me -->
 		<div id="contactMe" class="words fullcentered">
@@ -295,14 +320,6 @@
 		<div id="portfolio-contentMobile" class="popup-content fullcentered">
 			<span class="close">x</span>
 			<h3>Projects coming soon!</h3>
-		</div>
-	</div>
-
-	<!-- Music -->
-	<div id="music-boxMobile" class="popup">
-		<div id="music-contentMobile" class="popup-content fullcentered">
-			<span class="close">x</span>
-			<h3>Music page coming soon!</h3>
 		</div>
 	</div>
 

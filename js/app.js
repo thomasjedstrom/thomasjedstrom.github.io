@@ -138,27 +138,35 @@ $(function () {
 	$(".close").click(function(){
 		contact[0]			.style.display = "none";
 		portfolio[0]		.style.display = "none";
-		music[0]			.style.display = "none";
 
 		portfolioMobile[0]	.style.display = "none";
-		musicMobile[0]		.style.display = "none";
 		contactMe[0]		.style.display = "none";
 	})
 
 	// CONTACT
 	var contact = $('#contact-box');
-	$("#burger")				.click(()=>{contact[0].style.display = "block"})
-	$("#contactword")		.click(()=>{contact[0].style.display = "block"})
+	$("#burger")				.click(()=>{contact[0].style.display = "block"});
+	$("#contactword")		.click(()=>{contact[0].style.display = "block"});
 	
 	// PORTFOLIO
-	var portfolio = $("#portfolio-box")
-	$("#briefcaseclicker")	.click(()=>{portfolio[0].style.display = "block"})
+	var portfolio = $("#portfolio-box");
+	$("#briefcaseclicker")	.click(()=>{portfolio[0].style.display = "block"});
 
-	// MUSIC
-	var music = $("#music-box")
-	$("#pianoclicker")		.click(()=>{music[0].style.display = "block"})	
+	var rails = $("#rails-box");
+	$("#railsTag")			.click(()=>{rails.fadeIn('slow')});
 
+	var mean = $("#mean-box");
+	$("#meanTag")			.click(()=>{mean.fadeIn('slow')});
 
+	var django = $("#django-box");
+	$("#djangoTag")			.click(()=>{django.fadeIn('slow')});
+
+// PORTFOLIO POPUS
+	$(".pclose").click(function(){
+		rails			.fadeOut('slow');
+		mean			.fadeOut('slow');
+		django			.fadeOut('slow');
+	})
 
 
 
@@ -179,10 +187,6 @@ $(function () {
 	// PORTFOLIO
 	var portfolioMobile = $("#portfolio-boxMobile")
 	$("#portfolioClickerMobile")	.click(()=>{portfolioMobile[0].style.display = "block"})
-
-	// MUSIC
-	var musicMobile = $("#music-boxMobile")
-	$("#musicClickerMobile")		.click(()=>{musicMobile[0].style.display = "block"})
 
 	// CONTACT
 	var contactMe = $('#contact-boxMobile');
