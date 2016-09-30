@@ -421,7 +421,7 @@ html, body {
 /********************ICONS********************/
 .iconContainer{
 	z-index: 1000000;
-	top: -100vw;	
+	top: -145vh;	
 }
 .icon{
 	height: 75vh;
