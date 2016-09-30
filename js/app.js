@@ -144,21 +144,21 @@ $(function () {
 	})
 
 	// CONTACT
-	var contact = $('#contact-box');
-	$("#burger")				.click(()=>{contact[0].style.display = "block"});
+	var contact 			= $('#contact-box');
+	$("#burger")			.click(()=>{contact[0].style.display = "block"});
 	$("#contactword")		.click(()=>{contact[0].style.display = "block"});
 	
 	// PORTFOLIO
-	var portfolio = $("#portfolio-box");
+	var portfolio 			= $("#portfolio-box");
 	$("#briefcaseclicker")	.click(()=>{portfolio[0].style.display = "block"});
 
-	var rails = $("#rails-box");
+	var rails 				= $("#rails-box");
 	$("#railsTag")			.click(()=>{rails.fadeIn('slow')});
 
-	var mean = $("#mean-box");
+	var mean 				= $("#mean-box");
 	$("#meanTag")			.click(()=>{mean.fadeIn('slow')});
 
-	var django = $("#django-box");
+	var django 				= $("#django-box");
 	$("#djangoTag")			.click(()=>{django.fadeIn('slow')});
 
 // PORTFOLIO POPUS
