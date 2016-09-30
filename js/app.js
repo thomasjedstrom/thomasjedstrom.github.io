@@ -50,10 +50,12 @@ $(function () {
 	var $isAnimatedSecond = $('.is-animated'),
 		$isAnimatedSecondSingle = $('.second .is-animated__single');
 
-	var $curtainL = $('#curtain1'),
-		$curtainR = $('#curtain2'),
-		$bgHanging = $('#bgHanging'),
-		$fader = $('.fader');
+	var $curtainL	= $('#curtain1'),
+		$curtainR	= $('#curtain2'),
+		$fader 		= $('.fader'),
+		$bgHanging	= $('.bg-star'),
+		$icon 		= $('.iconContainer');
+		
 
 	// initialize fullPage
 	$('#fullpage').fullpage({
@@ -66,13 +68,16 @@ $(function () {
 				$curtainL.animate({'left': "-=50vw"}, "slow");
 				$curtainR.animate({'left': "+=50vw"}, "slow");
 				$fader.fadeOut('slow');
-				// $bgHanging.addClass('animated slideInDown');
+				$bgHanging.animate({'top': "+=50vh"}, "slow");
+				$icon.animate({'top': "+=132vh"}, 1200);
 
 			// Page 3 - Page 2
 			}else if( index == 3 && direction == 'up') {
 				$curtainL.animate({'left': "+=50vw"}, "slow");
 				$curtainR.animate({'left': "-=50vw"}, "slow");
 				$fader.fadeIn('slow');
+				$bgHanging.animate({'top': "-=50vh"}, "slow");
+				$icon.animate({'top': "-=132vh"}, 800);
 			}
 
 			// second animation
@@ -165,7 +170,7 @@ $(function () {
 
 	// CONTACT
 	var contact = $('#contact-box');
-	$("#donut")				.click(()=>{contact[0].style.display = "block"})
+	$("#burger")				.click(()=>{contact[0].style.display = "block"})
 	$("#contactword")		.click(()=>{contact[0].style.display = "block"})
 	
 	// PORTFOLIO

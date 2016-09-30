@@ -298,6 +298,14 @@ html, body {
 
 
 /*===================== PAGE III =====================*/
+#thirdpage{
+	width: 100vw;
+	height: 100vh;
+	z-index: 10;
+	background: #000 url('../img/floor/woodfloor.jpg') no-repeat fixed bottom;
+	background-size: 100vw 10vh;
+
+}
 /**************** HANGIN STARS ********************/
 @-moz-keyframes swing{
 	0%{-moz-transform:rotate(-3deg)}
@@ -313,12 +321,12 @@ html, body {
 	height: 40vh;
 	width: auto;
 	z-index: 10000;
-	top: -15vh;
+	top: -65vh;
 }
 
 /*=========STAR A==========*/
 #starA{
-	left: 2%;
+	left: 2vw;
 	-moz-animation: 3s ease 0s normal none infinite swing;
 	-moz-transform-origin: center top;
 	-webkit-animation:swing 3s infinite ease-in-out;
@@ -326,7 +334,7 @@ html, body {
 }
 /*=========STAR B==========*/
 #starB{
-	left: 18%;
+	left: 18vw;
 	-moz-animation: 3.5s ease 0s normal none infinite swing;
 	-moz-transform-origin: center top;
 	-webkit-animation:swing 3.5s infinite ease-in-out;
@@ -334,7 +342,7 @@ html, body {
 }
 /*=========STAR C==========*/
 #starC{
-	left: 35%;
+	left: 35vw;
 	-moz-animation: 3.1s ease 0s normal none infinite swing;
 	-moz-transform-origin: center top;
 	-webkit-animation:swing 3.1s infinite ease-in-out;
@@ -342,7 +350,7 @@ html, body {
 }
 /*=========STAR D==========*/
 #starD{
-	left: 59%;
+	left: 59vw;
 	-moz-animation: 3.3s ease 0s normal none infinite swing;
 	-moz-transform-origin: center top;
 	-webkit-animation:swing 3.3s infinite ease-in-out;
@@ -358,18 +366,18 @@ html, body {
 }
 
 
-/*======DONUT CONTACT========*/
-#donutcontainer{
-	top:20%;
-	left: 92%;
+/*======BURGER CONTACT========*/
+#burgercontainer{
+	top: -70vh;
+	left: 92vw;
 }
-#donutcontainer:hover > #contactword{
+#burgercontainer:hover > #contactword{
 	-webkit-filter: brightness(1);
 	filter: brightness(1);
 	cursor: pointer;
 	cursor: hand;
 }
-#donut{
+#burger{
 	transition: .6s filter linear;
 	-webkit-transition: .6s -webkit-filter linear;
 	-moz-transition: .6s -moz-filter linear;
@@ -382,7 +390,7 @@ html, body {
 	-webkit-animation:swing 3.1s infinite ease-in-out;
 	-webkit-transform-origin:top;
 }
-#donut:hover{
+#burger:hover{
 	-webkit-filter: brightness(1);
 	filter: brightness(1);
 	cursor: pointer;
@@ -391,8 +399,8 @@ html, body {
 #contactword{
 	position: absolute;
 	z-index: 3;
-	top: 103%;
-	left: -45%;
+	top: 120%;
+	left: 0%;
 
 	max-height: 3vh;
 	min-height: 3vh;
@@ -410,14 +418,14 @@ html, body {
 }
 
 
-/*=========ICONS=========*/
+/********************ICONS********************/
+.iconContainer{
+	z-index: 1000000;
+	top: -100vw;	
+}
 .icon{
-	max-height: 75vh;
-	min-height: 75vh;
+	height: 75vh;
 	width: auto;
-
-
-
 
 	-webkit-filter: brightness(0.4);
 	filter: brightness(0.4);
@@ -429,10 +437,22 @@ html, body {
 	-ms-transition: .6s -ms-filter linear;
 	-o-transition: .6s -o-filter linear;	
 }
-.clicker:hover ~ .icon{
-	-webkit-filter: brightness(1);
-	filter: brightness(1);
+#newspaperContainer{
+	left: 10vw;
 }
+#suitContainer{
+	left: 30vw;
+}
+#briefcaseContainer{
+	left: 50vw;
+}
+#octocatContainer{
+	left: 72vw;
+}
+#pianoContainer{
+	left: 90vw;
+}
+
 
 /*=====ICON CLICKABLE AREA========*/
 .clicker{
@@ -449,6 +469,10 @@ html, body {
 	top: 60vh;
 	cursor: pointer;
 	cursor: hand;
+}
+.clicker:hover ~ .icon{
+	-webkit-filter: brightness(1);
+	filter: brightness(1);
 }
 #newspaperclicker{
 	/*left: -28%;*/
