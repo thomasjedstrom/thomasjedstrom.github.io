@@ -1,41 +1,36 @@
-#skrollr-body{
+/*=======GLOBAL=========*/
+#desktop, #fullpage{
 	display: none;
 }
-
-/*=======GLOBAL=========*/
 html, body {
 	width:100%;
 	height:100%;
 	padding:0;
-	margin:0;
-	/*overflow: hidden;*/
+	margin:0;	
 }
-.fixed{
-	position: fixed;
-}
+
+/*======= HELPER =========*/
 .centered{
 	-ms-transform: translate(-50%, 0%);
 	-webkit-tranform: translate(-50%, 0%); 
+	-o-transform: translate(-50%, 0%);
+	-moz-transform: translate(-50%, 0%); 
 	transform: translate(-50%, 0%);
 }
 .fullcentered{
 	-ms-transform: translate(-50%, -50%);
 	-webkit-tranform: translate(-50%, -50%); 
+	-o-transform: translate(-50%, -50%);
+	-moz-transform: translate(-50%, -50%); 
 	transform: translate(-50%, -50%);	
 }
 .dim{
+	-ms-filter: brightness(0.6);
 	-webkit-filter: brightness(0.6);
+	-o-filter: brightness(0.6);
+	-moz-filter: brightness(0.6);
 	filter: brightness(0.6);	
 }
-
-/*=======SKROLLR Fixed Positioning=========*/
-.skrollable .skrollable .skrollable {
-	/*
-	 * Third-level (and below) skrollables are positioned static
-	 */
-	position:static;
-}
-
 
 
 
@@ -64,11 +59,12 @@ html, body {
 }
 #landingBanner h1, h2{
 	display: inline-block;
-	font-family: 'Permanent Marker', sans-serif;
+	font-family: 'Anton', sans-serif;
+	letter-spacing: 2px;
 }
 #bannerText{
 	width: 90vw;
-	height: 12em;
+	height: 21em;
 }
 #bannerText h1, h2{
 	margin: 1em;
@@ -76,7 +72,14 @@ html, body {
 #name, #title{
 	margin: 0%;
 }
-
+#name{
+	font-size: 5em;
+	line-height: 1em;
+}
+#title{
+	font-size: 3em;
+	line-height: 1em;
+}
 
 
 /*======= Section Two =========*/
@@ -110,7 +113,7 @@ html, body {
 	border: 3px solid white;
 	font-size: 1.5em;
 	background: rgba(255, 255, 255, 0.5);
-	font-family: 'Archivo Narrow';
+	font-family: 'Average Sans', sans-serif;
 	padding: 1%;
 	position: relative;
 	top: 10vh;
@@ -124,8 +127,9 @@ html, body {
 	cursor: hand;
 }
 .bioHeader{
-	font-family: 'Permanent Marker', sans-serif;
-	font-size: 1.6em;
+	font-family: 'Anton', sans-serif;
+	font-size: 2em;
+	letter-spacing: 3px;
 	text-align: center;
 }
 #marqueeMobile{
@@ -179,6 +183,8 @@ html, body {
 	padding: 0px;
 }
 #contactMe h1{
+	font-family: 'Anton', sans-serif;
+	font-size: 4em;
 	margin: 0px;
 }
 
@@ -250,6 +256,7 @@ html, body {
 	overflow: auto;
 	background-color: rgb(0,0,0);
 	background-color: rgba(0,0,0,0.4);
+	font-family: 'Average Sans', sans-serif;
 }
 
 /* Modal Content/Box */
@@ -258,17 +265,20 @@ html, body {
 	padding: 5vw;
 	border: 1px solid #888;
 	min-width: 300px;
-	max-width: 90vw;
+	width: 90vw;
 	position: fixed;
 	top: 50%;
 	left: 50%;
+	font-size: 3.5em;
 }
 .popup-content h3{
-	text-align: center
+	text-align: center;
+	font-family: 'Anton', sans-serif;
+	font-size: 3.5em;
 }
 .category{
 	display: inline-block;
-	width: 6em;
+	width: 4em;
 	text-align: left;
 }
 
@@ -278,6 +288,7 @@ html, body {
 	float: right;
 	font-size: 28px;
 	font-weight: bold;
+	font-size: 2em;
 }
 
 .close:hover,

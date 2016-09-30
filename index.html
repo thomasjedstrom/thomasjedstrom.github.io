@@ -6,376 +6,181 @@
 	
 	<link rel="icon" type="image/png" href="img/marquee_star/marquee_star.png">
 
-<!--CSS Normalize-->
-	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/4.1.1/normalize.css">
-<!--CSS Google Marker Font -->
-	<link href="https://fonts.googleapis.com/css?family=Permanent+Marker" rel="stylesheet">
-<!--CSS OTHER GOOGLE FONT -->
-	<link href="https://fonts.googleapis.com/css?family=Archivo+Narrow" rel="stylesheet">
+<!--CSS Google Fonts -->
+	<link href="https://fonts.googleapis.com/css?family=Anton|Average+Sans" rel="stylesheet">
+<!-- CSS JQuery FullPage -->
+	<link rel="stylesheet" href="css/jquery.fullPage.css">
 
-<!--CSS Mobile-->
+<!-- CSS Mobile -->
 	<link rel="stylesheet" type="text/css" media="only screen and (max-width: 1024px)" href="css/mobile.css">
-<!--CSS Desktop-->
+<!-- CSS Desktop -->
 	<link rel="stylesheet" type="text/css" media="only screen and (min-width: 1025px)" href="css/desktop.css">
-	
-<!--JS JQuery-->
+
+<!-- JS JQuery -->
 	<script src="https://code.jquery.com/jquery-3.0.0.js" integrity="sha256-jrPLZ+8vDxt2FnE1zvZXCkCcebI/C8Dt5xyaQBjxQIo=" crossorigin="anonymous"></script>
-<!--JS Scroller -->
-	<script src="js/skrollr.min.js"></script>
-<!--JS ScrollTo  -->
-	<script src="js/jquery.scrollTo.min.js"></script>
+<!-- JS JQuery FullPage -->
+	<script src="js/jquery.fullPage.min.js"></script>
 <!--JS My App-->
 	<script src="js/app.js"></script>
 
-	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-
 </head>
 <body>
-<div id="skrollr-body">
-
-	<!-- LOADING PAGE -->
-	
+<!-- ========================== DESKTOP ========================== -->
+<div id="desktop">
+<!-- ================= LOADING PAGE ================= -->
 	<div id="loader-wrapper">
 		<img src="img/marquee_star/marquee_star.png" alt="star" id="loader" class="">
-
 		<div class="loader-section section-left"></div>
-        <div class="loader-section section-right"></div>
-
+		<div class="loader-section section-right"></div>
 	</div>
-
-
-
-	<!-- LANDING -->
-
-	<div id="masthead"
-		data-start="
-			z-index: 9;
-			position: absolute;
-			clip: rect(0vw,100vw,100vh,0vh);
-			background-position: 50% 50%;"
-		data-top-bottom="
-			clip: rect(0vw,100vw,00vh,0vh)
-			background-position: 50% 100%;">
-
-		<div id="mastheadBanner" class="fade-out centered">
-			<div id="textholder">
-				<h1 id="myName">Thomas Edstrom</h1><br>
-				<h2 id="myTitle">full-stack developer</h2>
-			</div>
-
+	<div id="fullpage">
+	<!-- ================= PAGE I ================= -->
+		<div id="firstPage" class="section active">
+				<div id="firstPageBanner" class="fade-out fullcentered">
+					<div id="textholder">
+						<h1 id="myName">THOMAS EDSTROM</h1><br>
+						<h2 id="myTitle">FULL-STACK DEVELOPER</h2>
+					</div>
+				</div>
+				<img src="img/navigation/enter.png" alt="Enter Here" id="enter_here" class="btn centered">
 		</div>
 
-		<img src="img/navigation/enter.png" alt="Enter Here" id="enter_here" class="btn centered">
+	<!-- ================= PAGE II ================= -->
+		<div id="secondPage" class="section">
 
-	</div>
-
-	<!-- STAGE -->
-
-	<div id="curtain">
-
-		<!-- NAVIGATION BUTTON = Back (to landing page) -->
-		<img src="img/navigation/back.png" alt="Back" id="back_to_landing" class="btn centered fixed"
-			data-0p-top-bottom="
-				z-index: 5;
-				top: 1%;"
-			data--20p-top-bottom="
-				top: -20%;"
-			data-anchor-target="#masthead">
+			<!-- NAVIGATION BUTTON = Back (to landing page) -->
+			<img src="img/navigation/back.png" alt="Back" id="back_to_landing" class="btn centered fixed">
 
 
-		<!-- CURTAINS -->
-		<img src="img/curtain/curtain1.jpg" alt="curtain" class="fixed curtain" 
-			data-0p-top-bottom="
-				z-index:4;
-				top:0%;
-				left:0%"
-			data--100p-top-bottom="
-				top:0%;
-				left:-50%"
-			data-anchor-target="#masthead">
-		<img src="img/curtain/curtain2.jpg" alt="curtain" class="fixed curtain" 
-			data-0p-top-bottom="
-				z-index:4;
-				top:0%;
-				left:50%"
-			data--100p-top-bottom="
-				top:0%;
-				left:100%"
-			data-anchor-target="#masthead">
+			<!-- CURTAINS -->
+			<img src="img/curtain/curtain1.jpg" alt="curtain1" class=" curtain fixed" id="curtain1">
+			<img src="img/curtain/curtain2.jpg" alt="curtain2" class="curtain fixed" id="curtain2">
 
 
-		<!-- BIO SECTION -->
-		<div id="bioSection">
-			
-			<img src="img/thomas.jpg" alt="Picture of Thomas" id="self_portrait" class="fixed fullcentered" 
-				data-start="
-					top: 50%;
-					left: -30%;"
-				data-0p-top-bottom="
-					left: 15%"
-				data--100p-top-bottom="
-					left: -30%"
-				data-anchor-target="#masthead">
-
-			<div id="bio" class="fixed  fullcentered" 
-				data-75p-top-bottom="
-					opacity: 0;
-					top: 50%;
-					left: 50%"
-				data-0p-top-bottom="
-					z-index: 4;
-					opacity: 1;"
-				data--75p-top-bottom="
-					opacity: 0;"
-				data--100p-top-bottom="
-					z-index: -1;"
-				data-anchor-target="#masthead">
+			<!-- BIO SECTION -->
+			<div id="bioSection">
 				
-				<h3 class="bioHeader">Specialist in adaptability.</h3>
-				<p>As a <u><b>full-stack developer</b></u>, I have a passion for creating elegant solutions to complex problems, leveraging cutting edge technologies to turn software into an <u><b>experience.</b></u></p>
-				<p>On the rare occassion I'm not behind the computer, I love to read, make music, or talk some philosophy over coffee.</p>
-				<p>I currently reside in Dallas, TX with my family and friends and I'm always looking to create something new.  <span class="sendMeALine">Send me a line</span> and let's make something happen!</p>
+				<div id="myDiv" class="is-animated"></div>
 
 
+				<!-- PORTRAIT -->
+				<img src="img/thomas.jpg" alt="Picture of Thomas" id="self_portrait" class="fixed fullcentered fader">
+
+				<!-- BIO -->
+				<div id="bio" class="fixed fullcentered fader">				
+					<h3 class="bioHeader">SPECIALIST IN ADAPTABILITY.</h3>
+					<p>As a <u><b>full-stack developer</b></u>, I have a passion for creating elegant solutions to complex problems, leveraging cutting edge technologies to turn software into an <u><b>experience.</b></u></p>
+					<p>On the rare occassion I'm not behind the computer, I love to read, make music, or talk philosophy over coffee.</p>
+					<p>I currently reside in Dallas, TX with my family and friends and I'm always looking to create something new.  <span class="sendMeALine">Send me a line</span> and let's make something happen!</p>
+				</div>
+
+				<!-- MARQUEE -->
+				<img src="img/marquee.gif" alt="marquee" class="fixed fullcentered fader" id="marquee">
 			</div>
-
-			<img src="img/marquee.gif" alt="marquee" class="fixed fullcentered" id="marquee" 
-				data-start="
-					top: 50%;
-					left: 150%"
-				data-0p-top-bottom="
-					left: 85%"
-				data--100p-top-bottom="
-					left: 150%"
-				data-anchor-target="#masthead">
-
 
 			<!-- NAVIGATION BUTTON = More -->
-			<img src="img/navigation/more.png" alt="onward ho!" id="to_connections" class="btn centered fixed"
-				data-0p-top-bottom="
-					z-index: 5;
-					top: 80%;"
-				data--20p-top-bottom="
-					top: 120%;"
-				data-anchor-target="#masthead">
-
+			<img src="img/navigation/more.png" alt="onward ho!" id="to_connections" class="btn centered fixed">
 		</div>
 
-		<!-- NAVIGATION BUTTON = Back -->
-		<img src="img/navigation/bio.png" alt="back go bio" id="back_to_bio" class="btn centered fixed"
-				data--80p-top-bottom="
-					z-index: 5;
-					top: -20%;"
-				data--100p-top-bottom="
-					top: 1%;"
-				data-anchor-target="#masthead">
+	<!-- ================= PAGE III ================= -->
+		<div id="thirdpage" class="section">
 
+			<!-- NAVIGATION BUTTON = Back -->
+			<img src="img/navigation/bio.png" alt="back go bio" id="back_to_bio" class="btn centered fixed">
 
-		<!-- TWINKLE STARS -->
-		<div class="fixed stars"></div>
-		<div class="fixed twinkling"></div>
+			<!-- ======= BG HANGING STARS -->
+			<div id="bgHanging">
+			<!-- STAR 1 -->
+				<img src="img/stars/star_3.png" alt="star 1" class="dim bg-star fullcentered fixed" id="starA">
+			<!-- STAR 2 -->
+				<img src="img/stars/star_2.png" alt="star 1" class="dim bg-star fullcentered fixed" id="starB">
+			<!-- STAR 3 -->
+				<img src="img/stars/star_1.png" alt="star 1" class="dim bg-star fullcentered fixed" id="starC">
+			<!-- STAR 4 -->
+				<img src="img/stars/star_4.png" alt="star 1" class="dim bg-star fullcentered fixed" id="starD">
+			<!-- STAR 5 -->
+				<img src="img/stars/star_5.png" alt="star 1" class="dim bg-star fullcentered fixed" id="starE">
 
-
-
-		<!-- HANGING STARS -->
-		<div>
-		<!-- STAR 1 -->
-			<img src="img/stars/star_3.png" alt="star 1" class="fixed dim hanging-star" id="starA" 
-				data-50p-top-bottom="
-					z-index:1;
-					top: -350%;
-					left: 2%"
-				data--100p-top-bottom="
-					top: -15%;"
-				data-anchor-target="#masthead">
-
-		<!-- STAR 2 -->
-			<img src="img/stars/star_2.png" alt="star 1" class="fixed dim hanging-star" id="starB"
-				data-50p-top-bottom="
-					z-index:1;
-					top: -400%;
-					left: 18%"
-				data--100p-top-bottom="
-					top: -20%;"
-				data-anchor-target="#masthead">
-
-		<!-- STAR 3 -->
-			<img src="img/stars/star_1.png" alt="star 1" class="fixed dim hanging-star" id="starC"
-				data-50p-top-bottom="
-					z-index:1;
-					top: -350%;
-					left: 35%"
-				data--100p-top-bottom="
-					top: -25%;"
-				data-anchor-target="#masthead">
-
-		<!-- STAR 4 -->
-			<img src="img/stars/star_4.png" alt="star 1" class="fixed dim hanging-star" id="starD" 
-				data-50p-top-bottom="
-					z-index:1;
-					top: -350%;
-					left: 59%"
-				data--100p-top-bottom="
-					top: -25%;"
-				data-anchor-target="#masthead">
-
-		<!-- STAR 5 -->
-			<img src="img/stars/star_5.png" alt="star 1" class="fixed dim hanging-star" id="starE"
-				data-50p-top-bottom="
-					z-index:1;
-					top: -300%;
-					left: 78%"
-				data--100p-top-bottom="
-					top: -20%;"
-				data-anchor-target="#masthead">
-
-
-		<!-- =============CONTACT================== -->
-
-
-		<!-- DONUT - CONTACT -->
-			<div class="fixed" id="donutcontainer" 
-				data-50p-top-bottom="
-					z-index:2;
-					top: -450%;
-					left: 92%"
-				data--100p-top-bottom="
-					top: -10%;"
-				data-anchor-target="#masthead">
-				<img src="img/icons/donut.png" alt="contact menu" class="dim" id="donut">	
-
-				<img src="img/words/contact.png" alt="contact" class="dim" id="contactword">
+			<!-- CONTACT -->
+				<div class="bg-star fixed" id="burgercontainer">
+					<img src="img/stars/burger.png" alt="contact menu" class="dim" id="burger">	
+					<img src="img/words/contact.png" alt="contact" class="dim" id="contactword">
+				</div>
 			</div>
 
 
-		<!-- ================ICONS================ -->
-
-
-		<!-- Newspaper -->
-			<div class="fixed" 
-				data-50p-top-bottom="
-					z-index:1;
-					top: -150%;
-					left: 10%;
-					-ms-transform: translate(-50%, 0%);
-					-webkit-tranform: translate(-50%, 0%); 
-					transform: translate(-50%, 0%);"
-				data--75p-top-bottom="
-					top: -18%;"
-				data-anchor-target="#masthead">
-
-				<a href="http://www.thomaswrotethis.com/" id="newspaperclicker" class="clicker" target="_blank" style="target-new: tab;"></a>
-
-				<img src="img/icons/newspaper.png" alt="newspaper" class="icon" id="newspaper">	
-				<img src="img/words/blog.png" alt="blog" class="words" id="blogword">
+			<!-- ================ICONS================ -->
+			<div id="icons">
+			<!-- Newspaper -->
+				<div id="newspaperContainer" class="fixed iconContainer centered">
+					<!-- Clickable -->
+					<a href="http://www.thomaswrotethis.com/" id="newspaperclicker" class="clicker" target="_blank" style="target-new: tab;"></a>
+					<!-- Icon -->
+					<img src="img/icons/newspaper.png" alt="newspaper" class="icon" id="newspaper">	
+					<!-- Word -->
+					<img src="img/words/blog.png" alt="blog" class="words" id="blogword">
+				</div>
+				<!-- Shadow -->
+				<div class="shadow centered" id="newspapershadow"></div>
 				
+			<!-- Suit -->
+				<div id="suitContainer" class="fixed iconContainer centered">
+					<!-- Clickable -->
+					<a href="http://www.linkedin.com/in/thomasjedstrom" id="suitclicker" class="clicker" target="_blank" style="target-new: tab;"></a>
+					<!-- Icon -->
+					<img src="img/icons/suit.png" alt="suit" class="icon" id="suit">
+					<!-- Word -->
+					<img src="img/words/linkedin.png" alt="linkedin" class="words" id="linkedinword">
+				</div>
+				<!-- Shadow -->
+				<div class="shadow centered" id="suitshadow"></div>
+
+			<!-- Briefcase / Portfolio -->
+				<div id="briefcaseContainer" class="fixed iconContainer centered">
+					<!-- Clickable -->
+					<div id="briefcaseclicker" class="clicker"></div>
+					<!-- Icon -->
+					<img src="img/icons/briefcase.png" alt="briefcase" class="icon" id="briefcase">
+					<!-- Word -->
+					<img src="img/words/portfolio.png" alt="portfolio" class="words" id="portfolioword">
+				</div>
+				<!-- Shadow -->
+				<div class="shadow centered" id="briefcaseshadow"></div>
+
+			<!-- Octocat -->
+				<div id="octocatContainer" class="fixed iconContainer centered">
+					<!-- Clickable -->
+					<a href="http://www.github.com/thomasjedstrom" id="octocatclicker" class="clicker" target="_blank" style="target-new: tab;"></a>
+					<!-- Icon -->
+					<img src="img/icons/octocat.png" alt="star 1" class="icon" id="octocat">
+					<!-- Word -->
+					<img src="img/words/github.png" alt="music" class="words" id="githubword">
+				</div>
+				<!-- Shadow -->
+				<div class="shadow centered" id="octocatshadow"></div>
+
+			<!-- PIANO -->
+				<div id="pianoContainer" class="fixed iconContainer centered">
+					<!-- Clickable -->
+					<div id="pianoclicker" class="clicker"></div>
+					<!-- Icon -->
+					<img src="img/icons/piano.png" alt="star 1" class="icon" id="piano">
+					<!-- Word -->
+					<img src="img/words/music.png" alt="music" class="words" id="musicword">
+				</div>
+				<!-- Shadow -->
+				<div class="shadow centered" id="pianoshadow"></div>
 			</div>
 
-			<div class="shadow centered" id="newspapershadow"></div>
-			
 
-
-		<!-- Suit -->
-			<div class="fixed"
-				data-50p-top-bottom="
-					z-index:1;
-					top: -150%;
-					left: 30%;
-					-ms-transform: translate(-50%, 0%);
-					-webkit-tranform: translate(-50%, 0%); 
-					transform: translate(-50%, 0%);"
-				data--75p-top-bottom="
-					top: -18%;"
-				data-anchor-target="#masthead">
-
-				<a href="http://www.linkedin.com/in/thomasjedstrom" id="suitclicker" class="clicker" target="_blank" style="target-new: tab;"></a>
-
-				<img src="img/icons/suit.png" alt="suit" class="icon" id="suit">
-				<img src="img/words/linkedin.png" alt="linkedin" class="words" id="linkedinword">
-				
-			</div>
-
-			<div class="shadow centered" id="suitshadow"></div>
-			
-
-
-		<!-- Briefcase / Portfolio -->
-			<div class="fixed"
-				data-50p-top-bottom="
-					z-index:1;
-					top: -150%;
-					left: 50%;
-					-ms-transform: translate(-50%, 0%);
-					-webkit-tranform: translate(-50%, 0%); 
-					transform: translate(-50%, 0%);"
-				data--75p-top-bottom="
-					top: -18%;"
-				data-anchor-target="#masthead">
-				
-				<!-- <a href="/" id="briefcaseclicker" class="clicker" target="_blank" style="target-new: tab;"></a> -->
-				<div id="briefcaseclicker" class="clicker"></div>
-
-				<img src="img/icons/briefcase.png" alt="briefcase" class="icon" id="briefcase">
-				<img src="img/words/portfolio.png" alt="portfolio" class="words" id="portfolioword">
-
-			</div>
-
-			<div class="shadow centered" id="briefcaseshadow"></div>
-
-			
-
-		<!-- Octocat -->
-			<div class="fixed"
-				data-50p-top-bottom="
-					z-index:1;
-					top: -150%;
-					left: 72%;
-					-ms-transform: translate(-50%, 0%);
-					-webkit-tranform: translate(-50%, 0%); 
-					transform: translate(-50%, 0%);"
-				data--75p-top-bottom="
-					top: -18%;"
-				data-anchor-target="#masthead">
-
-				<a href="http://www.github.com/thomasjedstrom" id="octocatclicker" class="clicker" target="_blank" style="target-new: tab;"></a>
-
-				<img src="img/icons/octocat.png" alt="star 1" class="icon" id="octocat">
-				<img src="img/words/github.png" alt="music" class="words" id="githubword">
-
-			</div>
-
-			<div class="shadow centered" id="octocatshadow"></div>
-			
-
-		<!-- PIANO -->
-			<div class="fixed"
-				data-50p-top-bottom="
-					z-index:1;
-					top: -150%;
-					left: 90%;
-					-ms-transform: translate(-50%, 0%);
-					-webkit-tranform: translate(-50%, 0%); 
-					transform: translate(-50%, 0%);"
-				data--75p-top-bottom="
-					top: -18%;"
-				data-anchor-target="#masthead">
-
-				<!-- <a href="/" id="pianoclicker" class="clicker" target="_blank" style="target-new: tab;"></a> -->
-				<div id="pianoclicker" class="clicker"></div>
-
-				<img src="img/icons/piano.png" alt="star 1" class="icon" id="piano">
-				<img src="img/words/music.png" alt="music" class="words" id="musicword">
-
-			</div>
-			<div class="shadow centered" id="pianoshadow"></div>
-			
-
+			<!-- TWINKLE STARS -->
+			<div class="fixed stars"></div>
+			<div class="fixed twinkling"></div>
 
 		</div>
 	</div>
 
-
-  <!-- POP UPS -->
+  <!-- ================= DESKTOP POPUPS ================= -->
   <!-- Contact -->
 	<div id="contact-box" class="popup">
 		<div id="contact-content" class="popup-content fullcentered">
@@ -401,45 +206,39 @@
 			<h3>Music page coming soon!</h3>
 		</div>
 	</div>
-
-
 </div>
 
-<!-- ============================  MOBILE  ======================================= -->
 
 
+
+
+
+
+
+<!-- ========================== MOBILE ========================== -->
 <div id="mobile">
-
-
-	<!-- LANDING -->
-
+	<!-- ================= LANDING ================= -->
 	<div id="landing"">
-
 		<div id="landingBanner" class="fade-out centered">
 			<div id="bannerText">
-				<h1 id="name">Thomas Edstrom</h1><br>
-				<h2 id="title">full-stack developer</h2>
+				<h1 id="name">THOMAS EDSTROM</h1><br>
+				<h2 id="title">FULL-STACK DEVELOPER</h2>
 			</div>
-
 		</div>
-
 	</div>
 
 
-	<!-- SECTION TWO -->
+	<!-- ================= SECTION II ================= -->
 
 	<div id="sectionTwo">
 
 		<img src="img/thomas.jpg" alt="Thomas" id="thomasImage" class="centered">
 		
 		<div id="bioMobile" class="fixed centered"">
-			
-			<h3 class="bioHeader">Specialist in adaptability.</h3>
+			<h3 class="bioHeader">SPECIALIST IN ADAPTABILITY</h3>
 			<p>As a <u><b>full-stack developer</b></u>, I have a passion for creating elegant solutions to complex problems, leveraging cutting edge technologies to turn software into an <u><b>experience.</b></u></p>
 			<p>On the rare occassion I'm not behind the computer, I love to read, make music, or talk some philosophy over coffee.</p>
 			<p>I currently reside in Dallas, TX with my family and friends and I'm always looking to create something new.  <span class="sendMeALine">Send me a line</span> and let's make something happen!</p>
-
-
 		</div>
 
 		<img src="img/marquee.gif" alt="marquee" class="centered" id="marqueeMobile">
@@ -447,7 +246,7 @@
 	</div>
 
 
-	<!-- SECTION THREE -->
+	<!-- ================= SECTION III ================= -->
 
 	<div id="sectionThree">
 		
@@ -455,8 +254,7 @@
 		<div class="stars"></div>
 		<div class="twinkling"></div>
 
-
-		<!-- LINKS -->
+		<!-- ============ LINKS ============ -->
 
 		<!-- Blog -->
 		<a href="http://www.thomaswrotethis.com/" id="blogLink" class="clicker" target="_blank" style="target-new: tab;">
@@ -490,10 +288,7 @@
 
 	</div>
 
-
-
-
- <!-- POP UPS -->
+ <!-- ================= MOBILE POPUPS ================= -->
 	
 	<!-- Portfolio -->
 	<div id="portfolio-boxMobile" class="popup">
@@ -520,10 +315,6 @@
 			<span class="category"><b>email:</b></span><span>thomasjedstrom@gmail.com</span><br>
 		</div>
 	</div>
-
-
-
-
 
 </div>
 

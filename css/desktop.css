@@ -57,10 +57,6 @@ html, body {
 	cursor: pointer;
 	cursor: hand;
 }
-#enter_here{
-	position: absolute;
-	top: 80%;
-}
 
 /*=====================LOADING PAGE=======================*/
 #loader-wrapper {
@@ -194,7 +190,8 @@ html, body {
 }
 #firstPageBanner h1, h2{
 	display: inline-block;
-	font-family: 'Permanent Marker', sans-serif;
+	font-family: 'Anton', sans-serif;
+	letter-spacing: 3px;
 }
 #textholder{
 	z-index: 31;
@@ -207,8 +204,10 @@ html, body {
 #myName, #myTitle{
 	margin: 0%;
 }
-
-
+#enter_here{
+	position: absolute;
+	top: 84%;
+}
 
 
 
@@ -225,15 +224,14 @@ html, body {
 
 
 /*===================== PAGE II =====================*/
-#sectionII{
+#pageII{
 	width: 100vw;
 	height: 100vh;
-	background: black url('../img/floor/woodfloor.jpg');
-	background-position: 0% 100%;
-	background-repeat: no-repeat;
-	background-attachment: fixed;
-	background-size: 100vw 25vh;
 	z-index: 20;
+}
+#back_to_landing{
+	z-index: 22;
+	top: 1%;
 }
 /*============= Curtain =============*/
 .curtain{
@@ -255,14 +253,15 @@ html, body {
 	top: 50%;
 	left: 50%;
 	width: 30vw;
-	border: 3px solid white;
+	border: 15px groove white;
 	font-size: 1.5em;
 	background: rgba(255, 255, 255, 0.5);
-	font-family: 'Archivo Narrow';
+	font-family: 'Average Sans', sans-serif;
 	padding: 1%;
 }
 .bioHeader{
-	font-family: 'Permanent Marker', sans-serif;
+	font-family: 'Anton', sans-serif;
+	letter-spacing: 2px;
 	font-size: 1.6em;
 	text-align: center;
 }
@@ -286,7 +285,10 @@ html, body {
 	height: auto;
 	width: 27vw;
 }
-
+#to_connections{
+	z-index: 22;
+	top: 84%;
+}
 
 
 
@@ -304,7 +306,10 @@ html, body {
 	z-index: 10;
 	background: #000 url('../img/floor/woodfloor.jpg') no-repeat fixed bottom;
 	background-size: 100vw 10vh;
-
+}
+#back_to_bio{
+	z-index: 14;
+	top: -29%;
 }
 /**************** HANGIN STARS ********************/
 @-moz-keyframes swing{
@@ -399,7 +404,7 @@ html, body {
 #contactword{
 	position: absolute;
 	z-index: 3;
-	top: 120%;
+	top: 460px;
 	left: 0%;
 
 	max-height: 3vh;
@@ -420,7 +425,7 @@ html, body {
 
 /********************ICONS********************/
 .iconContainer{
-	z-index: 1000000;
+	z-index: 11;
 	top: -145vh;	
 }
 .icon{
@@ -461,7 +466,7 @@ html, body {
 	min-height: 30%;
 	max-height: 30%;
 
-	z-index: 20;
+	z-index: 19;
 	display: inline-block;
 	border-radius: 10%;
 
@@ -493,7 +498,7 @@ html, body {
 /*======WORDS========*/
 .words{
 	position: absolute;
-	z-index: 3;
+	z-index: 11;
 	top: 103%;
 	left: -45%;
 
@@ -534,12 +539,12 @@ html, body {
 
 /*========SHADOWS========*/
 .shadow{
+	z-index: 12;
 	position: fixed;
 	width: 17vw;
 	height: 5vh;
 	border-radius: 100%;
 	background: rgba(255,255,255,.4);
-	z-index: 2;
 	display: none;
 	top: 95vh;
 
@@ -622,7 +627,7 @@ html, body {
 .popup {
 	display: none;
 	position: fixed;
-	z-index: 20;
+	z-index: 9999;
 	left: 0;
 	top: 0;
 	width: 100%;
@@ -643,16 +648,19 @@ html, body {
 	left: 50%;
 }
 .popup-content h3{
-	text-align: center
+	text-align: center;
+	font-family: 'Anton', sans-serif;
 }
 .category{
 	display: inline-block;
 	width: 3.5em;
 	text-align: left;
+	font-family: 'Average Sans', sans-serif;
 }
 #contact-content{
 	width: 30%;
 	font-size: 1.3em;
+	font-family: 'Average Sans', sans-serif;
 }
 
 

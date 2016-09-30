@@ -7,133 +7,110 @@ $(function () {
 	var mq = window.matchMedia( "(min-width: 1025px)" );
 
 	if (mq.matches){
-
 		$(window).resize(function(){
 			location.reload();
-		});		
+		});	
 
-		// BUTTONS TO SCROLL
+		// ANIMATIONS
+		// variables
+		var $curtainL	= $('#curtain1'),
+			$curtainR	= $('#curtain2'),
+			$fader 		= $('.fader'),
+			$bgHanging	= $('.bg-star'),
+			$icon 		= $('.iconContainer'),
+			$enter		= $('#enter_here'),
+			$btl		= $('#back_to_landing'),
+			$more		= $('#to_connections'),
+			$btb		= $('#back_to_bio');
 
-		// $('#enter_here')		.click(()=>{$(window).scrollTo('50%', 1300)});	
-		// $('#back_to_landing')	.click(()=>{$(window).scrollTo('0%', 1300)});	
-		// $('#to_connections')	.click(()=>{$(window).scrollTo('100%', 1300)});	
-		// $('#to_connections')	.click(()=>{$(window).scrollTo('100%', 1300)});
-		// $('#back_to_bio')		.click(()=>{$(window).scrollTo('50%', 1300)});			
+		// initialize fullPage
+		$('#fullpage').fullpage({
 
-		// // SKROLLR initialization
+			// navigation: true,
+			// anchors: ['firstPage, secondPage, thirdPage'],
+			scrollBar: true,
+			css3:false,
+			onLeave: function(index, nextIndex, direction) {
+				// page2 - page3
+				if( index == 2 && nextIndex == 3 ) {
+					$curtainL.animate({'left': "-=50vw"}, "slow").addClass('animated');
+					$curtainR.animate({'left': "+=50vw"}, "slow").addClass('animated');
+					$fader.fadeOut('slow');
+					$bgHanging.animate({'top': "+=50vh"}, "slow").addClass('animated');
+					$icon.animate({'top': "+=127vh"}, 1200).addClass('animated');
+					$btl.animate({'top': "-=30vh"}, "slow").addClass('animated');
+					$more.animate({'top': "+=30vh"}, "slow").addClass('animated');
+					$btb.animate({'top': "+=30vh"}, "slow").addClass('animated');
 
-		// var s = skrollr.init({
-		// 	render: function(data) {
-		// 		//Debugging - Log the current scroll position.
-		// 		console.log(data.curTop);
-		// 	}
-		// });	
+
+				// Page 3 - Page 2
+				}else if( index == 3 && direction == 'up') {
+					if($curtainL.hasClass('animated')){
+						$curtainL.animate({'left': "+=50vw"}, "slow");	
+					}
+					if($curtainL.hasClass('animated')){
+						$curtainR.animate({'left': "-=50vw"}, "slow");
+					}
+					$fader.fadeIn('slow');
+					if($bgHanging.hasClass('animated')){
+						$bgHanging.animate({'top': "-=50vh"}, "slow");
+					}
+					if($icon.hasClass('animated')){
+						$icon.animate({'top': "-=127vh"}, 800);
+					}
+					if($btl.hasClass('animated')){
+						$btl.animate({'top': "+=30vh"}, "slow");
+					}
+					if($more.hasClass('animated')){
+						$more.animate({'top': "-=30vh"}, "slow");
+					}
+					if($btb.hasClass('animated')){
+						$btb.animate({'top': "-=30vh"}, "slow");
+					}
+				}
+			}
+		});
+
+		$enter.click(function(e){
+			e.preventDefault();
+			$.fn.fullpage.moveSectionDown();
+		});
+		$btl.click(function(e){
+			e.preventDefault();
+			$.fn.fullpage.moveSectionUp();
+		});
+		$more.click(function(e){
+			e.preventDefault();
+			$.fn.fullpage.moveSectionDown();
+		});
+		$btb.click(function(e){
+			e.preventDefault();
+			$.fn.fullpage.moveSectionUp();
+		});
+
+
+		// LOADING PAGE
+		setTimeout(function(){
+			$('body').addClass('loaded');
+		}, 1000);
+
+		// firstPage fade in effects
+
+		$('#firstPageBanner')	.fadeIn(2000).css("display", "inline-block");
+		$('#myName')			.css('display', 'inline-block').hide().delay(1500).fadeIn(3000);
+		$('#myTitle')			.css('display', 'inline-block').hide().delay(2500).fadeIn(3000);
+
+		// firstPage fade out effects
+
+		$(window).scroll(function(){
+			$(".fade-out")		.css("opacity", 2 - $(window).scrollTop() / 250);
+		});
+
+
+
+			
 	}
 
-
-
-
-
-
-
-
-
-
-
-
-	// ANIMATIONS
-
-
-
-
-	// variables
-	var $isAnimatedSecond = $('.is-animated'),
-		$isAnimatedSecondSingle = $('.second .is-animated__single');
-
-	var $curtainL	= $('#curtain1'),
-		$curtainR	= $('#curtain2'),
-		$fader 		= $('.fader'),
-		$bgHanging	= $('.bg-star'),
-		$icon 		= $('.iconContainer');
-		
-
-	// initialize fullPage
-	$('#fullpage').fullpage({
-
-		// navigation: true,
-		css3:false,
-		onLeave: function(index, nextIndex, direction) {
-			// page2 - page3
-			if( index == 2 && nextIndex == 3 ) {
-				$curtainL.animate({'left': "-=50vw"}, "slow");
-				$curtainR.animate({'left': "+=50vw"}, "slow");
-				$fader.fadeOut('slow');
-				$bgHanging.animate({'top': "+=50vh"}, "slow");
-				$icon.animate({'top': "+=132vh"}, 1200);
-
-			// Page 3 - Page 2
-			}else if( index == 3 && direction == 'up') {
-				$curtainL.animate({'left': "+=50vw"}, "slow");
-				$curtainR.animate({'left': "-=50vw"}, "slow");
-				$fader.fadeIn('slow');
-				$bgHanging.animate({'top': "-=50vh"}, "slow");
-				$icon.animate({'top': "-=132vh"}, 800);
-			}
-
-			// second animation
-			// else if( ( index == 1 || index == 2 ) && nextIndex == 3 ) {
-			// 	$isAnimatedThird.eq(0).addClass('animated fadeInRightBig').css('animation-delay', '.3s'); 
-			// 	$isAnimatedThird.eq(1).addClass('animated fadeInLeftBig').css('animation-delay', '.6s');
-			// 	$isAnimatedThirdSingle.addClass('animated bounceInDown').css('animation-delay', '1.2s');
-			// }
-
-			// third animation
-			// else if( ( index == 1 || index == 2 || index == 3 ) && nextIndex == 4 ) {
-			// 	$isAnimatedFourth.addClass('animated zoomIn').css('animation-delay', '.6s');
-			// 	$isAnimatedFourthSingle.addClass('animated lightSpeedIn').css('animation-delay', '1.2s');
-			// 	$isAnimatedFourthSingle.one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function() {
-			// 		$(this).removeClass('lightSpeedIn').addClass('zoomOutDown');
-				// $isAnimatedSecond.addClass('animated fadeInUpBig'); 
-				// $isAnimatedSecond.eq(0).css('animation-delay', '.3s');
-				// $isAnimatedSecond.eq(1).css('animation-delay', '.6s');
-				// $isAnimatedSecond.eq(2).css('animation-delay', '.9s');
-				// $isAnimatedSecondSingle.addClass('animated rollIn').css('animation-delay', '1.7s');
-
-			// 	});
-			// }
-		}
-
-	});
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-	// LOADING PAGE
-	setTimeout(function(){
-		$('body').addClass('loaded');
-	}, 1000);
-
-	// firstPage fade in effects
-
-	$('#firstPageBanner')	.fadeIn(2000).css("display", "inline-block");
-	$('#myName')			.css('display', 'inline-block').hide().delay(1500).fadeIn(3000);
-	$('#myTitle')			.css('display', 'inline-block').hide().delay(2500).fadeIn(3000);
-
-	// firstPage fade out effects
-
-	$(window).scroll(function(){
-		$(".fade-out")		.css("opacity", 2 - $(window).scrollTop() / 250);
-	});
 
 
 
