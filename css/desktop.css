@@ -1,4 +1,4 @@
-/*=======GLOBAL=========*/
+/*======= GLOBAL =========*/
 #mobile{
 	display: none;
 }
@@ -6,135 +6,34 @@ html, body {
 	width:100%;
 	height:100%;
 	padding:0;
-	margin:0;
-	overflow:hidden;
+	margin:0;	
 }
+
+/*======= HELPER =========*/
 .fixed{
 	position: fixed;
 }
 .centered{
 	-ms-transform: translate(-50%, 0%);
 	-webkit-tranform: translate(-50%, 0%); 
+	-o-transform: translate(-50%, 0%);
+	-moz-transform: translate(-50%, 0%); 
 	transform: translate(-50%, 0%);
 }
 .fullcentered{
 	-ms-transform: translate(-50%, -50%);
 	-webkit-tranform: translate(-50%, -50%); 
+	-o-transform: translate(-50%, -50%);
+	-moz-transform: translate(-50%, -50%); 
 	transform: translate(-50%, -50%);	
 }
 .dim{
+	-ms-filter: brightness(0.6);
 	-webkit-filter: brightness(0.6);
+	-o-filter: brightness(0.6);
+	-moz-filter: brightness(0.6);
 	filter: brightness(0.6);	
 }
-
-/*=======SKROLLR Fixed Positioning=========*/
-.skrollable .skrollable .skrollable {
-	/*
-	 * Third-level (and below) skrollables are positioned static
-	 */
-	position:static;
-}
-
-
-/*=======LOADING PAGE=========*/
-#loader-wrapper {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 1000;
-}
-#loader {
-    display: block;
-    position: absolute;
-    left: 45%;
-    top: 45%;
-    width: 10vw;
-    height: auto;
-
-    -webkit-animation: spin 2s linear infinite; /* Chrome, Opera 15+, Safari 5+ */
-    animation: spin 2s linear infinite; /* Chrome, Firefox 16+, IE 10+, Opera */
-
-    z-index: 1001;
-}
-
-    @-webkit-keyframes spin {
-        0%   { 
-            -webkit-transform: rotate(0deg);  /* Chrome, Opera 15+, Safari 3.1+ */
-            -ms-transform: rotate(0deg);  /* IE 9 */
-            transform: rotate(0deg);  /* Firefox 16+, IE 10+, Opera */
-        }
-        100% {
-            -webkit-transform: rotate(360deg);  /* Chrome, Opera 15+, Safari 3.1+ */
-            -ms-transform: rotate(360deg);  /* IE 9 */
-            transform: rotate(360deg);  /* Firefox 16+, IE 10+, Opera */
-        }
-    }
-    @keyframes spin {
-        0%   { 
-            -webkit-transform: rotate(0deg);  /* Chrome, Opera 15+, Safari 3.1+ */
-            -ms-transform: rotate(0deg);  /* IE 9 */
-            transform: rotate(0deg);  /* Firefox 16+, IE 10+, Opera */
-        }
-        100% {
-            -webkit-transform: rotate(360deg);  /* Chrome, Opera 15+, Safari 3.1+ */
-            -ms-transform: rotate(360deg);  /* IE 9 */
-            transform: rotate(360deg);  /* Firefox 16+, IE 10+, Opera */
-        }
-    }
-
-    #loader-wrapper .loader-section {
-        position: fixed;
-        top: 0;
-        width: 51%;
-        height: 100%;
-        background: #000;
-        z-index: 1000;
-        -webkit-transform: translateX(0);  /* Chrome, Opera 15+, Safari 3.1+ */
-        -ms-transform: translateX(0);  /* IE 9 */
-        transform: translateX(0);  /* Firefox 16+, IE 10+, Opera */
-    }
-
-    #loader-wrapper .loader-section.section-left {
-        left: 0;
-    }
-
-    #loader-wrapper .loader-section.section-right {
-        right: 0;
-    }
-
-    /* Loaded */
-    .loaded #loader-wrapper .loader-section.section-left {
-        -webkit-transform: translateX(-100%);  /* Chrome, Opera 15+, Safari 3.1+ */
-            -ms-transform: translateX(-100%);  /* IE 9 */
-                transform: translateX(-100%);  /* Firefox 16+, IE 10+, Opera */
-        -webkit-transition: all 0.7s 0.3s cubic-bezier(0.645, 0.045, 0.355, 1.000);  
-                transition: all 0.7s 0.3s cubic-bezier(0.645, 0.045, 0.355, 1.000);
-    }
-
-    .loaded #loader-wrapper .loader-section.section-right {
-        -webkit-transform: translateX(100%);  /* Chrome, Opera 15+, Safari 3.1+ */
-            -ms-transform: translateX(100%);  /* IE 9 */
-                transform: translateX(100%);  /* Firefox 16+, IE 10+, Opera */
-		-webkit-transition: all 0.7s 0.3s cubic-bezier(0.645, 0.045, 0.355, 1.000);  
-		        transition: all 0.7s 0.3s cubic-bezier(0.645, 0.045, 0.355, 1.000);
-    }
-    
-    .loaded #loader {
-        opacity: 0;
-        -webkit-transition: all 0.3s ease-out;  
-                transition: all 0.3s ease-out;
-    }
-    .loaded #loader-wrapper {
-        visibility: hidden;
-        -webkit-transform: translateY(-100%);  /* Chrome, Opera 15+, Safari 3.1+ */
-            -ms-transform: translateY(-100%);  /* IE 9 */
-                transform: translateY(-100%);  /* Firefox 16+, IE 10+, Opera */
-        -webkit-transition: all 0.3s 1s ease-out;  
-                transition: all 0.3s 1s ease-out;
-    }
-
 
 /*=======NAVIGATION BUTTONS=========*/
 .btn{
@@ -163,38 +62,142 @@ html, body {
 	top: 80%;
 }
 
+/*=====================LOADING PAGE=======================*/
+#loader-wrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1000;
+}
+#loader {
+    display: block;
+    position: absolute;
+    left: 45%;
+    top: 45%;
+    width: 10vw;
+    height: auto;
 
-/*=======LANDING=========*/
-#masthead{
-	z-index: 10;
+    -webkit-animation: spin 2s linear infinite;
+    animation: spin 2s linear infinite;
+
+    z-index: 1001;
+}
+
+    @-webkit-keyframes spin {
+        0%   { 
+            -webkit-transform: rotate(0deg);
+            -ms-transform: rotate(0deg);
+            transform: rotate(0deg);
+        }
+        100% {
+            -webkit-transform: rotate(360deg)
+            -ms-transform: rotate(360deg);
+            transform: rotate(360deg);
+        }
+    }
+    @keyframes spin {
+        0%   { 
+            -webkit-transform: rotate(0deg);
+            -ms-transform: rotate(0deg);
+            transform: rotate(0deg);
+        }
+        100% {
+            -webkit-transform: rotate(360deg);
+            -ms-transform: rotate(360deg);
+            transform: rotate(360deg);
+        }
+    }
+
+    #loader-wrapper .loader-section {
+        position: fixed;
+        top: 0;
+        width: 51%;
+        height: 100%;
+        background: #000;
+        z-index: 1000;
+        -webkit-transform: translateX(0);
+        -ms-transform: translateX(0);
+        transform: translateX(0);
+    }
+
+    #loader-wrapper .loader-section.section-left {
+        left: 0;
+    }
+
+    #loader-wrapper .loader-section.section-right {
+        right: 0;
+    }
+
+    /* Loaded */
+    .loaded #loader-wrapper .loader-section.section-left {
+        -webkit-transform: translateX(-100%);
+            -ms-transform: translateX(-100%);
+                transform: translateX(-100%);
+        -webkit-transition: all 0.7s 0.3s cubic-bezier(0.645, 0.045, 0.355, 1.000);  
+                transition: all 0.7s 0.3s cubic-bezier(0.645, 0.045, 0.355, 1.000);
+    }
+
+    .loaded #loader-wrapper .loader-section.section-right {
+        -webkit-transform: translateX(100%);
+            -ms-transform: translateX(100%);
+                transform: translateX(100%);
+		-webkit-transition: all 0.7s 0.3s cubic-bezier(0.645, 0.045, 0.355, 1.000);  
+		        transition: all 0.7s 0.3s cubic-bezier(0.645, 0.045, 0.355, 1.000);
+    }
+    
+    .loaded #loader {
+        opacity: 0;
+        -webkit-transition: all 0.3s ease-out;  
+                transition: all 0.3s ease-out;
+    }
+    .loaded #loader-wrapper {
+        visibility: hidden;
+        -webkit-transform: translateY(-100%);
+            -ms-transform: translateY(-100%);
+                transform: translateY(-100%);
+        -webkit-transition: all 0.3s 1s ease-out;  
+                transition: all 0.3s 1s ease-out;
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+/*===================== PAGE I =======================*/
+#firstPage{
+	z-index: 30;
+	background-image: url('../img/masthead_background.jpg');
+	background-size: cover;
+	background-attachment: fixed;
 	width: 100vw;
 	height: 100vh;
-	background-image:url('../img/masthead_background.jpg');
-	background-position: center;
-	background-repeat: no-repeat;
-	background-attachment: fixed;
-	background-size: cover;
-	z-index: 6;
 }
-#mastheadBanner{
+#firstPageBanner{
 	display: none;
 	position: relative;
-	
-	top: 30%;
+	top: 0%;
 	left: 50%;
-
 	background: rgba(255, 255, 255, 0.5);
 	padding: 10px;
 	border-radius: 5px;
 	box-shadow: 0px 0px 100px black;
 	text-align: center;
-	z-index: 10;
 }
-#mastheadBanner h1, h2{
+#firstPageBanner h1, h2{
 	display: inline-block;
 	font-family: 'Permanent Marker', sans-serif;
 }
 #textholder{
+	z-index: 31;
 	width: 30em;
 	height: 12em;
 }
@@ -206,19 +209,55 @@ html, body {
 }
 
 
-/*=======BIO SECTION=========*/
-#self_portrait{
-	height: 40vh;
-	width: auto;
-	z-index: 4;
-	border-radius: 30%;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*===================== PAGE II =====================*/
+#sectionII{
+	width: 100vw;
+	height: 100vh;
+	background: black url('../img/floor/woodfloor.jpg');
+	background-position: 0% 100%;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-size: 100vw 25vh;
+	z-index: 20;
 }
+/*============= Curtain =============*/
+.curtain{
+	z-index: 21;
+	width: 50vw;
+	height: 100vh;
+}
+#curtain1{
+	top: 0%;
+	left: 0%;
+}
+#curtain2{
+	top: 0%;
+	left: 50%;
+}
+/*============= BioSection =============*/
 #bio{
+	z-index: 22;
+	top: 50%;
+	left: 50%;
 	width: 30vw;
 	border: 3px solid white;
 	font-size: 1.5em;
 	background: rgba(255, 255, 255, 0.5);
-	z-index: 4;
 	font-family: 'Archivo Narrow';
 	padding: 1%;
 }
@@ -232,33 +271,123 @@ html, body {
 	cursor: pointer;
 	cursor: hand;
 }
+#self_portrait{
+	z-index: 22;
+	top: 50%;
+	left: 15%;	
+	height: 40vh;
+	width: auto;
+	border-radius: 30%;
+}
 #marquee{
-	top: 25%;
-	left: 30%;
-	z-index: 4;
+	z-index: 22;
+	top: 50%;
+	left: 85%;
 	height: auto;
 	width: 27vw;
 }
 
 
 
-/*=======CURTAIN / STAGE=========*/
-#curtain{
-	width: 100vw;
-	height: 300vh;
-	background: black url('../img/floor/woodfloor.jpg');
-	background-position: 0% 100%;
-	background-repeat: no-repeat;
-	background-attachment: fixed;
-	background-size: 100vw 25vh;
-	z-index: 4;
+
+
+
+
+
+
+
+
+/*===================== PAGE III =====================*/
+/**************** HANGIN STARS ********************/
+@-moz-keyframes swing{
+	0%{-moz-transform:rotate(-3deg)}
+	50%{-moz-transform:rotate(3deg)}
+	100%{-moz-transform:rotate(-3deg)}
 }
-.curtain{
-	width: 50vw;
-	height: 100vh;
+@-webkit-keyframes swing{
+	0%{-webkit-transform:rotate(-3deg)}
+	50%{-webkit-transform:rotate(3deg)}
+	100%{-webkit-transform:rotate(-3deg)}
+}
+.bg-star{
+	height: 40vh;
+	width: auto;
+	z-index: 10000;
+	top: -15vh;
 }
 
+/*=========STAR A==========*/
+#starA{
+	left: 2%;
+	-moz-animation: 3s ease 0s normal none infinite swing;
+	-moz-transform-origin: center top;
+	-webkit-animation:swing 3s infinite ease-in-out;
+	-webkit-transform-origin:top;
+}
+/*=========STAR B==========*/
+#starB{
+	left: 18%;
+	-moz-animation: 3.5s ease 0s normal none infinite swing;
+	-moz-transform-origin: center top;
+	-webkit-animation:swing 3.5s infinite ease-in-out;
+	-webkit-transform-origin:top;
+}
+/*=========STAR C==========*/
+#starC{
+	left: 35%;
+	-moz-animation: 3.1s ease 0s normal none infinite swing;
+	-moz-transform-origin: center top;
+	-webkit-animation:swing 3.1s infinite ease-in-out;
+	-webkit-transform-origin:top;
+}
+/*=========STAR D==========*/
+#starD{
+	left: 59%;
+	-moz-animation: 3.3s ease 0s normal none infinite swing;
+	-moz-transform-origin: center top;
+	-webkit-animation:swing 3.3s infinite ease-in-out;
+	-webkit-transform-origin:top;
+}
+/*=========STAR E==========*/
+#starE{
+	left: 78vw;
+	-moz-animation: 3.7s ease 0s normal none infinite swing;
+	-moz-transform-origin: center top;
+	-webkit-animation:swing 3.7s infinite ease-in-out;
+	-webkit-transform-origin:top;
+}
+
+
 /*======DONUT CONTACT========*/
+#donutcontainer{
+	top:20%;
+	left: 92%;
+}
+#donutcontainer:hover > #contactword{
+	-webkit-filter: brightness(1);
+	filter: brightness(1);
+	cursor: pointer;
+	cursor: hand;
+}
+#donut{
+	transition: .6s filter linear;
+	-webkit-transition: .6s -webkit-filter linear;
+	-moz-transition: .6s -moz-filter linear;
+	-moz-transition: .6s filter linear;
+	-ms-transition: .6s -ms-filter linear;
+	-o-transition: .6s -o-filter linear;
+
+	-moz-animation: 3.1s ease 0s normal none infinite swing;
+	-moz-transform-origin: center top;
+	-webkit-animation:swing 3.1s infinite ease-in-out;
+	-webkit-transform-origin:top;
+}
+#donut:hover{
+	-webkit-filter: brightness(1);
+	filter: brightness(1);
+	cursor: pointer;
+	cursor: hand;
+}
 #contactword{
 	position: absolute;
 	z-index: 3;
@@ -279,46 +408,8 @@ html, body {
 	-ms-transition: .6s -ms-filter linear;
 	-o-transition: .6s -o-filter linear;	
 }
-#donutcontainer:hover > #contactword{
-	-webkit-filter: brightness(1);
-	filter: brightness(1);
-	cursor: pointer;
-	cursor: hand;
-}
 
-#donut{
-	max-height: 25vh;
-	min-height: 25vh;
-	width: auto;
 
-	transition: .6s filter linear;
-	-webkit-transition: .6s -webkit-filter linear;
-	-moz-transition: .6s -moz-filter linear;
-	-moz-transition: .6s filter linear;
-	-ms-transition: .6s -ms-filter linear;
-	-o-transition: .6s -o-filter linear;
-
-	-moz-animation: 3.1s ease 0s normal none infinite swing;
-	-moz-transform-origin: center top;
-	-webkit-animation:swing 3.1s infinite ease-in-out;
-	-webkit-transform-origin:top;
-}
-@-moz-keyframes swing{
-	0%{-moz-transform:rotate(-3.1deg)}
-	50%{-moz-transform:rotate(3.1deg)}
-	100%{-moz-transform:rotate(-3.1deg)}
-}
-@-webkit-keyframes swing{
-	0%{-webkit-transform:rotate(-3.1deg)}
-	50%{-webkit-transform:rotate(3.1deg)}
-	100%{-webkit-transform:rotate(-3.1deg)}
-}
-#donut:hover{
-	-webkit-filter: brightness(1);
-	filter: brightness(1);
-	cursor: pointer;
-	cursor: hand;
-}
 /*=========ICONS=========*/
 .icon{
 	max-height: 75vh;
@@ -446,115 +537,7 @@ html, body {
 }
 
 
-/**************** HANGIN STARS ********************/
-.hanging-star{
-	min-height: 40vh;
-	max-height: 40vh;
-	width: auto;
-}
 
-/*=========STAR A==========*/
-#starA{
-	-moz-animation: 3s ease 0s normal none infinite swing;
-	-moz-transform-origin: center top;
-	-webkit-animation:swing 3s infinite ease-in-out;
-	-webkit-transform-origin:top;
-}
-@-moz-keyframes swing{
-	0%{-moz-transform:rotate(-3deg)}
-	50%{-moz-transform:rotate(3deg)}
-	100%{-moz-transform:rotate(-3deg)}
-}
-@-webkit-keyframes swing{
-	0%{-webkit-transform:rotate(-3deg)}
-	50%{-webkit-transform:rotate(3deg)}
-	100%{-webkit-transform:rotate(-3deg)}
-}
-/*=========STAR B==========*/
-#starB{
-	-moz-animation: 3.5s ease 0s normal none infinite swing;
-	-moz-transform-origin: center top;
-	-webkit-animation:swing 3.5s infinite ease-in-out;
-	-webkit-transform-origin:top;
-}
-@-moz-keyframes swing{
-	0%{-moz-transform:rotate(-3.5deg)}
-	50%{-moz-transform:rotate(3.5deg)}
-	100%{-moz-transform:rotate(-3.5deg)}
-}
-@-webkit-keyframes swing{
-	0%{-webkit-transform:rotate(-3.5deg)}
-	50%{-webkit-transform:rotate(3.5deg)}
-	100%{-webkit-transform:rotate(-3.5deg)}
-}
-/*=========STAR C==========*/
-#starC{
-	-moz-animation: 3.1s ease 0s normal none infinite swing;
-	-moz-transform-origin: center top;
-	-webkit-animation:swing 3.1s infinite ease-in-out;
-	-webkit-transform-origin:top;
-}
-@-moz-keyframes swing{
-	0%{-moz-transform:rotate(-3.1deg)}
-	50%{-moz-transform:rotate(3.1deg)}
-	100%{-moz-transform:rotate(-3.1deg)}
-}
-@-webkit-keyframes swing{
-	0%{-webkit-transform:rotate(-3.1deg)}
-	50%{-webkit-transform:rotate(3.1deg)}
-	100%{-webkit-transform:rotate(-3.1deg)}
-}
-/*=========STAR D==========*/
-#starD{
-	-moz-animation: 3.3s ease 0s normal none infinite swing;
-	-moz-transform-origin: center top;
-	-webkit-animation:swing 3.3s infinite ease-in-out;
-	-webkit-transform-origin:top;
-}
-@-moz-keyframes swing{
-	0%{-moz-transform:rotate(-3deg)}
-	50%{-moz-transform:rotate(3deg)}
-	100%{-moz-transform:rotate(-3deg)}
-}
-@-webkit-keyframes swing{
-	0%{-webkit-transform:rotate(-3deg)}
-	50%{-webkit-transform:rotate(3deg)}
-	100%{-webkit-transform:rotate(-3deg)}
-}
-/*=========STAR E==========*/
-#starE{
-	-moz-animation: 3.7s ease 0s normal none infinite swing;
-	-moz-transform-origin: center top;
-	-webkit-animation:swing 3.7s infinite ease-in-out;
-	-webkit-transform-origin:top;
-}
-@-moz-keyframes swing{
-	0%{-moz-transform:rotate(-2deg)}
-	50%{-moz-transform:rotate(2deg)}
-	100%{-moz-transform:rotate(-2deg)}
-}
-@-webkit-keyframes swing{
-	0%{-webkit-transform:rotate(-2deg)}
-	50%{-webkit-transform:rotate(2deg)}
-	100%{-webkit-transform:rotate(-2deg)}
-}
-/*=========STAR F==========*/
-#starF{
-	-moz-animation: 2.9s ease 0s normal none infinite swing;
-	-moz-transform-origin: center top;
-	-webkit-animation:swing 2.9s infinite ease-in-out;
-	-webkit-transform-origin:top;
-}
-@-moz-keyframes swing{
-	0%{-moz-transform:rotate(-2deg)}
-	50%{-moz-transform:rotate(2deg)}
-	100%{-moz-transform:rotate(-2deg)}
-}
-@-webkit-keyframes swing{
-	0%{-webkit-transform:rotate(-2deg)}
-	50%{-webkit-transform:rotate(2deg)}
-	100%{-webkit-transform:rotate(-2deg)}
-}
 
 
 

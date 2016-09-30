@@ -1,0 +1,20 @@
+{
+  "name": "thomasjedstrom.github.io",
+  "homepage": "https://github.com/thomasjedstrom/thomasjedstrom.github.io",
+  "authors": [
+    "Thomas Edstrom <thomasjedstrom@gmail.com>"
+  ],
+  "description": "",
+  "main": "",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "animate.css": "^3.5.2"
+  }
+}
