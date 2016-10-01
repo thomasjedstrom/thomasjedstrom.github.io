@@ -380,7 +380,7 @@ html, body {
 
 /*======BURGER CONTACT========*/
 #burgercontainer{
-	top: -85vh;
+	top: -80vh;
 	left: 92vw;
 }
 #burgercontainer:hover > #contactword{
