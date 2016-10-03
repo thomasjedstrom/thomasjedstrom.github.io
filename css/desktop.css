@@ -579,7 +579,18 @@ html, body {
 
 /**************** TWINKLE STARS ********************/
 
-@keyframes move-twink-back {
+.twinkling{
+	top: 0%;
+	z-index: 0;
+
+	height: 90vh;
+	width: 100vw;
+	
+	display:block;
+	background: url(../twinklestars/1.gif) repeat;
+}
+
+/*@keyframes move-twink-back {
 	from {background-position:0 0;}
 	to {background-position:-10000px 5000px;}
 }
@@ -624,7 +635,7 @@ html, body {
 	-o-animation:move-twink-back 200s linear infinite;
 	-webkit-animation:move-twink-back 200s linear infinite;
 	animation:move-twink-back 200s linear infinite;
-}
+}*/
 
 
 
@@ -725,6 +736,17 @@ html, body {
 .portfolioType{
 	cursor: pointer;
 	cursor: hand;
+	border: 3px solid black;
+	-ms-transition: all .5s ease-in;
+	-moz-transition: all .5s ease-in;
+	-o-transition: all .5s ease-in;
+	-webkit-transition: all .5s ease-in;
+	transition: all .5s ease-in;
+}
+.portfolioType:hover{
+	background: #AE1E1E;
+	border: 3px solid gray;
+	color: white;
 }
 .portfolioClicker{
 	display: inline-block;
