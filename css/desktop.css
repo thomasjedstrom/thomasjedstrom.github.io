@@ -578,66 +578,16 @@ html, body {
 
 
 /**************** TWINKLE STARS ********************/
-
-@keyframes move-twink-back {
-	from {background-position:0 0;}
-	to {background-position:-10000px 5000px;}
-}
-@-webkit-keyframes move-twink-back {
-	from {background-position:0 0;}
-	to {background-position:-10000px 5000px;}
-}
-@-moz-keyframes move-twink-back {
-	from {background-position:0 0;}
-	to {background-position:-10000px 5000px;}
-}
-@-ms-keyframes move-twink-back {
-	from {background-position:0 0;}
-	to {background-position:-10000px 5000px;}
-}
-
-
-.stars, .twinkling{
+.twinkling{
 	top: 0%;
 	z-index: 0;
 
-	max-height: 90vh;
-	min-height: 90vh;
+	height: 90vh;
 	width: 100vw;
 
+	background: url('../img/twinklestars/twinklestars.gif') repeat;
 	display:block;
 }
-
-.stars {
-	background:#000 url(http://www.script-tutorials.com/demos/360/images/stars.png) repeat top center;
-	background-attachment: fixed;
-	background-size: cover;
-	z-index:0;
-}
-
-.twinkling{
-	background:transparent url(http://www.script-tutorials.com/demos/360/images/twinkling.png) repeat top center;
-	z-index:1;
-
-	-moz-animation:move-twink-back 200s linear infinite;
-	-ms-animation:move-twink-back 200s linear infinite;
-	-o-animation:move-twink-back 200s linear infinite;
-	-webkit-animation:move-twink-back 200s linear infinite;
-	animation:move-twink-back 200s linear infinite;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -725,11 +675,21 @@ html, body {
 .portfolioType{
 	cursor: pointer;
 	cursor: hand;
+	border: 3px solid black;
+	border-radius: 5px;
+	-ms-transition: all .5s ease-in;
+	-moz-transition: all .5s ease-in;
+	-o-transition: all .5s ease-in;
+	-webkit-transition: all .5s ease-in;
+	transition: all .5s ease-in;
+}
+.portfolioType:hover{
+	background: red;
+	border: 3px solid gray;
 }
 .portfolioClicker{
 	display: inline-block;
 	width: 230px;
-	height: 280px;
 	text-align: center;
 	-ms-transition: all .5s ease-in;
 	-moz-transition: all .5s ease-in;
@@ -739,7 +699,7 @@ html, body {
 	border: 3px solid transparent;
 }
 .portfolioClicker:hover{
-	background: salmon;
+	background: red;
 	border: 3px solid gray;
 }
 .portfolioTitle{
