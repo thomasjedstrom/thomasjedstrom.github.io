@@ -587,7 +587,7 @@ html, body {
 	width: 100vw;
 	
 	display:block;
-	background: url(../twinklestars/1.gif) repeat;
+	background: url(../img/twinklestars/twinklestars.gif) repeat;
 }
 
 
@@ -673,10 +673,7 @@ html, body {
 	cursor: pointer;
 	cursor: hand;
 	border: 3px solid black;
-<<<<<<< HEAD
 	border-radius: 5px;
-=======
->>>>>>> e4d744e7b3ff3149d8d594bd3e33a9ba95d5c93a
 	-ms-transition: all .5s ease-in;
 	-moz-transition: all .5s ease-in;
 	-o-transition: all .5s ease-in;
@@ -684,19 +681,21 @@ html, body {
 	transition: all .5s ease-in;
 }
 .portfolioType:hover{
-<<<<<<< HEAD
 	background: red;
 	border: 3px solid gray;
-=======
 	background: #AE1E1E;
 	border: 3px solid gray;
 	color: white;
->>>>>>> e4d744e7b3ff3149d8d594bd3e33a9ba95d5c93a
 }
-.portfolioClicker{
+.projectContainer{
 	display: inline-block;
 	width: 230px;
 	text-align: center;
+}
+.portfolioClicker{
+	display: inline-block;
+	text-align: center;
+	width: 230px;
 	-ms-transition: all .5s ease-in;
 	-moz-transition: all .5s ease-in;
 	-o-transition: all .5s ease-in;
@@ -721,4 +720,8 @@ html, body {
 	display: inline-block;
 	margin: auto;
 	border: 3px solid black;
+}
+.popupLink{
+	width: 30px;
+	height: auto;
 }
