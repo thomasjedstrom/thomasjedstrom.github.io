@@ -8,6 +8,9 @@ html, body {
 	padding:0;
 	margin:0;	
 }
+a{
+	text-decoration: none;
+}
 
 /*======= HELPER =========*/
 .fixed{
@@ -601,12 +604,12 @@ html, body {
 .popup {
 	display: none;
 	position: fixed;
-	z-index: 9999;
+	z-index: 999;
 	left: 0;
 	top: 0;
 	width: 100%;
 	height: 100%;
-	overflow: auto;
+	/*overflow: auto;*/
 	background-color: rgb(0,0,0);
 	background-color: rgba(0,0,0,0.4);
 }
@@ -616,7 +619,7 @@ html, body {
 	background-color: #fefefe;
 	padding: 20px;
 	border: 1px solid #888;
-	width: 40%;
+	width: 750px;
 	position: fixed;
 	top: 50%;
 	left: 50%;
@@ -626,7 +629,7 @@ html, body {
 	font-family: 'Anton', sans-serif;
 }
 /* The Close Button */
-.close, .pclose {
+.close, .pclose, .iclose {
 	color: #aaa;
 	float: right;
 	font-size: 28px;
@@ -640,7 +643,11 @@ html, body {
 .close:hover,
 .close:focus,
 .pclose:hover,
-.pclose:focus {
+.pclose:focus,
+.iclose:hover,
+.iclose:focus,
+.popupLink:hover,
+.popupLink:focus {
 	color: black;
 	text-decoration: none;
 	cursor: pointer;
@@ -724,4 +731,16 @@ html, body {
 .popupLink{
 	width: 30px;
 	height: auto;
+}
+.infoBox{
+	z-index: 1000;
+	display: none;
+	font-family: 'Average Sans', sans-serif;
+	box-shadow: 0px 0px 10px black;
+}
+.infoBox>h2{
+	width: 100%;
+	margin: 0px;
+	text-align: center;
+	text-decoration: underline;
 }

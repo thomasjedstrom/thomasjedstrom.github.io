@@ -143,31 +143,108 @@ $(function () {
 		contactMe[0]		.style.display = "none";
 	})
 
-	// CONTACT
-	var contact 			= $('#contact-box');
+	const contact 			= $('#contact-box');
 	$("#burger")			.click(()=>{contact[0].style.display = "block"});
 	$("#contactword")		.click(()=>{contact[0].style.display = "block"});
 	
-	// PORTFOLIO
-	var portfolio 			= $("#portfolio-box");
+	const portfolio 			= $("#portfolio-box");
 	$("#briefcaseclicker")	.click(()=>{portfolio[0].style.display = "block"});
 
-	var rails 				= $("#rails-box");
-	$("#railsTag")			.click(()=>{rails.fadeIn('slow')});
 
-	var mean 				= $("#mean-box");
-	$("#meanTag")			.click(()=>{mean.fadeIn('slow')});
-
-	var django 				= $("#django-box");
-	$("#djangoTag")			.click(()=>{django.fadeIn('slow')});
-
-// PORTFOLIO POPUS
+// PORTFOLIO TYPES POPUPS
 	$(".pclose").click(function(){
 		rails			.fadeOut('slow');
 		mean			.fadeOut('slow');
 		django			.fadeOut('slow');
 	})
 
+	const rails 				= $("#rails-box");
+	$("#railsTag")			.click(()=>{rails.fadeIn('slow')});
+
+	const mean 				= $("#mean-box");
+	$("#meanTag")			.click(()=>{mean.fadeIn('slow')});
+
+	const django 				= $("#django-box");
+	$("#djangoTag")			.click(()=>{django.fadeIn('slow')});
+
+
+
+// PORTFOLIO INFO POPUPS
+	const ip = $("#infoPopup");
+	$(".iclose").click(()=>{
+		ip 				.fadeOut('slow');
+		olc 			.fadeOut('slow');
+		twc 			.fadeOut('slow');
+		etc 			.fadeOut('slow');
+		atc 			.fadeOut('slow');
+		bic 			.fadeOut('slow');
+		ngc 			.fadeOut('slow');
+		dbc 			.fadeOut('slow');
+		osc 			.fadeOut('slow');
+		blc 			.fadeOut('slow');
+		sc 				.fadeOut('slow');
+	});
+
+	const olc = $("#onlineLendingContent");
+	$("#oliClicker").click(()=>{
+		console.log("hey")
+		ip.fadeIn('slow');
+		olc.fadeIn('slow');
+	});
+
+	const twc = $("#theWallContent");
+	$("#twiClicker").click(()=>{
+		ip.fadeIn('slow');
+		twc.fadeIn('slow');
+	});
+
+	const etc = $("#eventTrackingContent");
+	$("#etiClicker").click(()=>{
+		ip.fadeIn('slow');
+		etc.fadeIn('slow');
+	});
+
+	const atc = $("#abTestingContent");
+	$("#atiClicker").click(()=>{
+		ip.fadeIn('slow');
+		atc.fadeIn('slow');
+	});
+
+	const bic = $("#brightIdeasContent");
+	$("#biiClicker").click(()=>{
+		ip.fadeIn('slow');
+		bic.fadeIn('slow');
+	});
+
+	const ngc = $("#ninjaGoldContent");
+	$("#ngiClicker").click(()=>{
+		ip.fadeIn('slow');
+		ngc.fadeIn('slow');
+	});
+
+	const dbc = $("#discussionBoardContent");
+	$("#dbiClicker").click(()=>{
+		ip.fadeIn('slow');
+		dbc.fadeIn('slow');
+	});
+
+	const osc = $("#onlineStoreContent");
+	$("#osiClicker").click(()=>{
+		ip.fadeIn('slow');
+		osc.fadeIn('slow');
+	});
+
+	const blc = $("#bucketListsContent");
+	$("#bliClicker").click(()=>{
+		ip.fadeIn('slow');
+		blc.fadeIn('slow');
+	});
+
+	const sc = $("#surveysContent");
+	$("#siClicker").click(()=>{
+		ip.fadeIn('slow');
+		sc.fadeIn('slow');
+	});
 
 
 
