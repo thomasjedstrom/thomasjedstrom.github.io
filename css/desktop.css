@@ -735,6 +735,7 @@ a{
 .infoBox{
 	z-index: 1000;
 	display: none;
+	width: 650px;
 	font-family: 'Average Sans', sans-serif;
 	box-shadow: 0px 0px 10px black;
 }
