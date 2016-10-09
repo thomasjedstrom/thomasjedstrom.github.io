@@ -138,9 +138,6 @@ $(function () {
 	$(".close").click(function(){
 		contact[0]			.style.display = "none";
 		portfolio[0]		.style.display = "none";
-
-		portfolioMobile[0]	.style.display = "none";
-		contactMe[0]		.style.display = "none";
 	})
 
 	const contact 			= $('#contact-box');
@@ -263,11 +260,11 @@ $(function () {
 	
 	// PORTFOLIO
 	var portfolioMobile = $("#portfolio-boxMobile")
-	$("#portfolioClickerMobile")	.click(()=>{portfolioMobile[0].style.display = "block"})
+	$("#portfolioClickerMobile")	.click(()=>{portfolio[0].style.display = "block"});
 
 	// CONTACT
 	var contactMe = $('#contact-boxMobile');
-	$("#contactMe")					.click(()=>{contactMe[0].style.display = "block"})
+	$("#contactMe")					.click(()=>{contact[0].style.display = "block"});
 	$(".sendMeALine")				.click(
 		()=>{
 			contact[0].style.display = "block";

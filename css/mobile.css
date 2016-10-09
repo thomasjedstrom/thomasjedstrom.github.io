@@ -8,6 +8,9 @@ html, body {
 	padding:0;
 	margin:0;	
 }
+a{
+	text-decoration: none;
+}
 
 /*======= HELPER =========*/
 .centered{
@@ -248,52 +251,144 @@ html, body {
 .popup {
 	display: none;
 	position: fixed;
-	z-index: 100;
+	z-index: 999;
 	left: 0;
 	top: 0;
 	width: 100%;
 	height: 100%;
-	overflow: auto;
+	/*overflow: auto;*/
 	background-color: rgb(0,0,0);
 	background-color: rgba(0,0,0,0.4);
-	font-family: 'Average Sans', sans-serif;
 }
 
 /* Modal Content/Box */
 .popup-content {
 	background-color: #fefefe;
-	padding: 5vw;
+	padding: 20px;
 	border: 1px solid #888;
-	min-width: 300px;
-	width: 90vw;
+	width: 750px;
 	position: fixed;
 	top: 50%;
 	left: 50%;
-	font-size: 3.5em;
 }
 .popup-content h3{
 	text-align: center;
 	font-family: 'Anton', sans-serif;
-	font-size: 3.5em;
 }
-.category{
-	display: inline-block;
-	width: 4em;
-	text-align: left;
-}
-
 /* The Close Button */
-.close {
+.close, .pclose, .iclose {
 	color: #aaa;
 	float: right;
 	font-size: 28px;
 	font-weight: bold;
-	font-size: 2em;
+	font-family: 'Average Sans', sans-serif;
+	position: absolute;
+	top: 10px;
+	right: 20px;
 }
 
 .close:hover,
-.close:focus {
+.close:focus,
+.pclose:hover,
+.pclose:focus,
+.iclose:hover,
+.iclose:focus,
+.popupLink:hover,
+.popupLink:focus {
 	color: black;
 	text-decoration: none;
 	cursor: pointer;
+	cursor: hand;
+}
+/*======CONTACT POPUP======*/
+.category{
+	display: inline-block;
+	width: 3.5em;
+	text-align: left;
+	font-family: 'Average Sans', sans-serif;
+}
+#contact-content{
+	width: 30%;
+	font-size: 1.3em;
+	font-family: 'Average Sans', sans-serif;
+}
+/*======PORTFOLIO POPUP======*/
+#portfolio-content{
+	display: flex;
+	justify-content: space-around; 
+}
+#portfolio-content h1{
+	display: inline-block;
+	font-family: 'Anton', sans-serif;
+	width: 5em;
+	text-align: center;
+}
+.portfolioType{
+	cursor: pointer;
+	cursor: hand;
+	border: 3px solid black;
+	border-radius: 5px;
+	-ms-transition: all .5s ease-in;
+	-moz-transition: all .5s ease-in;
+	-o-transition: all .5s ease-in;
+	-webkit-transition: all .5s ease-in;
+	transition: all .5s ease-in;
+}
+.portfolioType:hover{
+	background: red;
+	border: 3px solid gray;
+	background: #AE1E1E;
+	border: 3px solid gray;
+	color: white;
+}
+.projectContainer{
+	display: inline-block;
+	width: 230px;
+	text-align: center;
+}
+.portfolioClicker{
+	display: inline-block;
+	text-align: center;
+	width: 230px;
+	-ms-transition: all .5s ease-in;
+	-moz-transition: all .5s ease-in;
+	-o-transition: all .5s ease-in;
+	-webkit-transition: all .5s ease-in;
+	transition: all .5s ease-in;
+	border: 3px solid transparent;
+}
+.portfolioClicker:hover{
+	background: red;
+	border: 3px solid gray;
+}
+.portfolioTitle{
+	position: relative;
+	text-decoration: none;
+	color: black;
+	display: inline-block;
+	font-size: 1.5em;
+}
+.portfolioImage{
+	width: 200px;
+	height: 200px;
+	display: inline-block;
+	margin: auto;
+	border: 3px solid black;
+}
+.popupLink{
+	width: 30px;
+	height: auto;
+}
+.infoBox{
+	z-index: 1000;
+	display: none;
+	width: 650px;
+	font-family: 'Average Sans', sans-serif;
+	box-shadow: 0px 0px 10px black;
+}
+.infoBox>h2{
+	width: 100%;
+	margin: 0px;
+	text-align: center;
+	text-decoration: underline;
 }
