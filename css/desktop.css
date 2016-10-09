@@ -670,15 +670,11 @@ a{
 	display: flex;
 	justify-content: space-around; 
 }
-#portfolio-content h1{
+.portfolioType{
 	display: inline-block;
 	font-family: 'Anton', sans-serif;
 	width: 5em;
 	text-align: center;
-}
-.portfolioType{
-	cursor: pointer;
-	cursor: hand;
 	border: 3px solid black;
 	border-radius: 5px;
 	-ms-transition: all .5s ease-in;
@@ -688,6 +684,8 @@ a{
 	transition: all .5s ease-in;
 }
 .portfolioType:hover{
+	cursor: pointer;
+	cursor: hand;
 	background: red;
 	border: 3px solid gray;
 	background: #AE1E1E;
