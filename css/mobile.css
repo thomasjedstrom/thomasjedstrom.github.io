@@ -339,7 +339,7 @@ big{
 	overflow: scroll;
 }
 .portfolio-box .pclose{
-	top: 10%;
+	top: 15%;
 }
 .projectContainer{
 	display: inline-block;
@@ -370,7 +370,7 @@ big{
 	border: 3px solid black;
 }
 .popupLink{
-	width: 20vw;
+	width: 15vw;
 	height: auto;
 	margin: 0px 15px 20px 15px;
 }
