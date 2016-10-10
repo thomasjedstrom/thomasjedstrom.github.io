@@ -338,10 +338,16 @@ big{
 	height: 100vh;
 	overflow: scroll;
 }
+.portfolio-box .pclose{
+	top: 10%;
+}
 .projectContainer{
 	display: inline-block;
 	width: 90vw;
 	text-align: center;
+}
+.projectContainer:nth-child(2){
+	margin-top: 50px;
 }
 .portfolioClicker{
 	display: inline-block;
@@ -364,7 +370,7 @@ big{
 	border: 3px solid black;
 }
 .popupLink{
-	width: 30px;
+	width: 50px;
 	height: auto;
 	margin: 0px 15px 20px 15px;
 }
