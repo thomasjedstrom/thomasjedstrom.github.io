@@ -323,7 +323,7 @@ big{
 .portfolioType{
 	display: inline-block;
 	font-family: 'Anton', sans-serif;
-	font-size: 1em;
+	font-size: 2em;
 	margin: 20px 0px;
 	display: inline-block;
 	flex: 0 0 80%;
@@ -339,7 +339,7 @@ big{
 	overflow: scroll;
 }
 .portfolio-box .pclose{
-	top: 5%;
+	top: 10%;
 }
 .projectContainer{
 	display: inline-block;
@@ -359,7 +359,7 @@ big{
 	text-decoration: none;
 	color: black;
 	display: block;
-	font-size: 1em;
+	font-size: 1.3em;
 	margin-bottom: 10px;
 }
 .portfolioImage{
