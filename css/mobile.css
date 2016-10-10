@@ -187,7 +187,7 @@ a{
 }
 #contactMe h1{
 	font-family: 'Anton', sans-serif;
-	font-size: 2em;
+	font-size: 3em;
 	margin: 0px;
 }
 
@@ -281,7 +281,7 @@ a{
 	font-family: 'Average Sans', sans-serif;
 	position: absolute;
 	top: 5px;
-	right: 10px;
+	right: 15px;
 }
 
 .close:hover,
@@ -359,7 +359,7 @@ big{
 	text-decoration: none;
 	color: black;
 	display: block;
-	font-size: .7em;
+	font-size: 1em;
 	margin-bottom: 10px;
 }
 .portfolioImage{
