@@ -17,7 +17,7 @@
 	<link rel="stylesheet" type="text/css" media="only screen and (min-width: 1025px)" href="css/desktop.css">
 
 <!-- JS JQuery -->
-	<script src="https://code.jquery.com/jquery-3.0.0.js" integrity="sha256-jrPLZ+8vDxt2FnE1zvZXCkCcebI/C8Dt5xyaQBjxQIo=" crossorigin="anonymous"></script>
+	<script src="js/jquery-3.1.1.min.js"></script>
 <!-- JS JQuery FullPage -->
 	<script src="js/jquery.fullPage.min.js"></script>
 <!--JS My App-->
@@ -71,7 +71,7 @@
 					<h3 class="bioHeader">SPECIALIST IN ADAPTABILITY.</h3>
 					<p>As a <u><b>full-stack developer</b></u>, I have a passion for creating elegant solutions to complex problems, leveraging cutting edge technologies to turn software into an <u><b>experience.</b></u></p>
 					<p>On the rare occassion I'm not behind the computer, I love to read, make music, or talk philosophy over coffee.</p>
-					<p>I currently reside in Dallas, TX with my family and friends and I'm always looking to create something new.  <span class="sendMeALine">Send me a line</span> and let's make something happen!</p>
+					<p>I currently reside in Dallas, TX and I'm always looking to create something new.  <span class="sendMeALine">Send me a line</span> and let's make something happen!</p>
 				</div>
 
 				<!-- MARQUEE -->
@@ -104,7 +104,7 @@
 			<!-- CONTACT -->
 				<div class="bg-star fixed" id="burgercontainer">
 					<img src="img/stars/burger.png" alt="contact menu" class="dim" id="burger">	
-					<img src="img/words/contact.png" alt="contact" class="dim" id="contactword">
+					<!-- <img src="img/words/contact.png" alt="contact" class="dim" id="contactword"> -->
 				</div>
 			</div>
 
@@ -305,33 +305,32 @@
   	<!-- Contact -->
 	<div id="contact-box" class="popup">
 		<div id="contact-content" class="popup-content fullcentered">
-			<span class="close">x</span>
-			<h2><big>214-912-2649</big></h2><br>
-			<h2><big>T</big>homas<big>JE</big>dstrom<big>@</big>gmail.com</h2><br>
+			<span class="close">X</span>
+			<big id="phone">214-912-2649</big><br>
+			<span id="email"><big>T</big>homas<big>JE</big>dstrom<big>@</big>gmail.com</span><br>
 		</div>
 	</div>
 	
 	<!-- ======== Portfolio LAYER 1 ======== -->
 	<div id="portfolio-box" class="popup">
 		<div id="portfolio-content" class="popup-content fullcentered">
-			<span class="close">x</span>
-			<h1 id="railsTag" class="portfolioType">RAILS</h1>
-			<h1 id="meanTag" class="portfolioType">MEAN</h1>
-			<h1 id="djangoTag" class="portfolioType">DJANGO</h1>
+			<span class="close">X</span>
+			<span id="railsTag" class="portfolioType">RAILS</span>
+			<span id="meanTag" class="portfolioType">MEAN</span>
+			<span id="djangoTag" class="portfolioType">DJANGO</span>
 		</div>
 	</div>
 
 	<!-- ======== Portfolio LAYER 2 ======== -->
 	<!-- ======== RAILS LAYER 2 ======== -->
 	<div id="rails-box" class="popup">
-		<div id="rails-content" class="popup-content fullcentered">
-			<span class="pclose">x</span>
+		<div id="rails-content" class="popup-content fullcentered portfolio-box">
+			<span class="pclose">X</span>
 
 			<div class="projectContainer">
 				<div class="portfolioClicker">
 					<a href="http://onlinelending.thomasjedstrom.com" target="_blank" style="target-new: tab;">
 						<h2 class="portfolioTitle">ONLINE LENDING</h2>
-						<br>
 						<img src="img/thumbnails/rails_online_lending.jpg" alt="rails online lending" class="portfolioImage">
 					</a>
 				</div>
@@ -345,7 +344,6 @@
 				<div class="portfolioClicker">
 					<a href="http://thewall.thomasjedstrom.com" target="_blank" style="target-new: tab;">
 						<h2 class="portfolioTitle">THE WALL</h2>
-						<br>
 						<img src="img/thumbnails/rails_the_wall.jpg" alt="rails the wall" class="portfolioImage">
 					</a>
 				</div>
@@ -359,7 +357,6 @@
 				<div class="portfolioClicker">
 					<a href="http://eventtracking.thomasjedstrom.com" target="_blank" style="target-new: tab;">
 						<h2 class="portfolioTitle">EVENT TRACKING</h2>
-						<br>
 						<img src="img/thumbnails/rails_eventtracking.jpg" alt="rails event tracking" class="portfolioImage">
 					</a>
 				</div>
@@ -373,7 +370,6 @@
 				<div class="portfolioClicker">
 					<a href="http://abtesting.thomasjedstrom.com" target="_blank" style="target-new: tab;">
 						<h2 class="portfolioTitle">AB TESTING</h2>
-						<br>
 						<img src="img/thumbnails/rails_abtesting.jpg" alt="rails ab testing" class="portfolioImage">
 					</a>
 				</div>
@@ -387,7 +383,6 @@
 				<div class="portfolioClicker">
 					<a href="http://brightideas.thomasjedstrom.com" target="_blank" style="target-new: tab;">
 						<h2 class="portfolioTitle">BRIGHT IDEAS</h2>
-						<br>
 						<img src="img/thumbnails/rails_bright_ideas.jpg" alt="rails bright ideas" class="portfolioImage">
 					</a>
 				</div>
@@ -401,7 +396,6 @@
 				<div class="portfolioClicker">
 					<a href="http://ninjagold.thomasjedstrom.com" target="_blank" style="target-new: tab;">
 						<h2 class="portfolioTitle">NINJA GOLD</h2>
-						<br>
 						<img src="img/thumbnails/rails_ninja_gold.jpg" alt="rails ninja gold" class="portfolioImage">
 					</a>
 				</div>
@@ -416,13 +410,13 @@
 
 	<!-- ======== MEAN LAYER 2 ======== -->
 	<div id="mean-box" class="popup">
-		<div id="mean-content" class="popup-content fullcentered">
+		<div id="mean-content" class="popup-content fullcentered portfolio-box">
 			<span class="pclose">x</span>
 
 			<div class="projectContainer">
 				<div class="portfolioClicker">
 					<a href="http://discussionboard.thomasjedstrom.com" target="_blank" style="target-new: tab;">
-						<h2 class="portfolioTitle">DISCUSSION BOARD</h2><br>
+						<h2 class="portfolioTitle">DISCUSSION BOARD</h2>
 						<img src="img/thumbnails/mean_discussionboard.jpg" alt="mean discussionboard" class="portfolioImage">
 					</a>
 				</div>
@@ -435,7 +429,7 @@
 			<div class="projectContainer">
 				<div class="portfolioClicker">
 					<a href="http://meanonlinestore.thomasjedstrom.com" target="_blank" style="target-new: tab;">
-						<h2 class="portfolioTitle">ONLINE STORE</h2><br>
+						<h2 class="portfolioTitle">ONLINE STORE</h2>
 						<img src="img/thumbnails/mean_onlinestore.jpg" alt="mean online store" class="portfolioImage">
 					</a>
 				</div>
@@ -448,7 +442,7 @@
 			<div class="projectContainer">
 				<div class="portfolioClicker">
 					<a href="http://bucketlist.thomasjedstrom.com" target="_blank" style="target-new: tab;">
-						<h2 class="portfolioTitle">BUCKET LISTS</h2><br>
+						<h2 class="portfolioTitle">BUCKET LISTS</h2>
 						<img src="img/thumbnails/mean_bucketlists.jpg" alt="mean bucket lists" class="portfolioImage">
 					</a>
 				</div>
@@ -461,7 +455,7 @@
 			<div class="projectContainer">
 				<div class="portfolioClicker">
 					<a href="http://surveys.thomasjedstrom.com" target="_blank" style="target-new: tab;">
-						<h2 class="portfolioTitle">SURVEYS</h2><br>
+						<h2 class="portfolioTitle">SURVEYS</h2>
 						<img src="img/thumbnails/mean_surveys.jpg" alt="mean surveys" class="portfolioImage">
 					</a>	
 				</div>

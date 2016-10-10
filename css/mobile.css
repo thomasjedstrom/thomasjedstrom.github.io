@@ -76,11 +76,11 @@ a{
 	margin: 0%;
 }
 #name{
-	font-size: 5em;
+	font-size: 4em;
 	line-height: 1em;
 }
 #title{
-	font-size: 3em;
+	font-size: 2em;
 	line-height: 1em;
 }
 
@@ -187,7 +187,7 @@ a{
 }
 #contactMe h1{
 	font-family: 'Anton', sans-serif;
-	font-size: 4em;
+	font-size: 2em;
 	margin: 0px;
 }
 
@@ -256,16 +256,9 @@ a{
 	top: 0;
 	width: 100%;
 	height: 100%;
-	overflow: auto;
 	background-color: rgb(0,0,0);
 	background-color: rgba(0,0,0,0.4);
 	font-family: 'Average Sans', sans-serif;
-}
-.popup h2{
-	margin: 0px;
-}
-big{
-	font-size: 1.2em;
 }
 /* Modal Content/Box */
 .popup-content {
@@ -283,12 +276,12 @@ big{
 .close, .pclose, .iclose {
 	color: #aaa;
 	float: right;
-	font-size: 2em;
+	font-size: 1em;
 	font-weight: bold;
 	font-family: 'Average Sans', sans-serif;
 	position: absolute;
-	top: 10px;
-	right: 20px;
+	top: 5px;
+	right: 10px;
 }
 
 .close:hover,
@@ -308,8 +301,20 @@ big{
 	font-size: 2em;
 	font-family: 'Average Sans', sans-serif;
 	text-align: center;
+	margin: 0px;
 }
-/*======PORTFOLIO POPUP======*/
+#phone{
+	display: inline-block;
+	font-size: 1em;
+	margin-top: 1em;
+}
+#email{
+	font-size: 70%;
+}
+big{
+	font-size: 1.2em;
+}
+/*======PORTFOLIO LAYER 1======*/
 #portfolio-content{
 	display: flex;
 	flex-wrap: wrap;
@@ -318,41 +323,42 @@ big{
 .portfolioType{
 	display: inline-block;
 	font-family: 'Anton', sans-serif;
+	font-size: 1em;
+	margin: 20px 0px;
+	display: inline-block;
 	flex: 0 0 80%;
 	text-align: center;
 	border: 3px solid black;
 	border-radius: 5px;
 }
+/*======PORTFOLIO LAYER 2======*/
+.portfolio-box{
+	position: relative;
+	width: 90vw;
+	height: 100vh;
+	overflow: scroll;
+}
 .projectContainer{
 	display: inline-block;
-	width: 230px;
+	width: 90vw;
 	text-align: center;
 }
 .portfolioClicker{
 	display: inline-block;
 	text-align: center;
-	width: 230px;
-	-ms-transition: all .5s ease-in;
-	-moz-transition: all .5s ease-in;
-	-o-transition: all .5s ease-in;
-	-webkit-transition: all .5s ease-in;
-	transition: all .5s ease-in;
-	border: 3px solid transparent;
-}
-.portfolioClicker:hover{
-	background: red;
-	border: 3px solid gray;
+	width: 85vw;
 }
 .portfolioTitle{
-	position: relative;
+	/*position: relative;*/
 	text-decoration: none;
 	color: black;
-	display: inline-block;
-	font-size: 1.5em;
+	display: block;
+	font-size: .7em;
+	margin-bottom: 10px;
 }
 .portfolioImage{
-	width: 200px;
-	height: 200px;
+	width: 60vw;
+	height: auto;
 	display: inline-block;
 	margin: auto;
 	border: 3px solid black;
@@ -360,17 +366,18 @@ big{
 .popupLink{
 	width: 30px;
 	height: auto;
+	margin: 0px 15px 20px 15px;
 }
+/*======PORTFOLIO LAYER 3======*/
 .infoBox{
 	z-index: 1000;
 	display: none;
-	width: 650px;
+	width: 90vw;
 	font-family: 'Average Sans', sans-serif;
-	box-shadow: 0px 0px 10px black;
+	font-size: 90%;
 }
 .infoBox>h2{
 	width: 100%;
-	margin: 0px;
 	text-align: center;
 	text-decoration: underline;
 }

@@ -263,14 +263,8 @@ $(function () {
 	$("#portfolioClickerMobile")	.click(()=>{portfolio[0].style.display = "block"});
 
 	// CONTACT
-	var contactMe = $('#contact-boxMobile');
 	$("#contactMe")					.click(()=>{contact[0].style.display = "block"});
-	$(".sendMeALine")				.click(
-		()=>{
-			contact[0].style.display = "block";
-			contactMe[0].style.display = "block";
-		}
-	)
+	$(".sendMeALine")				.click(()=>{contact[0].style.display = "block"});
 
 
 })
