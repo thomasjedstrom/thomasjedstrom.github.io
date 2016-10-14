@@ -7,11 +7,11 @@
 	<link rel="icon" type="image/png" href="img/marquee_star/marquee_star.png">
 
 	<link href="https://fonts.googleapis.com/css?family=Anton|Average+Sans" rel="stylesheet">
-	<link rel="stylesheet" href="css/jquery.fullPage.css">
-	<link rel="stylesheet" type="text/css" href="css/desktop.css">
+	<link rel="stylesheet" href="bower_components/fullpage.js/dist/jquery.fullPage.min.css">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
 
 	<script src="bower_components/jquery/dist/jquery.min.js"></script>
-	<script src="js/jquery.fullPage.min.js"></script>
+	<script src="bower_components/fullpage.js/dist/jquery.fullPage.min.js"></script>
 	<script src="js/app.js"></script>
 	<script>
 	var loadedImage = new Image();
@@ -66,7 +66,7 @@
 
 				<!-- BIO -->
 				<div id="bio" class="fixed fullcentered fader">				
-					<h3 class="bioHeader">SPECIALIST IN ADAPTABILITY.</h3>
+					<h3 id="bioHeader">SPECIALIST IN ADAPTABILITY.</h3>
 					<p>As a <u><b>full-stack developer</b></u>, I have a passion for creating elegant solutions to complex problems, leveraging cutting edge technologies to turn software into an <u><b>experience.</b></u></p>
 					<p>On the rare occassion I'm not behind the computer, I love to read, make music, or talk philosophy over coffee.</p>
 					<p>I currently reside in Dallas, TX and I'm always looking to create something new.  <span class="sendMeALine">Send me a line</span> and let's make something happen!</p>
@@ -387,7 +387,7 @@
 	<!-- ======== MEAN LAYER 2 ======== -->
 	<div id="mean-box" class="popup">
 		<div id="mean-content" class="popup-content fullcentered portfolio-box">
-			<span class="pclose">x</span>
+			<span class="pclose">X</span>
 
 			<div class="projectContainer">
 				<div class="portfolioClicker">
@@ -446,9 +446,20 @@
 
 	<!-- ======== DJANGO LAYER 2 ======== -->
 	<div id="django-box" class="popup">
-		<div id="django-content" class="popup-content fullcentered">
+		<div id="django-content" class="popup-content fullcentered portfolio-box">
 			<span class="pclose">X</span>
-			<h2>Coming Soon</h2>
+			<div class="projectContainer">
+				<div class="portfolioClicker">
+					<a href="http://discussionboard.thomasjedstrom.com" target="_blank" style="target-new: tab;">
+						<h2 class="portfolioTitle">DISCUSSION BOARD</h2>
+						<img src="img/thumbnails/mean_discussionboard.jpg" alt="mean discussionboard" class="portfolioImage">
+					</a>
+				</div>
+				<a href="https://github.com/thomasjedstrom/MEAN_DiscussionBoard" target="_blank" style="target-new: tab;">
+					<img src="img/icons/github.png" alt="github link" class="popupLink">
+				</a>
+				<img src="img/icons/info.svg" alt="info" class="popupLink" id="dbiClicker">
+			</div>
 		</div>
 	</div>
 
@@ -457,7 +468,7 @@
 	<div class="popup" id="infoPopup"></div>
 
 	<div id="onlineLendingContent" class="popup-content fullcentered infoBox">
-		<span class="iclose">x</span>
+		<span class="iclose">X</span>
 		<h2>ONLINE LENDING</h2>
 		<h3>RUBY ON RAILS</h3>
 		<ul>
@@ -472,7 +483,7 @@
 	</div>
 
 	<div id="theWallContent" class="popup-content fullcentered infoBox">
-		<span class="iclose">x</span>
+		<span class="iclose">X</span>
 		<h2>THE WALL</h2>
 		<h3>RUBY ON RAILS</h3>
 		<ul>
@@ -488,7 +499,7 @@
 	</div>
 
 	<div id="eventTrackingContent" class="popup-content fullcentered infoBox">
-		<span class="iclose">x</span>
+		<span class="iclose">X</span>
 		<h2>EVENT TRACKING</h2>
 		<h3>RUBY ON RAILS</h3>
 		<ul>
@@ -506,7 +517,7 @@
 	</div>
 
 	<div id="abTestingContent" class="popup-content fullcentered infoBox">
-		<span class="iclose">x</span>
+		<span class="iclose">X</span>
 		<h2>AB TESTING</h2>
 		<h3>RUBY ON RAILS</h3>
 		<ul>
@@ -518,7 +529,7 @@
 	</div>
 
 	<div id="brightIdeasContent" class="popup-content fullcentered infoBox">
-		<span class="iclose">x</span>
+		<span class="iclose">X</span>
 		<h2>BRIGHT IDEAS</h2>
 		<h3>RUBY ON RAILS</h3>
 		<ul>
@@ -533,7 +544,7 @@
 	</div>
 
 	<div id="ninjaGoldContent" class="popup-content fullcentered infoBox">
-		<span class="iclose">x</span>
+		<span class="iclose">X</span>
 		<h2>NINJA GOLD</h2>
 		<h3>RUBY ON RAILS</h3>
 		<ul>
@@ -546,7 +557,7 @@
 	<!-- ======== MEAN LAYER 3 ======== -->
 
 	<div id="discussionBoardContent" class="popup-content fullcentered infoBox">
-		<span class="iclose">x</span>
+		<span class="iclose">X</span>
 		<h2>DISCUSSION BOARD</h2>
 		<h3>MEAN</h3>
 		<ul>
@@ -567,7 +578,7 @@
 	</div>
 
 	<div id="onlineStoreContent" class="popup-content fullcentered infoBox">
-		<span class="iclose">x</span>
+		<span class="iclose">X</span>
 		<h2>ONLINE STORE</h2>
 		<h3>MEAN</h3>
 		<ul>
@@ -586,7 +597,7 @@
 	</div>
 
 	<div id="bucketListsContent" class="popup-content fullcentered infoBox">
-		<span class="iclose">x</span>
+		<span class="iclose">X</span>
 		<h2>BUCKET LISTS</h2>
 		<h3>MEAN</h3>
 		<ul>
@@ -605,7 +616,7 @@
 	</div>
 
 	<div id="surveysContent" class="popup-content fullcentered infoBox">
-		<span class="iclose">x</span>
+		<span class="iclose">X</span>
 		<h2>SURVEYS</h2>
 		<h3>MEAN</h3>
 		<ul>

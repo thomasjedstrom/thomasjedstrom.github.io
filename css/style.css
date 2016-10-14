@@ -150,8 +150,8 @@ a{
 	width: 100vw;
 	height: 100vh;
 	z-index: 20;
-	/*background: #000 url('../img/floor/woodfloor.jpg') no-repeat fixed bottom;*/
-	/*background-size: 100vw 10vh;*/
+	background: #000 url('../img/floor/woodfloor.jpg') no-repeat fixed bottom;
+	background-size: 100vw 10vh;
 }
 #back_to_landing{
 	z-index: 22;
@@ -188,7 +188,7 @@ a{
 		font-size: 1.3em;
 	}
 }
-.bioHeader{
+#bioHeader{
 	font-family: 'Anton', sans-serif;
 	letter-spacing: 2px;
 	font-size: 1.6em;
@@ -402,21 +402,6 @@ a{
 	-webkit-filter: brightness(1);
 	filter: brightness(1);
 }
-#newspaperclicker{
-	/*left: -28%;*/
-}
-#suitclicker{
-	/*left: -63%;*/
-}
-#briefcaseclicker{
-	/*left: -5%;*/
-}
-#octocatclicker{
-	/*left: -36%;*/
-}
-#pianoclicker{
-	/*left: -40%;*/
-}
 
 /*======WORDS========*/
 .words{
@@ -544,8 +529,8 @@ a{
 	font-weight: bold;
 	font-family: 'Average Sans', sans-serif;
 	position: absolute;
-	top: 5px;
-	right: 10px;
+	top: 20px;
+	right: 25px;
 }
 
 .close:hover,
@@ -582,6 +567,7 @@ big{
 }
 /*======PORTFOLIO LAYER 1======*/
 #portfolio-content{
+	max-width: 90vw;
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: space-around; 
@@ -591,6 +577,7 @@ big{
 	font-family: 'Anton', sans-serif;
 	font-size: 2em;
 	width: 5em;
+	margin: 1em;
 	text-align: center;
 	border: 3px solid black;
 	border-radius: 5px;
@@ -698,7 +685,7 @@ big{
 
 /*======MEDAI QUERIES======*/
 @media screen and (max-width: 1170px){
-	.fp-tableCell{
+	#secondPage{
 		background: transparent;
 	}
 	.btn{
@@ -742,7 +729,9 @@ big{
 		left: 50%;
 		height: 10vh;
 		width: auto;
-		max-width: 95vw;
+		-webkit-filter: brightness(1);
+		filter: brightness(1);
+		/*max-width: 95vw;*/
 	}
 	#blogwordMobile{
 		top: 12.7%;
@@ -761,7 +750,7 @@ big{
 	}
 	#contactMe{
 		top: 92%;
-		width: auto;
+		width: 7em;
 		height: auto;
 		display: block;
 		background: white;
@@ -772,11 +761,70 @@ big{
 		font-size: 3em;
 		margin: 0px;
 	}
+
+	/*PopUps*/
+	#contact-content{
+		width: 80%;
+		font-size: 2em;
+		font-family: 'Average Sans', sans-serif;
+		text-align: center;
+		margin: 0px;
+	}
 }
 
-
-
-
+@media screen and (max-width: 770px){
+	/*PopUps*/
+	.portfolio-box{
+		position: relative;
+		width: 90vw;
+		height: 100vh;
+		overflow: scroll;
+	}
+	.portfolio-box .pclose{
+		top: 15%;
+	}
+	.projectContainer{
+		width: 90vw;
+	}
+	.projectContainer:nth-child(2){
+		margin-top: 50px;
+	}
+	.portfolioClicker{
+		display: inline-block;
+		text-align: center;
+		width: 85vw;
+	}
+	.portfolioTitle{
+		display: block;
+		font-size: 1.3em;
+		margin-bottom: 10px;
+	}
+	.portfolioImage{
+		width: 60vw;
+		height: auto;
+		display: inline-block;
+		margin: auto;
+		border: 3px solid black;
+	}
+	.popupLink{
+		width: 15vw;
+		height: auto;
+		margin: 0px 15px 20px 15px;
+	}
+	/*======PORTFOLIO LAYER 3======*/
+	.infoBox{
+		z-index: 1000;
+		display: none;
+		width: 90vw;
+		font-family: 'Average Sans', sans-serif;
+		font-size: 90%;
+	}
+	.infoBox>h2{
+		width: 100%;
+		text-align: center;
+		text-decoration: underline;
+	}
+}
 
 @media screen and (max-width: 600px){
 	#bio{
@@ -795,8 +843,7 @@ big{
 		top: 78%;
 		height: 20vh;
 		width: auto;
-	}
-
+	}	
 }
 
 
@@ -811,37 +858,50 @@ big{
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+@media screen and (max-height: 760px){
+	/*PAGE II*/
+	#back_to_landing, #to_connections{
+		display: none;
+	}
+	#enter_here{
+		height: 12vh;
+		width: auto;
+	}
+	#bio{
+		top: 52%;
+	}
+	#bioHeader{
+		display: none;
+	}
+	#bio p:nth-child(2){
+		margin-top: 0px;
+	}
+	#bio p:last-child{
+		margin-bottom: 0px;
+	}
+	#self_portrait{
+		top: 15%;
+		height: 25vh;
+		width: auto;
+	}
+	#marquee{
+		top: 85%;
+	}
+	#contactMe{
+		font-size: 1.8em;
+	}
+}
+@media screen and (max-height: 600px){
+	#textholder{
+		height: 9em;
+	}
+	#myName{
+		font-size: 1.5em;
+	}
+	#myTitle{
+		font-size: 1em;
+	}
+	#bio{
+		font-size: .8em;
+	}
+}
