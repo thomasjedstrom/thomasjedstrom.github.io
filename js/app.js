@@ -4,98 +4,101 @@ $(function () {
 	});
 
 	// MEDIA QUERY
-	var mq = window.matchMedia( "(min-width: 1025px)" );
+	// var mq = window.matchMedia( "(min-width: 1025px)" );
 
-	if (mq.matches){
-		$(window).resize(function(){
-			location.reload();
-		});	
+	// if (mq.matches){
+		// $(window).resize(function(){
+		// 	location.reload();
+		// });	
 
-		// ANIMATIONS
-		// variables
-		var $curtainL	= $('#curtain1'),
-			$curtainR	= $('#curtain2'),
-			$fader 		= $('.fader'),
-			$bgHanging	= $('.bg-star'),
-			$icon 		= $('.iconContainer'),
-			$enter		= $('#enter_here'),
-			$btl		= $('#back_to_landing'),
-			$more		= $('#to_connections'),
-			$btb		= $('#back_to_bio');
 
-		// initialize fullPage
-		$('#fullpage').fullpage({
 
-			// navigation: true,
-			// anchors: ['firstPage, secondPage, thirdPage'],
-			scrollBar: true,
-			css3:false,
-			onLeave: function(index, nextIndex, direction) {
-				// page2 - page3
-				if( index == 2 && nextIndex == 3 ) {
-					$curtainL.animate({'left': "-=50vw"}, "slow").addClass('animated');
-					$curtainR.animate({'left': "+=50vw"}, "slow").addClass('animated');
-					$fader.fadeOut('slow');
-					$bgHanging.animate({'top': "+=50vh"}, "slow").addClass('animated');
-					$icon.animate({'top': "+=127vh"}, 1200).addClass('animated');
-					$btl.animate({'top': "-=30vh"}, "slow").addClass('animated');
-					$more.animate({'top': "+=30vh"}, "slow").addClass('animated');
-					$btb.animate({'top': "+=30vh"}, "slow").addClass('animated');
+	// ANIMATIONS
+	// variables
+	var $curtainL	= $('#curtain1'),
+		$curtainR	= $('#curtain2'),
+		$fader 		= $('.fader'),
+		$bgHanging	= $('.bg-star'),
+		$icon 		= $('.iconContainer'),
+		$enter		= $('#enter_here'),
+		$btl		= $('#back_to_landing'),
+		$more		= $('#to_connections'),
+		$btb		= $('#back_to_bio');
 
-				// Page 3 - Page 2
-				}else if( index == 3 && direction == 'up') {
-					if($curtainL.hasClass('animated')){
-						$curtainL.animate({'left': "+=50vw"}, "slow");	
-					}
-					if($curtainL.hasClass('animated')){
-						$curtainR.animate({'left': "-=50vw"}, "slow");
-					}
-					$fader.fadeIn('slow');
-					if($bgHanging.hasClass('animated')){
-						$bgHanging.animate({'top': "-=50vh"}, "slow");
-					}
-					if($icon.hasClass('animated')){
-						$icon.animate({'top': "-=127vh"}, 800);
-					}
-					if($btl.hasClass('animated')){
-						$btl.animate({'top': "+=30vh"}, "slow");
-					}
-					if($more.hasClass('animated')){
-						$more.animate({'top': "-=30vh"}, "slow");
-					}
-					if($btb.hasClass('animated')){
-						$btb.animate({'top': "-=30vh"}, "slow");
-					}
+	// initialize fullPage
+	$('#fullpage').fullpage({
+
+		// navigation: true,
+		// anchors: ['firstPage, secondPage, thirdPage'],
+		responsiveWidth: 770,
+		scrollBar: true,
+		css3:false,
+		onLeave: function(index, nextIndex, direction) {
+			// page2 - page3
+			if( index == 2 && nextIndex == 3 ) {
+				$curtainL.animate({'left': "-=50vw"}, "slow").addClass('animated');
+				$curtainR.animate({'left': "+=50vw"}, "slow").addClass('animated');
+				$fader.fadeOut('slow');
+				$bgHanging.animate({'top': "+=50vh"}, "slow").addClass('animated');
+				$icon.animate({'top': "+=127vh"}, 1200).addClass('animated');
+				$btl.animate({'top': "-=30vh"}, "slow").addClass('animated');
+				$more.animate({'top': "+=30vh"}, "slow").addClass('animated');
+				$btb.animate({'top': "+=30vh"}, "slow").addClass('animated');
+
+			// Page 3 - Page 2
+			}else if( index == 3 && direction == 'up') {
+				if($curtainL.hasClass('animated')){
+					$curtainL.animate({'left': "+=50vw"}, "slow");	
+				}
+				if($curtainL.hasClass('animated')){
+					$curtainR.animate({'left': "-=50vw"}, "slow");
+				}
+				$fader.fadeIn('slow');
+				if($bgHanging.hasClass('animated')){
+					$bgHanging.animate({'top': "-=50vh"}, "slow");
+				}
+				if($icon.hasClass('animated')){
+					$icon.animate({'top': "-=127vh"}, 800);
+				}
+				if($btl.hasClass('animated')){
+					$btl.animate({'top': "+=30vh"}, "slow");
+				}
+				if($more.hasClass('animated')){
+					$more.animate({'top': "-=30vh"}, "slow");
+				}
+				if($btb.hasClass('animated')){
+					$btb.animate({'top': "-=30vh"}, "slow");
 				}
 			}
-		});
+		}
+	});
 
-		$enter.click(function(e){
-			e.preventDefault();
-			$.fn.fullpage.moveSectionDown();
-		});
-		$btl.click(function(e){
-			e.preventDefault();
-			$.fn.fullpage.moveSectionUp();
-		});
-		$more.click(function(e){
-			e.preventDefault();
-			$.fn.fullpage.moveSectionDown();
-		});
-		$btb.click(function(e){
-			e.preventDefault();
-			$.fn.fullpage.moveSectionUp();
-		});
+	$enter.click(function(e){
+		e.preventDefault();
+		$.fn.fullpage.moveSectionDown();
+	});
+	$btl.click(function(e){
+		e.preventDefault();
+		$.fn.fullpage.moveSectionUp();
+	});
+	$more.click(function(e){
+		e.preventDefault();
+		$.fn.fullpage.moveSectionDown();
+	});
+	$btb.click(function(e){
+		e.preventDefault();
+		$.fn.fullpage.moveSectionUp();
+	});
 
-		// firstPage fade in effects
-		$('#firstPageBanner')	.fadeIn(2000).css("display", "inline-block");
-		$('#myName')			.css('display', 'inline-block').hide().delay(1500).fadeIn(3000);
-		$('#myTitle')			.css('display', 'inline-block').hide().delay(2500).fadeIn(3000);
-		// firstPage fade out effects
-		$(window).scroll(function(){
-			$(".fade-out")		.css("opacity", 2 - $(window).scrollTop() / 250);
-		});
-	}
+	// firstPage fade in effects
+	$('#firstPageBanner')	.fadeIn(2000).css("display", "inline-block");
+	$('#myName')			.css('display', 'inline-block').hide().delay(1500).fadeIn(3000);
+	$('#myTitle')			.css('display', 'inline-block').hide().delay(2500).fadeIn(3000);
+	// firstPage fade out effects
+	$(window).scroll(function(){
+		$(".fade-out")		.css("opacity", 2 - $(window).scrollTop() / 250);
+	});
+	// }
 
 
 

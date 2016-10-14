@@ -1,5 +1,5 @@
 /*======= GLOBAL =========*/
-#mobile{
+#mobileLinks{
 	display: none;
 }
 html, body {
@@ -41,7 +41,7 @@ a{
 /*=======NAVIGATION BUTTONS=========*/
 .btn{
 	left: 50vw;
-	height: 16vh;
+	height: 15vh;
 	width: auto;
 
 	-webkit-filter: brightness(0.4);
@@ -94,6 +94,11 @@ a{
 	width: 100vw;
 	height: 100vh;
 }
+@media(max-width: 770px){
+	#firstPage{
+		background-attachment: scroll;	
+	}
+}
 #firstPageBanner{
 	display: none;
 	position: relative;
@@ -123,7 +128,7 @@ a{
 }
 #enter_here{
 	position: absolute;
-	top: 84%;
+	bottom: 2%;
 }
 
 
@@ -145,8 +150,8 @@ a{
 	width: 100vw;
 	height: 100vh;
 	z-index: 20;
-	background: #000 url('../img/floor/woodfloor.jpg') no-repeat fixed bottom;
-	background-size: 100vw 10vh;
+	/*background: #000 url('../img/floor/woodfloor.jpg') no-repeat fixed bottom;*/
+	/*background-size: 100vw 10vh;*/
 }
 #back_to_landing{
 	z-index: 22;
@@ -211,7 +216,7 @@ a{
 }
 #to_connections{
 	z-index: 22;
-	top: 84%;
+	bottom: 2%;
 }
 
 
@@ -420,8 +425,7 @@ a{
 	top: 103%;
 	left: -45%;
 
-	max-height: 6vh;
-	min-height: 6vh;
+	height: 6vh;
 	width: auto;
 
 	-webkit-filter: brightness(0.4);
@@ -658,3 +662,186 @@ big{
 	text-align: center;
 	text-decoration: underline;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*======MEDAI QUERIES======*/
+@media screen and (max-width: 1170px){
+	.fp-tableCell{
+		background: transparent;
+	}
+	.btn{
+		height: auto;
+		width: 18vw;
+	}
+
+	/*PAGE I*/
+	#textholder{
+		width: 90vw;
+	}	
+	
+	/*PAGE II*/
+	#bio{
+		width: 50vw;
+		left: 30%;
+		box-sizing: border-box;
+	}
+	#self_portrait, #marquee{
+		left: 78%;
+		width: 35vw;
+		max-width: 320px;
+		height: auto;
+	}
+	#self_portrait{
+		top: 40%;
+	}
+	#marquee{
+		top: 70%;
+	}
+
+	/*PAGE III*/
+	#bgHanging, #icons, #back_to_bio{
+		display: none;
+	}
+	#mobileLinks{
+		display: block;
+	}
+	.words{
+		position: fixed;
+		left: 50%;
+		height: 10vh;
+		width: auto;
+		max-width: 95vw;
+	}
+	#blogwordMobile{
+		top: 12.7%;
+	}
+	#linkedinwordMobile{
+		top: 28.3%;
+	}
+	#portfoliowordMobile{
+		top: 44%;
+	}
+	#githubwordMobile{
+		top: 59.6%;
+	}
+	#musicwordMobile{
+		top: 75.3%;
+	}
+	#contactMe{
+		top: 92%;
+		width: auto;
+		height: auto;
+		display: block;
+		background: white;
+		text-align: center;
+		border-radius: 20px;
+		padding: 10px 30px;
+		font-family: 'Anton', sans-serif;
+		font-size: 3em;
+		margin: 0px;
+	}
+}
+
+
+
+
+
+@media screen and (max-width: 600px){
+	#bio{
+		width: 90vw;
+		left: 50%;
+		box-sizing: border-box;
+		font-size:1em;
+	}
+	#self_portrait, #marquee{
+		left: 50%;
+	}
+	#self_portrait{
+		top: 22%;
+	}
+	#marquee{
+		top: 78%;
+		height: 20vh;
+		width: auto;
+	}
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
