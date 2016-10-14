@@ -1,9 +1,9 @@
 $(function () {
+	$(document).ready(function(){
+	    $(this).scrollTop(0);
+	});
 
-	// PARALLAX
-	// $('.parallax-window').parallax({imageSrc: './img/masthead_background.jpg'});
-
-	// MEDIA QUERY FOR SKROLLR AND SCROLLING
+	// MEDIA QUERY
 	var mq = window.matchMedia( "(min-width: 1025px)" );
 
 	if (mq.matches){
@@ -41,7 +41,6 @@ $(function () {
 					$btl.animate({'top': "-=30vh"}, "slow").addClass('animated');
 					$more.animate({'top': "+=30vh"}, "slow").addClass('animated');
 					$btb.animate({'top': "+=30vh"}, "slow").addClass('animated');
-
 
 				// Page 3 - Page 2
 				}else if( index == 3 && direction == 'up') {
@@ -88,27 +87,14 @@ $(function () {
 			$.fn.fullpage.moveSectionUp();
 		});
 
-
-		// LOADING PAGE
-		setTimeout(function(){
-			$('body').addClass('loaded');
-		}, 1000);
-
 		// firstPage fade in effects
-
 		$('#firstPageBanner')	.fadeIn(2000).css("display", "inline-block");
 		$('#myName')			.css('display', 'inline-block').hide().delay(1500).fadeIn(3000);
 		$('#myTitle')			.css('display', 'inline-block').hide().delay(2500).fadeIn(3000);
-
 		// firstPage fade out effects
-
 		$(window).scroll(function(){
 			$(".fade-out")		.css("opacity", 2 - $(window).scrollTop() / 250);
 		});
-
-
-
-			
 	}
 
 

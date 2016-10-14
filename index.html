@@ -6,9 +6,7 @@
 	 
 	<link rel="icon" type="image/png" href="img/marquee_star/marquee_star.png">
 
-<!--CSS Google Fonts -->
 	<link href="https://fonts.googleapis.com/css?family=Anton|Average+Sans" rel="stylesheet">
-<!-- CSS JQuery FullPage -->
 	<link rel="stylesheet" href="css/jquery.fullPage.css">
 
 <!-- CSS Mobile -->
@@ -16,23 +14,27 @@
 <!-- CSS Desktop -->
 	<link rel="stylesheet" type="text/css" media="only screen and (min-width: 1025px)" href="css/desktop.css">
 
-<!-- JS JQuery -->
-	<script src="js/jquery-3.1.1.min.js"></script>
-<!-- JS JQuery FullPage -->
+	<script src="bower_components/jquery/dist/jquery.min.js"></script>
 	<script src="js/jquery.fullPage.min.js"></script>
-<!--JS My App-->
 	<script src="js/app.js"></script>
+	<script>
+	var loadedImage = new Image();
+	loadedImage.onload = function(){
+		$('#loadingPage').css('display', 'none');
+		$('#firstPage').css('background-image', 'url('+this.src+')')
+	};
+	loadedImage.src = "img/masthead_background.jpg";
+	</script>
 
 </head>
 <body>
 <!-- ========================== DESKTOP ========================== -->
 <div id="desktop">
 <!-- ================= LOADING PAGE ================= -->
-	<div id="loader-wrapper">
-		<img src="img/marquee_star/marquee_star.png" alt="star" id="loader" class="">
-		<div class="loader-section section-left"></div>
-		<div class="loader-section section-right"></div>
+	<div id="loadingPage">
+		<img src="img/loading.gif" alt="loading" id="loading" class="fullcentered">
 	</div>
+
 	<div id="fullpage">
 	<!-- ================= PAGE I ================= -->
 		<div id="firstPage" class="section active">
