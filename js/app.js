@@ -169,6 +169,7 @@ $(function () {
 		osc 			.fadeOut('slow');
 		blc 			.fadeOut('slow');
 		sc 				.fadeOut('slow');
+		fc 				.fadeOut('slow');
 	});
 
 	const olc = $("#onlineLendingContent");
@@ -232,18 +233,15 @@ $(function () {
 		sc.fadeIn('slow');
 	});
 
+	const fc = $("#friendsContent");
+	$("#fiClicker").click(()=>{
+		ip.fadeIn('slow');
+		fc.fadeIn('slow');
+	});
 
 
 
 // ====================== MOBILE =========================
-
-	// MASTHEAD fade in effects
-
-	$('#landingBanner')		.fadeIn(2000).css("display", "inline-block");
-	$('#name')				.css('display', 'inline-block').hide().delay(1500).fadeIn(3000);
-	$('#title')				.css('display', 'inline-block').hide().delay(2500).fadeIn(3000);
-
-
 
 // POPUPS
 	
