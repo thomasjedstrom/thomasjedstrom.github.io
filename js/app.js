@@ -20,7 +20,7 @@ $(function () {
 		// navigation: true,
 		// anchors: ['firstPage, secondPage, thirdPage'],
 		responsiveWidth: 770,
-		scrollBar: true,
+		// scrollBar: true,
 		css3:false,
 		onLeave: function(index, nextIndex, direction) {
 			// page2 - page3
