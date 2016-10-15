@@ -94,11 +94,6 @@ a{
 	width: 100vw;
 	height: 100vh;
 }
-@media(max-width: 770px){
-	#firstPage{
-		background-attachment: scroll;	
-	}
-}
 #firstPageBanner{
 	display: none;
 	position: relative;
@@ -194,7 +189,7 @@ a{
 	font-size: 1.6em;
 	text-align: center;
 }
-.sendMeALine{
+#sendMeALine{
 	color: #6d1c1c;
 	cursor: pointer;
 	cursor: hand;
@@ -773,6 +768,9 @@ big{
 }
 
 @media screen and (max-width: 770px){
+	#firstPage{
+		background-attachment: scroll;
+	}
 	/*PopUps*/
 	.portfolio-box{
 		position: relative;

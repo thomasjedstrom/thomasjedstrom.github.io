@@ -3,16 +3,6 @@ $(function () {
 	    $(this).scrollTop(0);
 	});
 
-	// MEDIA QUERY
-	// var mq = window.matchMedia( "(min-width: 1025px)" );
-
-	// if (mq.matches){
-		// $(window).resize(function(){
-		// 	location.reload();
-		// });	
-
-
-
 	// ANIMATIONS
 	// variables
 	var $curtainL	= $('#curtain1'),
@@ -27,7 +17,6 @@ $(function () {
 
 	// initialize fullPage
 	$('#fullpage').fullpage({
-
 		// navigation: true,
 		// anchors: ['firstPage, secondPage, thirdPage'],
 		responsiveWidth: 770,
@@ -42,7 +31,7 @@ $(function () {
 				$bgHanging.animate({'top': "+=50vh"}, "slow").addClass('animated');
 				$icon.animate({'top': "+=127vh"}, 1200).addClass('animated');
 				$btl.animate({'top': "-=30vh"}, "slow").addClass('animated');
-				$more.animate({'top': "+=30vh"}, "slow").addClass('animated');
+				$more.animate({'bottom': "-=30vh"}, "slow").addClass('animated');
 				$btb.animate({'top': "+=30vh"}, "slow").addClass('animated');
 
 			// Page 3 - Page 2
@@ -64,7 +53,7 @@ $(function () {
 					$btl.animate({'top': "+=30vh"}, "slow");
 				}
 				if($more.hasClass('animated')){
-					$more.animate({'top': "-=30vh"}, "slow");
+					$more.animate({'bottom': "+=30vh"}, "slow");
 				}
 				if($btb.hasClass('animated')){
 					$btb.animate({'top': "-=30vh"}, "slow");
@@ -98,7 +87,6 @@ $(function () {
 	$(window).scroll(function(){
 		$(".fade-out")		.css("opacity", 2 - $(window).scrollTop() / 250);
 	});
-	// }
 
 
 
@@ -131,6 +119,7 @@ $(function () {
 
 	const contact 			= $('#contact-box');
 	$("#burger")			.click(()=>{contact[0].style.display = "block"});
+	$("#sendMeALine")		.click(()=>{contact[0].style.display = "block"});
 	$("#contactword")		.click(()=>{contact[0].style.display = "block"});
 	
 	const portfolio 			= $("#portfolio-box");
@@ -238,21 +227,5 @@ $(function () {
 		ip.fadeIn('slow');
 		fc.fadeIn('slow');
 	});
-
-
-
-// ====================== MOBILE =========================
-
-// POPUPS
-	
-	// PORTFOLIO
-	var portfolioMobile = $("#portfolio-boxMobile")
-	$("#portfolioClickerMobile")	.click(()=>{portfolio[0].style.display = "block"});
-
-	// CONTACT
-	$("#contactMe")					.click(()=>{contact[0].style.display = "block"});
-	$(".sendMeALine")				.click(()=>{contact[0].style.display = "block"});
-
-
 })
 
