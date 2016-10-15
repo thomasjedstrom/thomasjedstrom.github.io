@@ -849,16 +849,30 @@ big{
 
 
 
+@media screen and (max-height: 1070px) and (max-width: 1170px){
+	#self_portrait{
+		height: 35vh;
+		width: auto;
+	}
+}
 
-
-
-
-
-
+@media screen and (max-height: 1070px) and (max-width: 600px){
+	#back_to_landing, #to_connections, #bioHeader{
+		display: none;
+	}
+	#self_portrait{
+		top: 20%;
+		height: 30vh;
+		width: auto;
+	}
+	#bio{
+		top: 52%;
+	}
+}
 
 @media screen and (max-height: 760px){
 	/*PAGE II*/
-	#back_to_landing, #to_connections{
+	#back_to_landing, #to_connections, #bioHeader{
 		display: none;
 	}
 	#enter_here{
@@ -866,21 +880,13 @@ big{
 		width: auto;
 	}
 	#bio{
-		top: 52%;
-	}
-	#bioHeader{
-		display: none;
+		top: 55%;
 	}
 	#bio p:nth-child(2){
 		margin-top: 0px;
 	}
 	#bio p:last-child{
 		margin-bottom: 0px;
-	}
-	#self_portrait{
-		top: 15%;
-		height: 25vh;
-		width: auto;
 	}
 	#marquee{
 		top: 85%;
@@ -901,5 +907,17 @@ big{
 	}
 	#bio{
 		font-size: .8em;
+	}
+}
+
+@media screen and (max-height: 520px) and (max-width: 450px){
+	#marquee{
+		top: 85%;
+	}
+	#self_portrait{
+		/*height: 25vh;*/
+	}
+	#bio{
+		top: 55%;
 	}
 }
