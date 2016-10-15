@@ -19,7 +19,7 @@ $(function () {
 	$('#fullpage').fullpage({
 		// navigation: true,
 		// anchors: ['firstPage, secondPage, thirdPage'],
-		responsiveWidth: 770,
+		// responsiveWidth: 770,
 		scrollBar: true,
 		css3:false,
 		onLeave: function(index, nextIndex, direction) {
