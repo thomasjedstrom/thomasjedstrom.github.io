@@ -41,7 +41,9 @@ a{
 /*=======NAVIGATION BUTTONS=========*/
 .btn{
 	left: 50vw;
-	height: 15vh;
+	max-width: 100px;
+	max-height: 15vh;
+	height: auto;
 	width: auto;
 
 	-webkit-filter: brightness(0.4);
@@ -172,6 +174,7 @@ a{
 	top: 50%;
 	left: 50%;
 	width: 30vw;
+	box-sizing: border-box;
 	border: 15px groove white;
 	font-size: 1.5em;
 	background: rgba(255, 255, 255, 0.5);
@@ -198,7 +201,9 @@ a{
 	z-index: 22;
 	top: 50%;
 	left: 15%;	
-	height: 40vh;
+	max-width: 280px;
+	max-height: 35vh;
+	height: auto;
 	width: auto;
 	border-radius: 30%;
 }
@@ -296,7 +301,7 @@ a{
 
 /*======BURGER CONTACT========*/
 #burgercontainer{
-	top: -82vh;
+	top: -80vh;
 	left: 92vw;
 }
 #burgercontainer:hover > #contactword{
@@ -306,6 +311,8 @@ a{
 	cursor: hand;
 }
 #burger{
+	height: 40vh;
+	width: auto;
 	transition: .6s filter linear;
 	-webkit-transition: .6s -webkit-filter linear;
 	-moz-transition: .6s -moz-filter linear;
@@ -535,7 +542,8 @@ a{
 .iclose:hover,
 .iclose:focus,
 .popupLink:hover,
-.popupLink:focus {
+.popupLink:focus,
+#contactMe {
 	color: black;
 	text-decoration: none;
 	cursor: pointer;
@@ -656,29 +664,73 @@ big{
 
 
 
+/*================ASPECT RATIOS====================*/
 
+@media screen and (min-aspect-ratio: 3/2){
+	#bio{
+		width: 40vw;
+	}
+	#marquee{
+		height: auto;
+		width: 25vw;
+	}
+	#self_portrait{
+		width: 20vw;
+		height: auto;
+		max-height: 80vh
+	}
+}
+@media screen and (max-aspect-ratio: 3/2) and (min-aspect-ratio: 1/1){
+	#self_portrait, #marquee{
+		left: 78%;
+		height: auto;
+	}
+	#self_portrait{
+		top: 32%;
+	}
+	#marquee{
+		width: 35vw;
+		max-width: 320px;
+		top: 70%;
+	}
+	#bio{
+		width: 40vw;
+		left: 25%;
+		box-sizing: border-box;
+	}
+}
+@media screen and (max-aspect-ratio: 1/1){
+	#self_portrait, #marquee{
+		left: 50%;
+		height: 25vh;
+		width: auto;
+	}
+	#self_portrait{
+		top: 20%;
+	}
+	#marquee{
+		top: 80%;
+	}
+	#bio{
+		width: 90vw;
+		top: 50%;
+		left: 50%;
+	}
+	#bio p:nth-child(2){
+		margin-top: 0px;
+	}
+	#bio p:last-child{
+		margin-bottom: 0px;
+	}
+	#bioHeader{
+		margin: 0px;
+	}
+	#back_to_landing, #to_connections{
+		display: none;
+	}
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/*======MEDAI QUERIES======*/
+/*================MAX WIDTH====================*/
 @media screen and (max-width: 1170px){
 	#secondPage{
 		background: transparent;
@@ -694,23 +746,8 @@ big{
 	}	
 	
 	/*PAGE II*/
-	#bio{
-		width: 50vw;
-		left: 30%;
-		box-sizing: border-box;
-	}
-	#self_portrait, #marquee{
-		left: 78%;
-		width: 35vw;
-		max-width: 320px;
-		height: auto;
-	}
-	#self_portrait{
-		top: 40%;
-	}
-	#marquee{
-		top: 70%;
-	}
+
+
 
 	/*PAGE III*/
 	#bgHanging, #icons, #back_to_bio{
@@ -766,7 +803,6 @@ big{
 		margin: 0px;
 	}
 }
-
 @media screen and (max-width: 770px){
 	#firstPage{
 		background-attachment: scroll;
@@ -823,64 +859,35 @@ big{
 		text-decoration: underline;
 	}
 }
-
-@media screen and (max-width: 600px){
-	#bio{
-		width: 90vw;
-		left: 50%;
-		box-sizing: border-box;
-		font-size:1em;
+@media screen and (max-width: 700px){
+	#bioHeader{
+		display: none;
 	}
-	#self_portrait, #marquee{
-		left: 50%;
-	}
-	#self_portrait{
-		top: 22%;
-	}
+}
+@media screen and (max-width: 450px){
 	#marquee{
-		top: 78%;
-		height: 20vh;
-		width: auto;
-	}	
-}
-
-
-
-
-
-
-@media screen and (max-height: 1070px) and (max-width: 1170px){
-	#self_portrait{
-		height: 35vh;
-		width: auto;
-	}
-}
-
-@media screen and (max-height: 1070px) and (max-width: 600px){
-	#back_to_landing, #to_connections, #bioHeader{
-		display: none;
+		max-width: 85vw;
+		height: auto;
 	}
 	#self_portrait{
-		top: 20%;
-		height: 30vh;
-		width: auto;
+		max-width: 45vw;
+		height: auto;	
 	}
 	#bio{
-		top: 52%;
+		font-size: 1em;
+	}
+}
+@media screen and (max-width: 280px){
+	#bio{
+		font-size: 1em;
 	}
 }
 
-@media screen and (max-height: 760px){
-	/*PAGE II*/
-	#back_to_landing, #to_connections, #bioHeader{
-		display: none;
-	}
-	#enter_here{
-		height: 12vh;
-		width: auto;
-	}
+/*================MAX HEIGHT====================*/
+
+@media screen and (max-height: 890px){
 	#bio{
-		top: 55%;
+		font-size: 1em;
 	}
 	#bio p:nth-child(2){
 		margin-top: 0px;
@@ -888,14 +895,23 @@ big{
 	#bio p:last-child{
 		margin-bottom: 0px;
 	}
-	#marquee{
-		top: 85%;
+	#bioHeader{
+		margin: 0px;
+	}
+}
+@media screen and (max-height: 760px){
+	#enter_here{
+		height: 12vh;
+		width: auto;
 	}
 	#contactMe{
 		font-size: 1.8em;
 	}
 }
 @media screen and (max-height: 600px){
+	#bioHeader{
+		display: none;
+	}
 	#textholder{
 		height: 9em;
 	}
@@ -905,19 +921,50 @@ big{
 	#myTitle{
 		font-size: 1em;
 	}
+}
+@media screen and (max-height: 480px){
+	#back_to_landing, #to_connections{
+		display: none;
+	}
+}
+@media screen and (max-height: 420px){
 	#bio{
 		font-size: .8em;
 	}
 }
-
-@media screen and (max-height: 520px) and (max-width: 450px){
+@media screen and (max-height: 350px){
+	#self_portrait{
+		max-width: 20vw;
+		width: auto;
+	}
+}
+/*================MAX HEIGHT & WIDTH====================*/
+@media screen and (max-height: 770px) and (max-width: 330px){
+	#bio{
+		font-size: .8em;
+	}
+}
+@media screen and (max-height: 600px) and (max-width: 330px){
 	#marquee{
+		max-height: 22vh;
+		width: auto;
 		top: 85%;
 	}
 	#self_portrait{
-		/*height: 25vh;*/
+		max-height: 22vh;
+		width: auto;
+		top: 15%;
 	}
-	#bio{
-		top: 55%;
+}
+@media screen and (max-height: 770px) and (max-width: 450px){
+	#marquee{
+		max-height: 22vh;
+		width: auto;
+		top: 85%;
+	}
+	#self_portrait{
+		max-height: 22vh;
+		width: auto;
+		top: 15%;
 	}
 }

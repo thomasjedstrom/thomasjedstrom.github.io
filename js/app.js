@@ -121,9 +121,11 @@ $(function () {
 	$("#burger")			.click(()=>{contact[0].style.display = "block"});
 	$("#sendMeALine")		.click(()=>{contact[0].style.display = "block"});
 	$("#contactword")		.click(()=>{contact[0].style.display = "block"});
+	$("#contactMe")			.click(()=>{contact[0].style.display = "block"});
 	
 	const portfolio 			= $("#portfolio-box");
 	$("#briefcaseclicker")	.click(()=>{portfolio[0].style.display = "block"});
+	$("#portfoliowordMobile").click(()=>{portfolio[0].style.display = "block"});
 
 
 // PORTFOLIO TYPES POPUPS
