@@ -17,9 +17,6 @@ $(function () {
 
 	// initialize fullPage
 	$('#fullpage').fullpage({
-		// navigation: true,
-		// anchors: ['firstPage, secondPage, thirdPage'],
-		// responsiveWidth: 770,
 		scrollBar: true,
 		css3:false,
 		onLeave: function(index, nextIndex, direction) {
@@ -84,150 +81,85 @@ $(function () {
 	$('#myName')			.css('display', 'inline-block').hide().delay(1500).fadeIn(3000);
 	$('#myTitle')			.css('display', 'inline-block').hide().delay(2500).fadeIn(3000);
 	// firstPage fade out effects
-	$(window).scroll(function(){
+	$(window).scroll(()=>{
 		$(".fade-out")		.css("opacity", 2 - $(window).scrollTop() / 250);
 	});
 
 
 
-
 	// LINKS CLICKABLE AREA
-
 	$('#newspaperclicker')	.hover(()=>{$('#newspapershadow').fadeIn("slow")})
 	$('#newspaperclicker')	.mouseout(()=>{$('#newspapershadow').fadeOut("slow")})
-
 	$('#suitclicker')		.hover(()=>{$('#suitshadow').fadeIn("slow")})	
 	$('#suitclicker')		.mouseout(()=>{$('#suitshadow').fadeOut("slow")})
-
 	$('#briefcaseclicker')	.hover(()=>{$('#briefcaseshadow').fadeIn("slow")})	
 	$('#briefcaseclicker')	.mouseout(()=>{$('#briefcaseshadow').fadeOut("slow")})
-
 	$('#octocatclicker')	.hover(()=>{$('#octocatshadow').fadeIn("slow")})	
 	$('#octocatclicker')	.mouseout(()=>{$('#octocatshadow').fadeOut("slow")})
-
 	$('#pianoclicker')		.hover(()=>{$('#pianoshadow').fadeIn("slow")})	
 	$('#pianoclicker')		.mouseout(()=>{$('#pianoshadow').fadeOut("slow")})
 
 
 
-
-// POPUPS
+// POPUPS LAYER 1
+	const puBG = $('#popupBG')
+	$('.popupLink').click(()=>puBG.fadeIn('slow'));
 	$(".close").click(function(){
-		contact[0]			.style.display = "none";
-		portfolio[0]		.style.display = "none";
+		contact				.fadeOut('slow');
+		portfolio			.fadeOut('slow');
+		puBG				.fadeOut('slow');
 	})
 
-	const contact 			= $('#contact-box');
-	$("#burger")			.click(()=>{contact[0].style.display = "block"});
-	$("#sendMeALine")		.click(()=>{contact[0].style.display = "block"});
-	$("#contactword")		.click(()=>{contact[0].style.display = "block"});
-	$("#contactMe")			.click(()=>{contact[0].style.display = "block"});
-	
-	const portfolio 			= $("#portfolio-box");
-	$("#briefcaseclicker")	.click(()=>{portfolio[0].style.display = "block"});
-	$("#portfoliowordMobile").click(()=>{portfolio[0].style.display = "block"});
+	const contact 			= $('#contact-content');
+	$("#burger")			.click(()=>contact.fadeIn('slow'));
+	$("#sendMeALine")		.click(()=>contact.fadeIn('slow'));
+	$("#contactMe")			.click(()=>contact.fadeIn('slow'));
+
+	const portfolio 			= $("#portfolio-content");
+	portfolio.css("display", "flex").hide()
+	$("#briefcaseclicker")	.click(()=>portfolio.fadeIn('slow'));
+	$("#portfoliowordMobile").click(()=>portfolio.fadeIn('slow'));
 
 
-// PORTFOLIO TYPES POPUPS
-	$(".pclose").click(function(){
-		rails			.fadeOut('slow');
-		mean			.fadeOut('slow');
-		django			.fadeOut('slow');
+// POPUPS LAYER 2
+	const poBG = $('#portfolioBG')
+	$('.portfolioType').click(()=>poBG.fadeIn('slow'));
+	$(".pclose").click(()=>{
+		poBG				.fadeOut('slow');
+		rb					.fadeOut('slow');
+		mb					.fadeOut('slow');
+		db					.fadeOut('slow');
 	})
 
-	const rails 				= $("#rails-box");
-	$("#railsTag")			.click(()=>{rails.fadeIn('slow')});
-
-	const mean 				= $("#mean-box");
-	$("#meanTag")			.click(()=>{mean.fadeIn('slow')});
-
-	const django 				= $("#django-box");
-	$("#djangoTag")			.click(()=>{django.fadeIn('slow')});
+	const rb = $("#rails-content")
+	$("#railsTag").click(()=>rb.fadeIn('slow'));
+	const mb = $("#mean-content")
+	$("#meanTag").click(()=>mb.fadeIn('slow'));
+	const db = $("#django-content")
+	$("#djangoTag").click(()=>db.fadeIn('slow'));
 
 
-
-// PORTFOLIO INFO POPUPS
-	const ip = $("#infoPopup");
+// POPUPS LAYER 3
+	const ip = $("#infoBG");
+	const ib = $('.infoBox');
 	$(".iclose").click(()=>{
 		ip 				.fadeOut('slow');
-		olc 			.fadeOut('slow');
-		twc 			.fadeOut('slow');
-		etc 			.fadeOut('slow');
-		atc 			.fadeOut('slow');
-		bic 			.fadeOut('slow');
-		ngc 			.fadeOut('slow');
-		dbc 			.fadeOut('slow');
-		osc 			.fadeOut('slow');
-		blc 			.fadeOut('slow');
-		sc 				.fadeOut('slow');
-		fc 				.fadeOut('slow');
+		ib 				.fadeOut('slow');
 	});
+	$('.infoLink').click(()=>ip.fadeIn('slow'))
 
-	const olc = $("#onlineLendingContent");
-	$("#oliClicker").click(()=>{
-		console.log("hey")
-		ip.fadeIn('slow');
-		olc.fadeIn('slow');
-	});
-
-	const twc = $("#theWallContent");
-	$("#twiClicker").click(()=>{
-		ip.fadeIn('slow');
-		twc.fadeIn('slow');
-	});
-
-	const etc = $("#eventTrackingContent");
-	$("#etiClicker").click(()=>{
-		ip.fadeIn('slow');
-		etc.fadeIn('slow');
-	});
-
-	const atc = $("#abTestingContent");
-	$("#atiClicker").click(()=>{
-		ip.fadeIn('slow');
-		atc.fadeIn('slow');
-	});
-
-	const bic = $("#brightIdeasContent");
-	$("#biiClicker").click(()=>{
-		ip.fadeIn('slow');
-		bic.fadeIn('slow');
-	});
-
-	const ngc = $("#ninjaGoldContent");
-	$("#ngiClicker").click(()=>{
-		ip.fadeIn('slow');
-		ngc.fadeIn('slow');
-	});
-
-	const dbc = $("#discussionBoardContent");
-	$("#dbiClicker").click(()=>{
-		ip.fadeIn('slow');
-		dbc.fadeIn('slow');
-	});
-
-	const osc = $("#onlineStoreContent");
-	$("#osiClicker").click(()=>{
-		ip.fadeIn('slow');
-		osc.fadeIn('slow');
-	});
-
-	const blc = $("#bucketListsContent");
-	$("#bliClicker").click(()=>{
-		ip.fadeIn('slow');
-		blc.fadeIn('slow');
-	});
-
-	const sc = $("#surveysContent");
-	$("#siClicker").click(()=>{
-		ip.fadeIn('slow');
-		sc.fadeIn('slow');
-	});
-
-	const fc = $("#friendsContent");
-	$("#fiClicker").click(()=>{
-		ip.fadeIn('slow');
-		fc.fadeIn('slow');
-	});
+	// Rails
+	$("#oliClicker").click(()=>$("#onlineLendingContent").fadeIn('slow'));
+	$("#twiClicker").click(()=>$("#theWallContent").fadeIn('slow'));
+	$("#etiClicker").click(()=>$("#eventTrackingContent").fadeIn('slow'));
+	$("#atiClicker").click(()=>$("#abTestingContent").fadeIn('slow'));
+	$("#biiClicker").click(()=>$("#brightIdeasContent").fadeIn('slow'));
+	$("#ngiClicker").click(()=>$("#ninjaGoldContent").fadeIn('slow'));
+	// MEAN
+	$("#dbiClicker").click(()=>$("#discussionBoardContent").fadeIn('slow'));
+	$("#osiClicker").click(()=>$("#onlineStoreContent").fadeIn('slow'));
+	$("#bliClicker").click(()=>$("#bucketListsContent").fadeIn('slow'));
+	$("#siClicker").click(()=>$("#surveysContent").fadeIn('slow'));
+	// Django
+	$("#fiClicker").click(()=>$("#friendsContent").fadeIn('slow'));
 })
-

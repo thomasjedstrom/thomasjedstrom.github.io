@@ -500,8 +500,8 @@ a{
 
 
 /*========POP UPS=============*/
-/* The Modal (background) */
-.popup {
+/* Popup Background) */
+.popup{
 	display: none;
 	position: fixed;
 	z-index: 999;
@@ -513,8 +513,9 @@ a{
 	background-color: rgba(0,0,0,0.4);
 }
 
-/* Modal Content/Box */
-.popup-content {
+/* Popup Content */
+.popup-content{
+	box-sizing: border-box;
 	background-color: #fefefe;
 	padding: 20px;
 	border: 1px solid #888;
@@ -522,9 +523,10 @@ a{
 	position: fixed;
 	top: 50%;
 	left: 50%;
+	display: none;
 }
-/* The Close Button */
-.close, .pclose, .iclose {
+/* Close Button */
+.close, .pclose, .iclose{
 	color: #aaa;
 	float: right;
 	font-size: 1em;
@@ -543,6 +545,8 @@ a{
 .iclose:focus,
 .popupLink:hover,
 .popupLink:focus,
+.infoLink:hover,
+.infoLink:focus,
 #contactMe {
 	color: black;
 	text-decoration: none;
@@ -556,6 +560,7 @@ a{
 	font-family: 'Average Sans', sans-serif;
 	text-align: center;
 	margin: 0px;
+	z-index: 1000;
 }
 #phone{
 	display: inline-block;
@@ -571,9 +576,10 @@ big{
 /*======PORTFOLIO LAYER 1======*/
 #portfolio-content{
 	max-width: 90vw;
-	display: flex;
+	display: none;
 	flex-wrap: wrap;
-	justify-content: space-around; 
+	justify-content: space-around;
+	z-index: 1010;
 }
 .portfolioType{
 	display: inline-block;
@@ -600,10 +606,14 @@ big{
 	color: white;
 }
 /*======PORTFOLIO LAYER 2======*/
+.portfolioBox{
+	z-index: 1020;
+}
 .projectContainer{
 	display: inline-block;
 	width: 230px;
 	text-align: center;
+	z-index: 1021;
 }
 .portfolioClicker{
 	display: inline-block;
@@ -634,13 +644,16 @@ big{
 	margin: auto;
 	border: 3px solid black;
 }
-.popupLink{
+.infoLink{
 	width: 30px;
 	height: auto;
 }
 /*======PORTFOLIO LAYER 3======*/
+#infoBG{
+	z-index: 1030;
+}
 .infoBox{
-	z-index: 1000;
+	z-index: 1031;
 	display: none;
 	width: 650px;
 	font-family: 'Average Sans', sans-serif;
@@ -808,14 +821,12 @@ big{
 		background-attachment: scroll;
 	}
 	/*PopUps*/
-	.portfolio-box{
+	.portfolioBox{
 		position: relative;
-		width: 90vw;
+		width: 100vw;
 		height: 100vh;
 		overflow: scroll;
-	}
-	.portfolio-box .pclose{
-		top: 15%;
+		top: -50vh;
 	}
 	.projectContainer{
 		width: 90vw;
@@ -840,14 +851,13 @@ big{
 		margin: auto;
 		border: 3px solid black;
 	}
-	.popupLink{
+	.infoLink{
 		width: 15vw;
 		height: auto;
 		margin: 0px 15px 20px 15px;
 	}
 	/*======PORTFOLIO LAYER 3======*/
 	.infoBox{
-		z-index: 1000;
 		display: none;
 		width: 90vw;
 		font-family: 'Average Sans', sans-serif;
@@ -943,6 +953,9 @@ big{
 	#bio{
 		font-size: .8em;
 	}
+	.pclose{
+		top: 15%;
+	}
 }
 @media screen and (max-height: 600px) and (max-width: 330px){
 	#marquee{
@@ -966,5 +979,8 @@ big{
 		max-height: 22vh;
 		width: auto;
 		top: 15%;
+	}
+	#contact-content{
+		font-size: 1.3em;
 	}
 }

@@ -11,8 +11,8 @@
 	<link rel="stylesheet" href="css/jquery.fullpage.min.css">
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 
-	<script src="js/jquery.min.js"></script>
-	<script src="js/jquery.fullPage.min.js"></script>
+	<script src="dist/jquery.min.js"></script>
+	<script src="dist/jquery.fullPage.min.js"></script>
 	<!-- <script src="js/jquery.fullPage.min.js.map"></script> -->
 	<!-- <script src="js/jquery.fullPage.extensions.min.js"></script> -->
 	<script src="js/app.js"></script>
@@ -70,7 +70,7 @@
 				<h3 id="bioHeader">INCREASE PROFITS, DECREASE EXPENSES.</h3>
 				<p>I make people money.  That pretty much sums it up.</p>
 				<p>On the rare occassion I'm not behind the computer, I love to read, make music, or talk philosophy over coffee.</p>
-				<p>I currently reside in Dallas, TX and I'm always looking to create something new.  <span id="sendMeALine">Send me a line</span> and let's make something happen!</p>
+				<p>I currently reside in Dallas, TX and I'm always looking to create something new.  <a id="sendMeALine" class="popupLink">Send me a line</a> and let's make something happen!</p>
 			</div>
 
 			<!-- MARQUEE -->
@@ -101,9 +101,8 @@
 			<img src="img/stars/star_5.png" alt="star 1" class="dim bg-star fullcentered fixed" id="starE">
 
 		<!-- CONTACT -->
-			<div class="bg-star fixed" id="burgercontainer">
-				<img src="img/stars/burger.png" alt="contact menu" class="dim" id="burger">	
-				<!-- <img src="img/words/contact.png" alt="contact" class="dim" id="contactword"> -->
+			<div class="bg-star fixed" id="burgercontainer" class="popupLink">
+				<img src="img/stars/burger.png" alt="contact menu" class="dim popupLink" id="burger">	
 			</div>
 		</div>
 
@@ -137,7 +136,7 @@
 		<!-- Briefcase / Portfolio -->
 			<div id="briefcaseContainer" class="fixed iconContainer centered">
 				<!-- Clickable -->
-				<div id="briefcaseclicker" class="clicker"></div>
+				<div id="briefcaseclicker" class="clicker popupLink"></div>
 				<!-- Icon -->
 				<img src="img/icons/briefcase.png" alt="briefcase" class="icon" id="briefcase">
 				<!-- Word -->
@@ -194,7 +193,7 @@
 
 	<!-- Portfolio -->
 	<div id="portfolioClickerMobile" class="clicker">
-		<img src="img/words/portfolio.png" alt="portfolio" class="words fullcentered" id="portfoliowordMobile">
+		<img src="img/words/portfolio.png" alt="portfolio" class="words fullcentered popupLink" id="portfoliowordMobile">
 	</div>
 
 	<!-- Github -->
@@ -208,7 +207,7 @@
 	</a>
 
 	<!-- Contact Me -->
-	<h1 id="contactMe" class="words fullcentered">CONTACT ME!</h1>
+	<h1 id="contactMe" class="words fullcentered popupLink">CONTACT ME!</h1>
 
 </div>
 
@@ -235,195 +234,184 @@
 
 
 <!-- ================= POPUPS ================= -->
+	<div class="popup" id="popupBG"></div>
   	<!-- Contact -->
-	<div id="contact-box" class="popup">
-		<div id="contact-content" class="popup-content fullcentered">
-			<span class="close">X</span>
-			<big id="phone">214-912-2649</big><br>
-			<span id="email"><big>T</big>homas<big>JE</big>dstrom<big>@</big>gmail.com</span><br>
-		</div>
+	<div id="contact-content" class="popup-content fullcentered">
+		<span class="close">X</span>
+		<big id="phone">214-912-2649</big><br>
+		<span id="email"><big>T</big>homas<big>JE</big>dstrom<big>@</big>gmail.com</span><br>
 	</div>
 	
-	<!-- ======== Portfolio LAYER 1 ======== -->
-	<div id="portfolio-box" class="popup">
-		<div id="portfolio-content" class="popup-content fullcentered">
-			<span class="close">X</span>
-			<span id="railsTag" class="portfolioType">RAILS</span>
-			<span id="meanTag" class="portfolioType">MEAN</span>
-			<span id="djangoTag" class="portfolioType">DJANGO</span>
-		</div>
+<!-- ======== Portfolio LAYER 1 ======== -->
+	<div id="portfolio-content" class="popup-content fullcentered">
+		<span class="close">X</span>
+		<span id="railsTag" class="portfolioType">RAILS</span>
+		<span id="meanTag" class="portfolioType">MEAN</span>
+		<span id="djangoTag" class="portfolioType">DJANGO</span>
 	</div>
 
-	<!-- ======== Portfolio LAYER 2 ======== -->
-	<!-- ======== RAILS LAYER 2 ======== -->
-	<div id="rails-box" class="popup">
-		<div id="rails-content" class="popup-content fullcentered portfolio-box">
-			<span class="pclose">X</span>
+<!-- ======== Portfolio LAYER 2 ======== -->
+	<div class="popup" id="portfolioBG"></div>
+	<!-- ======== RAILS LAYER 2 ======== -->	
+	<div id="rails-content" class="popup-content fullcentered portfolioBox">
+		<span class="pclose">X</span>
 
-			<div class="projectContainer">
-				<div class="portfolioClicker">
-					<a href="http://onlinelending.thomasjedstrom.com" target="_blank" style="target-new: tab;">
-						<h2 class="portfolioTitle">ONLINE LENDING</h2>
-						<img src="img/thumbnails/rails_online_lending.jpg" alt="rails online lending" class="portfolioImage">
-					</a>
-				</div>
-				<a href="https://github.com/thomasjedstrom/RoR_OnlineLending" target="_blank" style="target-new: tab;">
-					<img src="img/icons/github.png" alt="github link" class="popupLink">
+		<div class="projectContainer">
+			<div class="portfolioClicker">
+				<a href="http://onlinelending.thomasjedstrom.com" target="_blank" style="target-new: tab;">
+					<h2 class="portfolioTitle">ONLINE LENDING</h2>
+					<img src="img/thumbnails/rails_online_lending.jpg" alt="rails online lending" class="portfolioImage">
 				</a>
-				<img src="img/icons/info.svg" alt="info" class="popupLink" id="oliClicker">
 			</div>
+			<a href="https://github.com/thomasjedstrom/RoR_OnlineLending" target="_blank" style="target-new: tab;">
+				<img src="img/icons/github.png" alt="github link" class="infoLink">
+			</a>
+			<img src="img/icons/info.svg" alt="info" class="infoLink" id="oliClicker">
+		</div>
 
-			<div class="projectContainer">
-				<div class="portfolioClicker">
-					<a href="http://thewall.thomasjedstrom.com" target="_blank" style="target-new: tab;">
-						<h2 class="portfolioTitle">THE WALL</h2>
-						<img src="img/thumbnails/rails_the_wall.jpg" alt="rails the wall" class="portfolioImage">
-					</a>
-				</div>
-				<a href="https://github.com/thomasjedstrom/RoR_TheWall" target="_blank" style="target-new: tab;">
-					<img src="img/icons/github.png" alt="github link" class="popupLink">
+		<div class="projectContainer">
+			<div class="portfolioClicker">
+				<a href="http://thewall.thomasjedstrom.com" target="_blank" style="target-new: tab;">
+					<h2 class="portfolioTitle">THE WALL</h2>
+					<img src="img/thumbnails/rails_the_wall.jpg" alt="rails the wall" class="portfolioImage">
 				</a>
-				<img src="img/icons/info.svg" alt="info" class="popupLink" id="twiClicker">
 			</div>
+			<a href="https://github.com/thomasjedstrom/RoR_TheWall" target="_blank" style="target-new: tab;">
+				<img src="img/icons/github.png" alt="github link" class="infoLink">
+			</a>
+			<img src="img/icons/info.svg" alt="info" class="infoLink" id="twiClicker">
+		</div>
 
-			<div class="projectContainer">
-				<div class="portfolioClicker">
-					<a href="http://eventtracking.thomasjedstrom.com" target="_blank" style="target-new: tab;">
-						<h2 class="portfolioTitle">EVENT TRACKING</h2>
-						<img src="img/thumbnails/rails_eventtracking.jpg" alt="rails event tracking" class="portfolioImage">
-					</a>
-				</div>
-				<a href="https://github.com/thomasjedstrom/RoR_EventTracking" target="_blank" style="target-new: tab;">
-					<img src="img/icons/github.png" alt="github link" class="popupLink">
+		<div class="projectContainer">
+			<div class="portfolioClicker">
+				<a href="http://eventtracking.thomasjedstrom.com" target="_blank" style="target-new: tab;">
+					<h2 class="portfolioTitle">EVENT TRACKING</h2>
+					<img src="img/thumbnails/rails_eventtracking.jpg" alt="rails event tracking" class="portfolioImage">
 				</a>
-				<img src="img/icons/info.svg" alt="info" class="popupLink" id="etiClicker">
 			</div>
+			<a href="https://github.com/thomasjedstrom/RoR_EventTracking" target="_blank" style="target-new: tab;">
+				<img src="img/icons/github.png" alt="github link" class="infoLink">
+			</a>
+			<img src="img/icons/info.svg" alt="info" class="infoLink" id="etiClicker">
+		</div>
 
-			<div class="projectContainer">
-				<div class="portfolioClicker">
-					<a href="http://abtesting.thomasjedstrom.com" target="_blank" style="target-new: tab;">
-						<h2 class="portfolioTitle">AB TESTING</h2>
-						<img src="img/thumbnails/rails_abtesting.jpg" alt="rails ab testing" class="portfolioImage">
-					</a>
-				</div>
-				<a href="https://github.com/thomasjedstrom/RoR_ABTesting" target="_blank" style="target-new: tab;">
-					<img src="img/icons/github.png" alt="github link" class="popupLink">
+		<div class="projectContainer">
+			<div class="portfolioClicker">
+				<a href="http://abtesting.thomasjedstrom.com" target="_blank" style="target-new: tab;">
+					<h2 class="portfolioTitle">AB TESTING</h2>
+					<img src="img/thumbnails/rails_abtesting.jpg" alt="rails ab testing" class="portfolioImage">
 				</a>
-				<img src="img/icons/info.svg" alt="info" class="popupLink" id="atiClicker">
 			</div>
+			<a href="https://github.com/thomasjedstrom/RoR_ABTesting" target="_blank" style="target-new: tab;">
+				<img src="img/icons/github.png" alt="github link" class="infoLink">
+			</a>
+			<img src="img/icons/info.svg" alt="info" class="infoLink" id="atiClicker">
+		</div>
 
-			<div class="projectContainer">
-				<div class="portfolioClicker">
-					<a href="http://brightideas.thomasjedstrom.com" target="_blank" style="target-new: tab;">
-						<h2 class="portfolioTitle">BRIGHT IDEAS</h2>
-						<img src="img/thumbnails/rails_bright_ideas.jpg" alt="rails bright ideas" class="portfolioImage">
-					</a>
-				</div>
-				<a href="https://github.com/thomasjedstrom/RoR_BrightIdeas" target="_blank" style="target-new: tab;">
-					<img src="img/icons/github.png" alt="github link" class="popupLink">
+		<div class="projectContainer">
+			<div class="portfolioClicker">
+				<a href="http://brightideas.thomasjedstrom.com" target="_blank" style="target-new: tab;">
+					<h2 class="portfolioTitle">BRIGHT IDEAS</h2>
+					<img src="img/thumbnails/rails_bright_ideas.jpg" alt="rails bright ideas" class="portfolioImage">
 				</a>
-				<img src="img/icons/info.svg" alt="info" class="popupLink" id="biiClicker">
 			</div>
+			<a href="https://github.com/thomasjedstrom/RoR_BrightIdeas" target="_blank" style="target-new: tab;">
+				<img src="img/icons/github.png" alt="github link" class="infoLink">
+			</a>
+			<img src="img/icons/info.svg" alt="info" class="infoLink" id="biiClicker">
+		</div>
 
-			<div class="projectContainer">
-				<div class="portfolioClicker">
-					<a href="http://ninjagold.thomasjedstrom.com" target="_blank" style="target-new: tab;">
-						<h2 class="portfolioTitle">NINJA GOLD</h2>
-						<img src="img/thumbnails/rails_ninja_gold.jpg" alt="rails ninja gold" class="portfolioImage">
-					</a>
-				</div>
-				<a href="https://github.com/thomasjedstrom/RoR_NinjaGold" target="_blank" style="target-new: tab;">
-					<img src="img/icons/github.png" alt="github link" class="popupLink">
+		<div class="projectContainer">
+			<div class="portfolioClicker">
+				<a href="http://ninjagold.thomasjedstrom.com" target="_blank" style="target-new: tab;">
+					<h2 class="portfolioTitle">NINJA GOLD</h2>
+					<img src="img/thumbnails/rails_ninja_gold.jpg" alt="rails ninja gold" class="portfolioImage">
 				</a>
-				<img src="img/icons/info.svg" alt="info" class="popupLink" id="ngiClicker">
 			</div>
-
+			<a href="https://github.com/thomasjedstrom/RoR_NinjaGold" target="_blank" style="target-new: tab;">
+				<img src="img/icons/github.png" alt="github link" class="infoLink">
+			</a>
+			<img src="img/icons/info.svg" alt="info" class="infoLink" id="ngiClicker">
 		</div>
 	</div>
 
 	<!-- ======== MEAN LAYER 2 ======== -->
-	<div id="mean-box" class="popup">
-		<div id="mean-content" class="popup-content fullcentered portfolio-box">
-			<span class="pclose">X</span>
+	<div id="mean-content" class="popup-content fullcentered portfolioBox">
+		<span class="pclose">X</span>
 
-			<div class="projectContainer">
-				<div class="portfolioClicker">
-					<a href="http://discussionboard.thomasjedstrom.com" target="_blank" style="target-new: tab;">
-						<h2 class="portfolioTitle">DISCUSSION BOARD</h2>
-						<img src="img/thumbnails/mean_discussionboard.jpg" alt="mean discussionboard" class="portfolioImage">
-					</a>
-				</div>
-				<a href="https://github.com/thomasjedstrom/MEAN_DiscussionBoard" target="_blank" style="target-new: tab;">
-					<img src="img/icons/github.png" alt="github link" class="popupLink">
+		<div class="projectContainer">
+			<div class="portfolioClicker">
+				<a href="http://discussionboard.thomasjedstrom.com" target="_blank" style="target-new: tab;">
+					<h2 class="portfolioTitle">DISCUSSION BOARD</h2>
+					<img src="img/thumbnails/mean_discussionboard.jpg" alt="mean discussionboard" class="portfolioImage">
 				</a>
-				<img src="img/icons/info.svg" alt="info" class="popupLink" id="dbiClicker">
 			</div>
+			<a href="https://github.com/thomasjedstrom/MEAN_DiscussionBoard" target="_blank" style="target-new: tab;">
+				<img src="img/icons/github.png" alt="github link" class="infoLink">
+			</a>
+			<img src="img/icons/info.svg" alt="info" class="infoLink" id="dbiClicker">
+		</div>
 
-			<div class="projectContainer">
-				<div class="portfolioClicker">
-					<a href="http://meanonlinestore.thomasjedstrom.com" target="_blank" style="target-new: tab;">
-						<h2 class="portfolioTitle">ONLINE STORE</h2>
-						<img src="img/thumbnails/mean_onlinestore.jpg" alt="mean online store" class="portfolioImage">
-					</a>
-				</div>
-				<a href="https://github.com/thomasjedstrom/MEAN_OnlineStore" target="_blank" style="target-new: tab;">
-					<img src="img/icons/github.png" alt="github link" class="popupLink">
+		<div class="projectContainer">
+			<div class="portfolioClicker">
+				<a href="http://meanonlinestore.thomasjedstrom.com" target="_blank" style="target-new: tab;">
+					<h2 class="portfolioTitle">ONLINE STORE</h2>
+					<img src="img/thumbnails/mean_onlinestore.jpg" alt="mean online store" class="portfolioImage">
 				</a>
-				<img src="img/icons/info.svg" alt="info" class="popupLink" id="osiClicker">
 			</div>
+			<a href="https://github.com/thomasjedstrom/MEAN_OnlineStore" target="_blank" style="target-new: tab;">
+				<img src="img/icons/github.png" alt="github link" class="infoLink">
+			</a>
+			<img src="img/icons/info.svg" alt="info" class="infoLink" id="osiClicker">
+		</div>
 
-			<div class="projectContainer">
-				<div class="portfolioClicker">
-					<a href="http://bucketlist.thomasjedstrom.com" target="_blank" style="target-new: tab;">
-						<h2 class="portfolioTitle">BUCKET LISTS</h2>
-						<img src="img/thumbnails/mean_bucketlists.jpg" alt="mean bucket lists" class="portfolioImage">
-					</a>
-				</div>
-				<a href="https://github.com/thomasjedstrom/MEAN_BucketLists" target="_blank" style="target-new: tab;">
-					<img src="img/icons/github.png" alt="github link" class="popupLink">
+		<div class="projectContainer">
+			<div class="portfolioClicker">
+				<a href="http://bucketlist.thomasjedstrom.com" target="_blank" style="target-new: tab;">
+					<h2 class="portfolioTitle">BUCKET LISTS</h2>
+					<img src="img/thumbnails/mean_bucketlists.jpg" alt="mean bucket lists" class="portfolioImage">
 				</a>
-				<img src="img/icons/info.svg" alt="info" class="popupLink" id="bliClicker">
 			</div>
+			<a href="https://github.com/thomasjedstrom/MEAN_BucketLists" target="_blank" style="target-new: tab;">
+				<img src="img/icons/github.png" alt="github link" class="infoLink">
+			</a>
+			<img src="img/icons/info.svg" alt="info" class="infoLink" id="bliClicker">
+		</div>
 
-			<div class="projectContainer">
-				<div class="portfolioClicker">
-					<a href="http://surveys.thomasjedstrom.com" target="_blank" style="target-new: tab;">
-						<h2 class="portfolioTitle">SURVEYS</h2>
-						<img src="img/thumbnails/mean_surveys.jpg" alt="mean surveys" class="portfolioImage">
-					</a>	
-				</div>
-				<a href="https://github.com/thomasjedstrom/MEAN_Surveys" target="_blank" style="target-new: tab;">
-					<img src="img/icons/github.png" alt="github link" class="popupLink">
-				</a>
-				<img src="img/icons/info.svg" alt="info" class="popupLink" id="siClicker">
+		<div class="projectContainer">
+			<div class="portfolioClicker">
+				<a href="http://surveys.thomasjedstrom.com" target="_blank" style="target-new: tab;">
+					<h2 class="portfolioTitle">SURVEYS</h2>
+					<img src="img/thumbnails/mean_surveys.jpg" alt="mean surveys" class="portfolioImage">
+				</a>	
 			</div>
-
+			<a href="https://github.com/thomasjedstrom/MEAN_Surveys" target="_blank" style="target-new: tab;">
+				<img src="img/icons/github.png" alt="github link" class="infoLink">
+			</a>
+			<img src="img/icons/info.svg" alt="info" class="infoLink" id="siClicker">
 		</div>
 	</div>
 
 	<!-- ======== DJANGO LAYER 2 ======== -->
-	<div id="django-box" class="popup">
-		<div id="django-content" class="popup-content fullcentered portfolio-box">
-			<span class="pclose">X</span>
-			<div class="projectContainer">
-				<div class="portfolioClicker">
-					<a href="http://friends.thomasjedstrom.com" target="_blank" style="target-new: tab;">
-						<h2 class="portfolioTitle">DJANGO FRIENDS</h2>
-						<img src="img/thumbnails/django_friends.jpg" alt="django friends" class="portfolioImage">
-					</a>
-				</div>
-				<a href="https://github.com/thomasjedstrom/Django_Friends" target="_blank" style="target-new: tab;">
-					<img src="img/icons/github.png" alt="github link" class="popupLink">
+	<div id="django-content" class="popup-content fullcentered portfolioBox">
+		<span class="pclose">X</span>
+		<div class="projectContainer">
+			<div class="portfolioClicker">
+				<a href="http://friends.thomasjedstrom.com" target="_blank" style="target-new: tab;">
+					<h2 class="portfolioTitle">DJANGO FRIENDS</h2>
+					<img src="img/thumbnails/django_friends.jpg" alt="django friends" class="portfolioImage">
 				</a>
-				<img src="img/icons/info.svg" alt="info" class="popupLink" id="fiClicker">
 			</div>
+			<a href="https://github.com/thomasjedstrom/Django_Friends" target="_blank" style="target-new: tab;">
+				<img src="img/icons/github.png" alt="github link" class="infoLink">
+			</a>
+			<img src="img/icons/info.svg" alt="info" class="infoLink" id="fiClicker">
 		</div>
 	</div>
 
-	<!-- ======== Portfolio LAYER 3 ======== -->
+<!-- ======== Portfolio LAYER 3 ======== -->
+	<div class="popup" id="infoBG"></div>
 	<!-- ======== RAILS LAYER 3======== -->
-	<div class="popup" id="infoPopup"></div>
-
 	<div id="onlineLendingContent" class="popup-content fullcentered infoBox">
 		<span class="iclose">X</span>
 		<h2>ONLINE LENDING</h2>
@@ -512,7 +500,6 @@
 	</div>
 
 	<!-- ======== MEAN LAYER 3 ======== -->
-
 	<div id="discussionBoardContent" class="popup-content fullcentered infoBox">
 		<span class="iclose">X</span>
 		<h2>DISCUSSION BOARD</h2>
@@ -591,7 +578,6 @@
 		<p>A fun app for creating polls to quiz other users.  A user can create a survey question with 4 potential answers.  Other users are then able to vote on their favorite answer and view the highest ranked answers.</p>
 	</div>
 
-
 	<!-- ======== DJANGO LAYER 3======== -->
 	<div id="friendsContent" class="popup-content fullcentered infoBox">
 		<span class="iclose">X</span>
@@ -605,7 +591,5 @@
 		</ul>
 		<p>From wireframe to deployed in under 3.5 hours.  A simple Django app for creating users and adding / removing friends.  The complexity lies in the many-to-many relationships involved as well as self joins using PostgreSQL.</p>
 	</div>
-
-
 </body>
 </html>
