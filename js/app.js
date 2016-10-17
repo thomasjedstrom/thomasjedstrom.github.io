@@ -29,7 +29,6 @@ $(function () {
 				$icon.animate({'top': "+=127vh"}, 1200).addClass('animated');
 				$btl.animate({'top': "-=30vh"}, "slow").addClass('animated');
 				$more.animate({'bottom': "-=30vh"}, "slow").addClass('animated');
-				$btb.animate({'top': "+=30vh"}, "slow").addClass('animated');
 
 			// Page 3 - Page 2
 			}else if( index == 3 && direction == 'up') {
@@ -51,9 +50,6 @@ $(function () {
 				}
 				if($more.hasClass('animated')){
 					$more.animate({'bottom': "+=30vh"}, "slow");
-				}
-				if($btb.hasClass('animated')){
-					$btb.animate({'top': "-=30vh"}, "slow");
 				}
 			}
 		}
@@ -110,9 +106,13 @@ $(function () {
 		puBG				.fadeOut('slow');
 	})
 
+
+	$("#bio").click(()=>console.log("whats up"))
+
+
 	const contact 			= $('#contact-content');
 	$("#burger")			.click(()=>contact.fadeIn('slow'));
-	$("#sendMeALine")		.click(()=>contact.fadeIn('slow'));
+	$("#sendMeALine").on('click touchstart', ()=>contact.fadeIn('slow'));
 	$("#contactMe")			.click(()=>contact.fadeIn('slow'));
 
 	const portfolio 			= $("#portfolio-content");
