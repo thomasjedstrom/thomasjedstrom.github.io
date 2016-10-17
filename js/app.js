@@ -106,10 +106,6 @@ $(function () {
 		puBG				.fadeOut('slow');
 	})
 
-
-	$("#bio").click(()=>console.log("whats up"))
-
-
 	const contact 			= $('#contact-content');
 	$("#burger")			.click(()=>contact.fadeIn('slow'));
 	$("#sendMeALine").on('click touchstart', ()=>contact.fadeIn('slow'));
