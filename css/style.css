@@ -962,9 +962,6 @@ big{
 	#bio{
 		font-size: .8em;
 	}
-	.pclose{
-		top: 15%;
-	}
 }
 @media screen and (max-height: 600px) and (max-width: 330px){
 	#marquee{
@@ -979,6 +976,9 @@ big{
 	}
 }
 @media screen and (max-height: 770px) and (max-width: 450px){
+	.pclose{
+		top: 15%;
+	}
 	#marquee{
 		max-height: 22vh;
 		width: auto;
