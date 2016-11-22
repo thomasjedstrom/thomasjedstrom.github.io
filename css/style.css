@@ -6,7 +6,7 @@ html, body {
 	width:100%;
 	height:100%;
 	padding:0;
-	margin:0;	
+	margin:0;
 }
 a{
 	text-decoration: none;
@@ -18,24 +18,24 @@ a{
 }
 .centered{
 	-ms-transform: translate(-50%, 0%);
-	-webkit-tranform: translate(-50%, 0%); 
+	-webkit-tranform: translate(-50%, 0%);
 	-o-transform: translate(-50%, 0%);
-	-moz-transform: translate(-50%, 0%); 
+	-moz-transform: translate(-50%, 0%);
 	transform: translate(-50%, 0%);
 }
 .fullcentered{
 	-ms-transform: translate(-50%, -50%);
-	-webkit-tranform: translate(-50%, -50%); 
+	-webkit-tranform: translate(-50%, -50%);
 	-o-transform: translate(-50%, -50%);
-	-moz-transform: translate(-50%, -50%); 
-	transform: translate(-50%, -50%);	
+	-moz-transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%);
 }
 .dim{
 	-ms-filter: brightness(0.6);
 	-webkit-filter: brightness(0.6);
 	-o-filter: brightness(0.6);
 	-moz-filter: brightness(0.6);
-	filter: brightness(0.6);	
+	filter: brightness(0.6);
 }
 
 /*=======NAVIGATION BUTTONS=========*/
@@ -54,7 +54,7 @@ a{
 	-moz-transition: .6s -moz-filter linear;
 	-moz-transition: .6s filter linear;
 	-ms-transition: .6s -ms-filter linear;
-	-o-transition: .6s -o-filter linear;	
+	-o-transition: .6s -o-filter linear;
 }
 .btn:hover{
 	-webkit-filter: brightness(1);
@@ -65,7 +65,7 @@ a{
 
 /*=====================LOADING PAGE=======================*/
 #loadingPage{
-	z-index: 99999999;	
+	z-index: 99999999;
 	width: 100vw;
 	height: 100vh;
 	position: fixed;
@@ -197,7 +197,7 @@ a{
 #self_portrait{
 	z-index: 22;
 	top: 50%;
-	left: 15%;	
+	left: 15%;
 	max-width: 280px;
 	max-height: 35vh;
 	height: auto;
@@ -343,14 +343,14 @@ a{
 	-moz-transition: .6s -moz-filter linear;
 	-moz-transition: .6s filter linear;
 	-ms-transition: .6s -ms-filter linear;
-	-o-transition: .6s -o-filter linear;	
+	-o-transition: .6s -o-filter linear;
 }
 
 
 /********************ICONS********************/
 .iconContainer{
 	z-index: 11;
-	top: -145vh;	
+	top: -145vh;
 }
 .icon{
 	height: 75vh;
@@ -364,7 +364,7 @@ a{
 	-moz-transition: .6s -moz-filter linear;
 	-moz-transition: .6s filter linear;
 	-ms-transition: .6s -ms-filter linear;
-	-o-transition: .6s -o-filter linear;	
+	-o-transition: .6s -o-filter linear;
 }
 #newspaperContainer{
 	left: 10vw;
@@ -409,7 +409,7 @@ a{
 	position: absolute;
 	z-index: 11;
 	top: 103%;
-	left: -45%;
+	left: -30%;
 
 	height: 6vh;
 	width: auto;
@@ -431,18 +431,15 @@ a{
 #blogword{
 }
 #linkedinword{
+  left: -34%;
 }
 #portfolioword{
-	left: -30%;
 }
 #githubword{
-	left: -30%;
 }
 #musicword{
-	left: -30%;
 }
 #contactword{
-	
 }
 
 /*========SHADOWS========*/
@@ -487,7 +484,7 @@ a{
 
 	height: 90vh;
 	width: 100vw;
-	
+
 	display:block;
 	background: url(../img/twinklestars/twinklestars.gif) repeat;
 }
@@ -762,8 +759,8 @@ big{
 	/*PAGE I*/
 	#textholder{
 		width: 90vw;
-	}	
-	
+	}
+
 	/*PAGE II*/
 
 
@@ -887,7 +884,7 @@ big{
 	}
 	#self_portrait{
 		max-width: 45vw;
-		height: auto;	
+		height: auto;
 	}
 	#bio{
 		font-size: 1em;
