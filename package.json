@@ -1,25 +1,31 @@
 {
-  "name": "thomasjedstrom.github.io",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/thomasjedstrom/thomasjedstrom.github.io.git"
-  },
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/thomasjedstrom/thomasjedstrom.github.io/issues"
-  },
-  "homepage": "https://github.com/thomasjedstrom/thomasjedstrom.github.io#readme",
-  "devDependencies": {
-    "gulp": "^3.9.1",
-    "gulp-concat": "^2.6.0",
-    "gulp-uglify": "^2.0.0",
-    "uglify-js": "^2.7.3"
-  }
+		"name": "javascript-development-environment",
+		"version": "1.0.0",
+		"description": "JavaScript development environment Pluralsight course by Cory House",
+		"author": "Thomas Edstrom",
+		"license": "MIT",
+		"devDependencies": {
+				"babel-core": "^6.26.0",
+				"babel-loader": "^7.1.2",
+				"babel-preset-env": "^1.6.0",
+				"gulp": "^3.9.1",
+				"gulp-autoprefixer": "^4.0.0",
+				"gulp-babel": "^7.0.0",
+				"gulp-bootstrap-configurator": "^0.4.1",
+				"gulp-bundle-assets": "^2.28.0",
+				"gulp-concat": "^2.6.1",
+				"gulp-cssnano": "^2.1.2",
+				"gulp-inject": "^4.3.0",
+				"gulp-rev": "^7.1.2",
+				"gulp-sass": "^3.1.0",
+				"gulp-sourcemaps": "^2.6.0",
+				"gulp-uglify": "^3.0.0",
+				"requirejs": "^2.3.5"
+		},
+		"dependencies": {
+				"bootstrap": "^3.3.7",
+				"fullpage.js": "^2.9.4",
+				"jquery": "^3.2.1",
+				"textillate": "^0.4.1"
+		}
 }

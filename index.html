@@ -2,58 +2,68 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>Thomas Edstrom, FullStack Developer</title>
-
-	<link rel="icon" type="image/png" href="img/marquee_star/marquee_star.png">
+	<title>TITLE OF WEBPAGE</title>
+	<meta http-equiv="x-ua-compatible" content="IE=edge, chrome=1">
+	<meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, width=device-width, user-scalable=no" />
+	<link rel="author" href="humans.txt" />
+	<!-- <link rel="shortcut icon" type="image/png" href="./favicon.png"/> -->
+	<link rel="icon" type="image/png" href="src/img/marquee_star/marquee_star.png">
 
 	<link href="https://fonts.googleapis.com/css?family=Anton|Average+Sans" rel="stylesheet">
-	<!-- <link rel="stylesheet" href="css/jquery.fullpage.min.css.map"> -->
-	<link rel="stylesheet" href="css/jquery.fullpage.min.css">
-	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<!-- <link rel="stylesheet" href="./dist/bootstrap.css"> -->
+	<link rel="stylesheet" href="./dist/jquery.fullpage.min.css">
+	<link rel="stylesheet" href="./dist/style.css">
 
-	<script src="dist/jquery.min.js"></script>
-	<script src="dist/jquery.fullPage.min.js"></script>
-	<!-- <script src="js/jquery.fullPage.min.js.map"></script> -->
-	<!-- <script src="js/jquery.fullPage.extensions.min.js"></script> -->
-	<script src="js/app.js"></script>
+	<script src="./dist/jquery.min.js"></script>
+	<script src="./dist/jquery.fullPage.min.js"></script>
+	<!-- <script src="./dist/bootstrap.js"></script> -->
+	<!-- <script src="./dist/jquery.fittext.js"></script>
+	<script src="./dist/jquery.lettering.js"></script>
+	<script src="./dist/jquery.textillate.js"></script> -->
+	<script src="./dist/app.js"></script>
 	<script>
-	var loadedImage = new Image();
-	loadedImage.onload = function(){
-		$('#loadingPage').css('display', 'none');
-		$('#firstPage').css('background-image', 'url('+this.src+')')
-	};
-	loadedImage.src = "img/masthead_background.jpg";
+		var loadedImage = new Image();
+		loadedImage.onload = function(){
+			$('#loadingPage').css('display', 'none');
+			$('#firstPage').css('background-image', 'url('+this.src+')')
+		};
+		loadedImage.src = "src/img/masthead_background.jpg";
 	</script>
-	<meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, width=device-width, user-scalable=no" />
+
+	<!-- HTML5 shiv and Respond.js IE8 support of HTML5 elements and media queries -->
+		<!--[if lt IE 9]>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.min.js"</script>
+	<![endif]-->
 </head>
 <body>
 <!-- ================= LOADING PAGE ================= -->
 <div id="loadingPage">
-	<img src="img/loading.gif" alt="loading" id="loading" class="fullcentered">
+	<img src="src/img/loading.gif" alt="loading" id="loading" class="fullcentered">
 </div>
 
 <div id="fullpage">
 <!-- ================= PAGE I ================= -->
 	<div id="firstPage" class="section active">
-			<div id="firstPageBanner" class="fade-out fullcentered">
-				<div id="textholder">
-					<h1 id="myName">THOMAS EDSTROM</h1><br>
-					<h2 id="myTitle">FULL-STACK DEVELOPER</h2>
-				</div>
+		<div id="firstPageBanner" class="fade-out fullcentered">
+			<div id="textholder">
+				<h1 id="myName">THOMAS EDSTROM</h1><br>
+				<h2 id="myTitle">FULL-STACK DEVELOPER</h2>
 			</div>
-			<img src="img/navigation/enter.png" alt="Enter Here" id="enter_here" class="btn centered">
+		</div>
+		<img src="src/img/navigation/enter.png" alt="Enter Here" id="enter_here" class="btn centered">
 	</div>
 
 <!-- ================= PAGE II ================= -->
 	<div id="secondPage" class="section">
 
 		<!-- NAVIGATION BUTTON = Back (to landing page) -->
-		<img src="img/navigation/back.png" alt="Back" id="back_to_landing" class="btn centered fixed">
+		<img src="src/img/navigation/back.png" alt="Back" id="back_to_landing" class="btn centered fixed">
 
 
 		<!-- CURTAINS -->
-		<img src="img/curtain/curtain1.jpg" alt="curtain1" class="curtain fixed" id="curtain1">
-		<img src="img/curtain/curtain2.jpg" alt="curtain2" class="curtain fixed" id="curtain2">
+		<img src="src/img/curtain/curtain1.jpg" alt="curtain1" class="curtain fixed" id="curtain1">
+		<img src="src/img/curtain/curtain2.jpg" alt="curtain2" class="curtain fixed" id="curtain2">
 
 
 		<!-- BIO SECTION -->
@@ -63,7 +73,7 @@
 
 
 			<!-- PORTRAIT -->
-			<img src="img/thomas.jpg" alt="Picture of Thomas" id="self_portrait" class="fixed fullcentered fader">
+			<img src="src/img/thomas.jpg" alt="Picture of Thomas" id="self_portrait" class="fixed fullcentered fader">
 
 			<!-- BIO -->
 			<div id="bio" class="fixed fullcentered fader">
@@ -74,35 +84,35 @@
 			</div>
 
 			<!-- MARQUEE -->
-			<img src="img/marquee.gif" alt="marquee" class="fixed fullcentered fader" id="marquee">
+			<img src="src/img/marquee.gif" alt="marquee" class="fixed fullcentered fader" id="marquee">
 		</div>
 
 		<!-- NAVIGATION BUTTON = More -->
-		<img src="img/navigation/more.png" alt="onward ho!" id="to_connections" class="btn centered fixed">
+		<img src="src/img/navigation/more.png" alt="onward ho!" id="to_connections" class="btn centered fixed">
 	</div>
 
 <!-- ================= PAGE III ================= -->
 	<div id="thirdpage" class="section">
 
 		<!-- NAVIGATION BUTTON = Back -->
-		<img src="img/navigation/bio.png" alt="back go bio" id="back_to_bio" class="btn centered fixed">
+		<img src="src/img/navigation/bio.png" alt="back go bio" id="back_to_bio" class="btn centered fixed">
 
 		<!-- ======= BG HANGING STARS -->
 		<div id="bgHanging">
 		<!-- STAR 1 -->
-			<img src="img/stars/star_3.png" alt="star 1" class="dim bg-star fullcentered fixed" id="starA">
+			<img src="src/img/stars/star_3.png" alt="star 1" class="dim bg-star fullcentered fixed" id="starA">
 		<!-- STAR 2 -->
-			<img src="img/stars/star_2.png" alt="star 1" class="dim bg-star fullcentered fixed" id="starB">
+			<img src="src/img/stars/star_2.png" alt="star 1" class="dim bg-star fullcentered fixed" id="starB">
 		<!-- STAR 3 -->
-			<img src="img/stars/star_1.png" alt="star 1" class="dim bg-star fullcentered fixed" id="starC">
+			<img src="src/img/stars/star_1.png" alt="star 1" class="dim bg-star fullcentered fixed" id="starC">
 		<!-- STAR 4 -->
-			<img src="img/stars/star_4.png" alt="star 1" class="dim bg-star fullcentered fixed" id="starD">
+			<img src="src/img/stars/star_4.png" alt="star 1" class="dim bg-star fullcentered fixed" id="starD">
 		<!-- STAR 5 -->
-			<img src="img/stars/star_5.png" alt="star 1" class="dim bg-star fullcentered fixed" id="starE">
+			<img src="src/img/stars/star_5.png" alt="star 1" class="dim bg-star fullcentered fixed" id="starE">
 
 		<!-- CONTACT -->
 			<div class="bg-star fixed" id="burgercontainer" class="popupLink">
-				<img src="img/stars/burger.png" alt="contact menu" class="dim popupLink" id="burger">
+				<img src="src/img/stars/burger.png" alt="contact menu" class="dim popupLink" id="burger">
 			</div>
 		</div>
 
@@ -114,9 +124,9 @@
 				<!-- Clickable -->
 				<a href="http://www.thomaswrotethis.com/" id="newspaperclicker" class="clicker" target="_blank" style="target-new: tab;"></a>
 				<!-- Icon -->
-				<img src="img/icons/newspaper.png" alt="newspaper" class="icon" id="newspaper">
+				<img src="src/img/icons/newspaper.png" alt="newspaper" class="icon" id="newspaper">
 				<!-- Word -->
-				<img src="img/words/blog.png" alt="blog" class="words" id="blogword">
+				<img src="src/img/words/blog.png" alt="blog" class="words" id="blogword">
 			</div>
 			<!-- Shadow -->
 			<div class="shadow centered" id="newspapershadow"></div>
@@ -126,9 +136,9 @@
 				<!-- Clickable -->
 				<a href="http://www.linkedin.com/in/thomasjedstrom" id="suitclicker" class="clicker" target="_blank" style="target-new: tab;"></a>
 				<!-- Icon -->
-				<img src="img/icons/suit.png" alt="suit" class="icon" id="suit">
+				<img src="src/img/icons/suit.png" alt="suit" class="icon" id="suit">
 				<!-- Word -->
-				<img src="img/words/linkedin.png" alt="linkedin" class="words" id="linkedinword">
+				<img src="src/img/words/linkedin.png" alt="linkedin" class="words" id="linkedinword">
 			</div>
 			<!-- Shadow -->
 			<div class="shadow centered" id="suitshadow"></div>
@@ -138,9 +148,9 @@
 				<!-- Clickable -->
 				<div id="briefcaseclicker" class="clicker popupLink"></div>
 				<!-- Icon -->
-				<img src="img/icons/briefcase.png" alt="briefcase" class="icon" id="briefcase">
+				<img src="src/img/icons/briefcase.png" alt="briefcase" class="icon" id="briefcase">
 				<!-- Word -->
-				<img src="img/words/portfolio.png" alt="portfolio" class="words" id="portfolioword">
+				<img src="src/img/words/portfolio.png" alt="portfolio" class="words" id="portfolioword">
 			</div>
 			<!-- Shadow -->
 			<div class="shadow centered" id="briefcaseshadow"></div>
@@ -150,9 +160,9 @@
 				<!-- Clickable -->
 				<a href="http://www.github.com/thomasjedstrom" id="octocatclicker" class="clicker" target="_blank" style="target-new: tab;"></a>
 				<!-- Icon -->
-				<img src="img/icons/octocat.png" alt="star 1" class="icon" id="octocat">
+				<img src="src/img/icons/octocat.png" alt="star 1" class="icon" id="octocat">
 				<!-- Word -->
-				<img src="img/words/github.png" alt="music" class="words" id="githubword">
+				<img src="src/img/words/github.png" alt="music" class="words" id="githubword">
 			</div>
 			<!-- Shadow -->
 			<div class="shadow centered" id="octocatshadow"></div>
@@ -162,9 +172,9 @@
 				<!-- Clickable -->
 				<a href="http://wearemostlyghostly.bandcamp.com/" id="pianoclicker" class="clicker" target="_blank" style="target-new: tab;"></a>
 				<!-- Icon -->
-				<img src="img/icons/piano.png" alt="star 1" class="icon" id="piano">
+				<img src="src/img/icons/piano.png" alt="star 1" class="icon" id="piano">
 				<!-- Word -->
-				<img src="img/words/music.png" alt="music" class="words" id="musicword">
+				<img src="src/img/words/music.png" alt="music" class="words" id="musicword">
 			</div>
 			<!-- Shadow -->
 			<div class="shadow centered" id="pianoshadow"></div>
@@ -183,27 +193,27 @@
 
 	<!-- Blog -->
 	<a href="http://www.thomaswrotethis.com/" id="blogLink" class="clicker" target="_blank" style="target-new: tab;">
-		<img src="img/words/blog.png" alt="blog" class="words fullcentered" id="blogwordMobile">
+		<img src="src/img/words/blog.png" alt="blog" class="words fullcentered" id="blogwordMobile">
 	</a>
 
 	<!-- LinkedIn -->
 	<a href="http://www.linkedin.com/in/thomasjedstrom" id="linkedinLink" class="clicker" target="_blank" style="target-new: tab;">
-		<img src="img/words/linkedin.png" alt="linkedin" class="words fullcentered" id="linkedinwordMobile">
+		<img src="src/img/words/linkedin.png" alt="linkedin" class="words fullcentered" id="linkedinwordMobile">
 	</a>
 
 	<!-- Portfolio -->
 	<div id="portfolioClickerMobile" class="clicker">
-		<img src="img/words/portfolio.png" alt="portfolio" class="words fullcentered popupLink" id="portfoliowordMobile">
+		<img src="src/img/words/portfolio.png" alt="portfolio" class="words fullcentered popupLink" id="portfoliowordMobile">
 	</div>
 
 	<!-- Github -->
 	<a href="http://www.github.com/thomasjedstrom" id="githubLink" class="clicker" target="_blank" style="target-new: tab;">
-		<img src="img/words/github.png" alt="music" class="words fullcentered" id="githubwordMobile">
+		<img src="src/img/words/github.png" alt="music" class="words fullcentered" id="githubwordMobile">
 	</a>
 
 	<!-- Music -->
 	<a href="http://wearemostlyghostly.bandcamp.com/" id="musicClickerMobile" class="clicker" target="_blank" style="target-new: tab;">
-		<img src="img/words/music.png" alt="music" class="words fullcentered" id="musicwordMobile">
+		<img src="src/img/words/music.png" alt="music" class="words fullcentered" id="musicwordMobile">
 	</a>
 
 	<!-- Contact Me -->
@@ -261,78 +271,78 @@
 			<div class="portfolioClicker">
 				<a href="http://onlinelending.thomasjedstrom.com" target="_blank" style="target-new: tab;">
 					<h2 class="portfolioTitle">ONLINE LENDING</h2>
-					<img src="img/thumbnails/rails_online_lending.jpg" alt="rails online lending" class="portfolioImage">
+					<img src="src/img/thumbnails/rails_online_lending.jpg" alt="rails online lending" class="portfolioImage">
 				</a>
 			</div>
 			<a href="https://github.com/thomasjedstrom/RoR_OnlineLending" target="_blank" style="target-new: tab;">
-				<img src="img/icons/github.png" alt="github link" class="infoLink">
+				<img src="src/img/icons/github.png" alt="github link" class="infoLink">
 			</a>
-			<img src="img/icons/info.svg" alt="info" class="infoLink" id="oliClicker">
+			<img src="src/img/icons/info.svg" alt="info" class="infoLink" id="oliClicker">
 		</div>
 
 		<div class="projectContainer">
 			<div class="portfolioClicker">
 				<a href="http://thewall.thomasjedstrom.com" target="_blank" style="target-new: tab;">
 					<h2 class="portfolioTitle">THE WALL</h2>
-					<img src="img/thumbnails/rails_the_wall.jpg" alt="rails the wall" class="portfolioImage">
+					<img src="src/img/thumbnails/rails_the_wall.jpg" alt="rails the wall" class="portfolioImage">
 				</a>
 			</div>
 			<a href="https://github.com/thomasjedstrom/RoR_TheWall" target="_blank" style="target-new: tab;">
-				<img src="img/icons/github.png" alt="github link" class="infoLink">
+				<img src="src/img/icons/github.png" alt="github link" class="infoLink">
 			</a>
-			<img src="img/icons/info.svg" alt="info" class="infoLink" id="twiClicker">
+			<img src="src/img/icons/info.svg" alt="info" class="infoLink" id="twiClicker">
 		</div>
 
 		<div class="projectContainer">
 			<div class="portfolioClicker">
 				<a href="http://eventtracking.thomasjedstrom.com" target="_blank" style="target-new: tab;">
 					<h2 class="portfolioTitle">EVENT TRACKING</h2>
-					<img src="img/thumbnails/rails_eventtracking.jpg" alt="rails event tracking" class="portfolioImage">
+					<img src="src/img/thumbnails/rails_eventtracking.jpg" alt="rails event tracking" class="portfolioImage">
 				</a>
 			</div>
 			<a href="https://github.com/thomasjedstrom/RoR_EventTracking" target="_blank" style="target-new: tab;">
-				<img src="img/icons/github.png" alt="github link" class="infoLink">
+				<img src="src/img/icons/github.png" alt="github link" class="infoLink">
 			</a>
-			<img src="img/icons/info.svg" alt="info" class="infoLink" id="etiClicker">
+			<img src="src/img/icons/info.svg" alt="info" class="infoLink" id="etiClicker">
 		</div>
 
 		<div class="projectContainer">
 			<div class="portfolioClicker">
 				<a href="http://abtesting.thomasjedstrom.com" target="_blank" style="target-new: tab;">
 					<h2 class="portfolioTitle">AB TESTING</h2>
-					<img src="img/thumbnails/rails_abtesting.jpg" alt="rails ab testing" class="portfolioImage">
+					<img src="src/img/thumbnails/rails_abtesting.jpg" alt="rails ab testing" class="portfolioImage">
 				</a>
 			</div>
 			<a href="https://github.com/thomasjedstrom/RoR_ABTesting" target="_blank" style="target-new: tab;">
-				<img src="img/icons/github.png" alt="github link" class="infoLink">
+				<img src="src/img/icons/github.png" alt="github link" class="infoLink">
 			</a>
-			<img src="img/icons/info.svg" alt="info" class="infoLink" id="atiClicker">
+			<img src="src/img/icons/info.svg" alt="info" class="infoLink" id="atiClicker">
 		</div>
 
 		<div class="projectContainer">
 			<div class="portfolioClicker">
 				<a href="http://brightideas.thomasjedstrom.com" target="_blank" style="target-new: tab;">
 					<h2 class="portfolioTitle">BRIGHT IDEAS</h2>
-					<img src="img/thumbnails/rails_bright_ideas.jpg" alt="rails bright ideas" class="portfolioImage">
+					<img src="src/img/thumbnails/rails_bright_ideas.jpg" alt="rails bright ideas" class="portfolioImage">
 				</a>
 			</div>
 			<a href="https://github.com/thomasjedstrom/RoR_BrightIdeas" target="_blank" style="target-new: tab;">
-				<img src="img/icons/github.png" alt="github link" class="infoLink">
+				<img src="src/img/icons/github.png" alt="github link" class="infoLink">
 			</a>
-			<img src="img/icons/info.svg" alt="info" class="infoLink" id="biiClicker">
+			<img src="src/img/icons/info.svg" alt="info" class="infoLink" id="biiClicker">
 		</div>
 
 		<div class="projectContainer">
 			<div class="portfolioClicker">
 				<a href="http://ninjagold.thomasjedstrom.com" target="_blank" style="target-new: tab;">
 					<h2 class="portfolioTitle">NINJA GOLD</h2>
-					<img src="img/thumbnails/rails_ninja_gold.jpg" alt="rails ninja gold" class="portfolioImage">
+					<img src="src/img/thumbnails/rails_ninja_gold.jpg" alt="rails ninja gold" class="portfolioImage">
 				</a>
 			</div>
 			<a href="https://github.com/thomasjedstrom/RoR_NinjaGold" target="_blank" style="target-new: tab;">
-				<img src="img/icons/github.png" alt="github link" class="infoLink">
+				<img src="src/img/icons/github.png" alt="github link" class="infoLink">
 			</a>
-			<img src="img/icons/info.svg" alt="info" class="infoLink" id="ngiClicker">
+			<img src="src/img/icons/info.svg" alt="info" class="infoLink" id="ngiClicker">
 		</div>
 	</div>
 
@@ -344,52 +354,52 @@
 			<div class="portfolioClicker">
 				<a href="http://discussionboard.thomasjedstrom.com" target="_blank" style="target-new: tab;">
 					<h2 class="portfolioTitle">DISCUSSION BOARD</h2>
-					<img src="img/thumbnails/mean_discussionboard.jpg" alt="mean discussionboard" class="portfolioImage">
+					<img src="src/img/thumbnails/mean_discussionboard.jpg" alt="mean discussionboard" class="portfolioImage">
 				</a>
 			</div>
 			<a href="https://github.com/thomasjedstrom/MEAN_DiscussionBoard" target="_blank" style="target-new: tab;">
-				<img src="img/icons/github.png" alt="github link" class="infoLink">
+				<img src="src/img/icons/github.png" alt="github link" class="infoLink">
 			</a>
-			<img src="img/icons/info.svg" alt="info" class="infoLink" id="dbiClicker">
+			<img src="src/img/icons/info.svg" alt="info" class="infoLink" id="dbiClicker">
 		</div>
 
 		<div class="projectContainer">
 			<div class="portfolioClicker">
 				<a href="http://meanonlinestore.thomasjedstrom.com" target="_blank" style="target-new: tab;">
 					<h2 class="portfolioTitle">ONLINE STORE</h2>
-					<img src="img/thumbnails/mean_onlinestore.jpg" alt="mean online store" class="portfolioImage">
+					<img src="src/img/thumbnails/mean_onlinestore.jpg" alt="mean online store" class="portfolioImage">
 				</a>
 			</div>
 			<a href="https://github.com/thomasjedstrom/MEAN_OnlineStore" target="_blank" style="target-new: tab;">
-				<img src="img/icons/github.png" alt="github link" class="infoLink">
+				<img src="src/img/icons/github.png" alt="github link" class="infoLink">
 			</a>
-			<img src="img/icons/info.svg" alt="info" class="infoLink" id="osiClicker">
+			<img src="src/img/icons/info.svg" alt="info" class="infoLink" id="osiClicker">
 		</div>
 
 		<div class="projectContainer">
 			<div class="portfolioClicker">
 				<a href="http://bucketlist.thomasjedstrom.com" target="_blank" style="target-new: tab;">
 					<h2 class="portfolioTitle">BUCKET LISTS</h2>
-					<img src="img/thumbnails/mean_bucketlists.jpg" alt="mean bucket lists" class="portfolioImage">
+					<img src="src/img/thumbnails/mean_bucketlists.jpg" alt="mean bucket lists" class="portfolioImage">
 				</a>
 			</div>
 			<a href="https://github.com/thomasjedstrom/MEAN_BucketLists" target="_blank" style="target-new: tab;">
-				<img src="img/icons/github.png" alt="github link" class="infoLink">
+				<img src="src/img/icons/github.png" alt="github link" class="infoLink">
 			</a>
-			<img src="img/icons/info.svg" alt="info" class="infoLink" id="bliClicker">
+			<img src="src/img/icons/info.svg" alt="info" class="infoLink" id="bliClicker">
 		</div>
 
 		<div class="projectContainer">
 			<div class="portfolioClicker">
 				<a href="http://surveys.thomasjedstrom.com" target="_blank" style="target-new: tab;">
 					<h2 class="portfolioTitle">SURVEYS</h2>
-					<img src="img/thumbnails/mean_surveys.jpg" alt="mean surveys" class="portfolioImage">
+					<img src="src/img/thumbnails/mean_surveys.jpg" alt="mean surveys" class="portfolioImage">
 				</a>
 			</div>
 			<a href="https://github.com/thomasjedstrom/MEAN_Surveys" target="_blank" style="target-new: tab;">
-				<img src="img/icons/github.png" alt="github link" class="infoLink">
+				<img src="src/img/icons/github.png" alt="github link" class="infoLink">
 			</a>
-			<img src="img/icons/info.svg" alt="info" class="infoLink" id="siClicker">
+			<img src="src/img/icons/info.svg" alt="info" class="infoLink" id="siClicker">
 		</div>
 	</div>
 
@@ -400,13 +410,13 @@
 			<div class="portfolioClicker">
 				<a href="http://friends.thomasjedstrom.com" target="_blank" style="target-new: tab;">
 					<h2 class="portfolioTitle">DJANGO FRIENDS</h2>
-					<img src="img/thumbnails/django_friends.jpg" alt="django friends" class="portfolioImage">
+					<img src="src/img/thumbnails/django_friends.jpg" alt="django friends" class="portfolioImage">
 				</a>
 			</div>
 			<a href="https://github.com/thomasjedstrom/Django_Friends" target="_blank" style="target-new: tab;">
-				<img src="img/icons/github.png" alt="github link" class="infoLink">
+				<img src="src/img/icons/github.png" alt="github link" class="infoLink">
 			</a>
-			<img src="img/icons/info.svg" alt="info" class="infoLink" id="fiClicker">
+			<img src="src/img/icons/info.svg" alt="info" class="infoLink" id="fiClicker">
 		</div>
 	</div>
 

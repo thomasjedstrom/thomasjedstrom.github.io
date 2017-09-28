@@ -1,0 +1,17 @@
+/*=====================LOADING PAGE=======================*/
+#loadingPage{
+	z-index: 99999999;
+	width: 100vw;
+	height: 100vh;
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	background: white;
+}
+#loading{
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	width: 25px;
+	height: auto;
+}

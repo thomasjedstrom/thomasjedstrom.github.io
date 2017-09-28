@@ -1,0 +1,24 @@
+/*=======NAVIGATION BUTTONS=========*/
+.btn{
+	left: 50vw;
+	max-width: 100px;
+	max-height: 15vh;
+	height: auto;
+	width: auto;
+
+	-webkit-filter: brightness(0.4);
+	filter: brightness(0.4);
+
+	transition: .6s filter linear;
+	-webkit-transition: .6s -webkit-filter linear;
+	-moz-transition: .6s -moz-filter linear;
+	-moz-transition: .6s filter linear;
+	-ms-transition: .6s -ms-filter linear;
+	-o-transition: .6s -o-filter linear;
+}
+.btn:hover{
+	-webkit-filter: brightness(1);
+	filter: brightness(1);
+	cursor: pointer;
+	cursor: hand;
+}

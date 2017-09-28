@@ -1,0 +1,25 @@
+/*======= HELPER =========*/
+.fixed{
+	position: fixed;
+}
+.centered{
+	-ms-transform: translate(-50%, 0%);
+	-webkit-tranform: translate(-50%, 0%);
+	-o-transform: translate(-50%, 0%);
+	-moz-transform: translate(-50%, 0%);
+	transform: translate(-50%, 0%);
+}
+.fullcentered{
+	-ms-transform: translate(-50%, -50%);
+	-webkit-tranform: translate(-50%, -50%);
+	-o-transform: translate(-50%, -50%);
+	-moz-transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%);
+}
+.dim{
+	-ms-filter: brightness(0.6);
+	-webkit-filter: brightness(0.6);
+	-o-filter: brightness(0.6);
+	-moz-filter: brightness(0.6);
+	filter: brightness(0.6);
+}

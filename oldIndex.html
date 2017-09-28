@@ -3,529 +3,594 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Thomas Edstrom, FullStack Developer</title>
-	
+
 	<link rel="icon" type="image/png" href="img/marquee_star/marquee_star.png">
 
-<!--CSS Normalize-->
-	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/4.1.1/normalize.css">
-<!--CSS Google Marker Font -->
-	<link href="https://fonts.googleapis.com/css?family=Permanent+Marker" rel="stylesheet">
-<!--CSS OTHER GOOGLE FONT -->
-	<link href="https://fonts.googleapis.com/css?family=Archivo+Narrow" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Anton|Average+Sans" rel="stylesheet">
+	<!-- <link rel="stylesheet" href="css/jquery.fullpage.min.css.map"> -->
+	<link rel="stylesheet" href="css/jquery.fullpage.min.css">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
 
-<!--CSS Mobile-->
-	<link rel="stylesheet" type="text/css" media="only screen and (max-width: 1024px)" href="css/mobile.css">
-<!--CSS Desktop-->
-	<link rel="stylesheet" type="text/css" media="only screen and (min-width: 1025px)" href="css/desktop.css">
-	
-<!--JS JQuery-->
-	<script src="https://code.jquery.com/jquery-3.0.0.js" integrity="sha256-jrPLZ+8vDxt2FnE1zvZXCkCcebI/C8Dt5xyaQBjxQIo=" crossorigin="anonymous"></script>
-<!--JS Scroller -->
-	<script src="js/skrollr.min.js"></script>
-<!--JS ScrollTo  -->
-	<script src="js/jquery.scrollTo.min.js"></script>
-<!--JS My App-->
+	<script src="dist/jquery.min.js"></script>
+	<script src="dist/jquery.fullPage.min.js"></script>
+	<!-- <script src="js/jquery.fullPage.min.js.map"></script> -->
+	<!-- <script src="js/jquery.fullPage.extensions.min.js"></script> -->
 	<script src="js/app.js"></script>
-
-	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-
+	<script>
+	var loadedImage = new Image();
+	loadedImage.onload = function(){
+		$('#loadingPage').css('display', 'none');
+		$('#firstPage').css('background-image', 'url('+this.src+')')
+	};
+	loadedImage.src = "img/masthead_background.jpg";
+	</script>
+	<meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, width=device-width, user-scalable=no" />
 </head>
 <body>
-<div id="skrollr-body">
+<!-- ================= LOADING PAGE ================= -->
+<div id="loadingPage">
+	<img src="img/loading.gif" alt="loading" id="loading" class="fullcentered">
+</div>
 
-	<!-- LOADING PAGE -->
-	
-	<div id="loader-wrapper">
-		<img src="img/marquee_star/marquee_star.png" alt="star" id="loader" class="">
-
-		<div class="loader-section section-left"></div>
-        <div class="loader-section section-right"></div>
-
-	</div>
-
-
-
-	<!-- LANDING -->
-
-	<div id="masthead"
-		data-start="
-			z-index: 9;
-			position: absolute;
-			clip: rect(0vw,100vw,100vh,0vh);
-			background-position: 50% 50%;"
-		data-top-bottom="
-			clip: rect(0vw,100vw,00vh,0vh)
-			background-position: 50% 100%;">
-
-		<div id="mastheadBanner" class="fade-out centered">
-			<div id="textholder">
-				<h1 id="myName">Thomas Edstrom</h1><br>
-				<h2 id="myTitle">full-stack developer</h2>
+<div id="fullpage">
+<!-- ================= PAGE I ================= -->
+	<div id="firstPage" class="section active">
+			<div id="firstPageBanner" class="fade-out fullcentered">
+				<div id="textholder">
+					<h1 id="myName">THOMAS EDSTROM</h1><br>
+					<h2 id="myTitle">FULL-STACK DEVELOPER</h2>
+				</div>
 			</div>
-
-		</div>
-
-		<img src="img/navigation/enter.png" alt="Enter Here" id="enter_here" class="btn centered">
-
+			<img src="img/navigation/enter.png" alt="Enter Here" id="enter_here" class="btn centered">
 	</div>
 
-	<!-- STAGE -->
-
-	<div id="curtain">
+<!-- ================= PAGE II ================= -->
+	<div id="secondPage" class="section">
 
 		<!-- NAVIGATION BUTTON = Back (to landing page) -->
-		<img src="img/navigation/back.png" alt="Back" id="back_to_landing" class="btn centered fixed"
-			data-0p-top-bottom="
-				z-index: 5;
-				top: 1%;"
-			data--20p-top-bottom="
-				top: -20%;"
-			data-anchor-target="#masthead">
+		<img src="img/navigation/back.png" alt="Back" id="back_to_landing" class="btn centered fixed">
 
 
 		<!-- CURTAINS -->
-		<img src="img/curtain/curtain1.jpg" alt="curtain" class="fixed curtain" 
-			data-0p-top-bottom="
-				z-index:4;
-				top:0%;
-				left:0%"
-			data--100p-top-bottom="
-				top:0%;
-				left:-50%"
-			data-anchor-target="#masthead">
-		<img src="img/curtain/curtain2.jpg" alt="curtain" class="fixed curtain" 
-			data-0p-top-bottom="
-				z-index:4;
-				top:0%;
-				left:50%"
-			data--100p-top-bottom="
-				top:0%;
-				left:100%"
-			data-anchor-target="#masthead">
+		<img src="img/curtain/curtain1.jpg" alt="curtain1" class="curtain fixed" id="curtain1">
+		<img src="img/curtain/curtain2.jpg" alt="curtain2" class="curtain fixed" id="curtain2">
 
 
 		<!-- BIO SECTION -->
 		<div id="bioSection">
-			
-			<img src="img/thomas.jpg" alt="Picture of Thomas" id="self_portrait" class="fixed fullcentered" 
-				data-start="
-					top: 50%;
-					left: -30%;"
-				data-0p-top-bottom="
-					left: 15%"
-				data--100p-top-bottom="
-					left: -30%"
-				data-anchor-target="#masthead">
 
-			<div id="bio" class="fixed  fullcentered" 
-				data-75p-top-bottom="
-					opacity: 0;
-					top: 50%;
-					left: 50%"
-				data-0p-top-bottom="
-					z-index: 4;
-					opacity: 1;"
-				data--75p-top-bottom="
-					opacity: 0;"
-				data--100p-top-bottom="
-					z-index: -1;"
-				data-anchor-target="#masthead">
-				
-				<h3 class="bioHeader">Specialist in adaptability.</h3>
-				<p>As a <u><b>full-stack developer</b></u>, I have a passion for creating elegant solutions to complex problems, leveraging cutting edge technologies to turn software into an <u><b>experience.</b></u></p>
-				<p>On the rare occassion I'm not behind the computer, I love to read, make music, or talk some philosophy over coffee.</p>
-				<p>I currently reside in Dallas, TX with my family and friends and I'm always looking to create something new.  <span class="sendMeALine">Send me a line</span> and let's make something happen!</p>
+			<div id="myDiv" class="is-animated"></div>
 
 
+			<!-- PORTRAIT -->
+			<img src="img/thomas.jpg" alt="Picture of Thomas" id="self_portrait" class="fixed fullcentered fader">
+
+			<!-- BIO -->
+			<div id="bio" class="fixed fullcentered fader">
+				<h3 id="bioHeader">INCREASE PROFITS, DECREASE EXPENSES.</h3>
+				<p>I make people money.  That pretty much sums it up.</p>
+				<p>On the rare occassion I'm not behind the computer, I love to read, make music, or talk philosophy over coffee.</p>
+				<p>I currently reside in Dallas, TX and I'm always looking to create something new.  <element id="sendMeALine" class="popupLink">Send me a line</element> and let's make something happen!</p>
 			</div>
 
-			<img src="img/marquee.gif" alt="marquee" class="fixed fullcentered" id="marquee" 
-				data-start="
-					top: 50%;
-					left: 150%"
-				data-0p-top-bottom="
-					left: 85%"
-				data--100p-top-bottom="
-					left: 150%"
-				data-anchor-target="#masthead">
-
-
-			<!-- NAVIGATION BUTTON = More -->
-			<img src="img/navigation/more.png" alt="onward ho!" id="to_connections" class="btn centered fixed"
-				data-0p-top-bottom="
-					z-index: 5;
-					top: 80%;"
-				data--20p-top-bottom="
-					top: 120%;"
-				data-anchor-target="#masthead">
-
+			<!-- MARQUEE -->
+			<img src="img/marquee.gif" alt="marquee" class="fixed fullcentered fader" id="marquee">
 		</div>
 
+		<!-- NAVIGATION BUTTON = More -->
+		<img src="img/navigation/more.png" alt="onward ho!" id="to_connections" class="btn centered fixed">
+	</div>
+
+<!-- ================= PAGE III ================= -->
+	<div id="thirdpage" class="section">
+
 		<!-- NAVIGATION BUTTON = Back -->
-		<img src="img/navigation/bio.png" alt="back go bio" id="back_to_bio" class="btn centered fixed"
-				data--80p-top-bottom="
-					z-index: 5;
-					top: -20%;"
-				data--100p-top-bottom="
-					top: 1%;"
-				data-anchor-target="#masthead">
+		<img src="img/navigation/bio.png" alt="back go bio" id="back_to_bio" class="btn centered fixed">
 
-
-		<!-- TWINKLE STARS -->
-		<div class="fixed stars"></div>
-		<div class="fixed twinkling"></div>
-
-
-
-		<!-- HANGING STARS -->
-		<div>
+		<!-- ======= BG HANGING STARS -->
+		<div id="bgHanging">
 		<!-- STAR 1 -->
-			<img src="img/stars/star_3.png" alt="star 1" class="fixed dim hanging-star" id="starA" 
-				data-50p-top-bottom="
-					z-index:1;
-					top: -350%;
-					left: 2%"
-				data--100p-top-bottom="
-					top: -15%;"
-				data-anchor-target="#masthead">
-
+			<img src="img/stars/star_3.png" alt="star 1" class="dim bg-star fullcentered fixed" id="starA">
 		<!-- STAR 2 -->
-			<img src="img/stars/star_2.png" alt="star 1" class="fixed dim hanging-star" id="starB"
-				data-50p-top-bottom="
-					z-index:1;
-					top: -400%;
-					left: 18%"
-				data--100p-top-bottom="
-					top: -20%;"
-				data-anchor-target="#masthead">
-
+			<img src="img/stars/star_2.png" alt="star 1" class="dim bg-star fullcentered fixed" id="starB">
 		<!-- STAR 3 -->
-			<img src="img/stars/star_1.png" alt="star 1" class="fixed dim hanging-star" id="starC"
-				data-50p-top-bottom="
-					z-index:1;
-					top: -350%;
-					left: 35%"
-				data--100p-top-bottom="
-					top: -25%;"
-				data-anchor-target="#masthead">
-
+			<img src="img/stars/star_1.png" alt="star 1" class="dim bg-star fullcentered fixed" id="starC">
 		<!-- STAR 4 -->
-			<img src="img/stars/star_4.png" alt="star 1" class="fixed dim hanging-star" id="starD" 
-				data-50p-top-bottom="
-					z-index:1;
-					top: -350%;
-					left: 59%"
-				data--100p-top-bottom="
-					top: -25%;"
-				data-anchor-target="#masthead">
-
+			<img src="img/stars/star_4.png" alt="star 1" class="dim bg-star fullcentered fixed" id="starD">
 		<!-- STAR 5 -->
-			<img src="img/stars/star_5.png" alt="star 1" class="fixed dim hanging-star" id="starE"
-				data-50p-top-bottom="
-					z-index:1;
-					top: -300%;
-					left: 78%"
-				data--100p-top-bottom="
-					top: -20%;"
-				data-anchor-target="#masthead">
+			<img src="img/stars/star_5.png" alt="star 1" class="dim bg-star fullcentered fixed" id="starE">
 
-
-		<!-- =============CONTACT================== -->
-
-
-		<!-- DONUT - CONTACT -->
-			<div class="fixed" id="donutcontainer" 
-				data-50p-top-bottom="
-					z-index:2;
-					top: -450%;
-					left: 92%"
-				data--100p-top-bottom="
-					top: -10%;"
-				data-anchor-target="#masthead">
-				<img src="img/icons/donut.png" alt="contact menu" class="dim" id="donut">	
-
-				<img src="img/words/contact.png" alt="contact" class="dim" id="contactword">
+		<!-- CONTACT -->
+			<div class="bg-star fixed" id="burgercontainer" class="popupLink">
+				<img src="img/stars/burger.png" alt="contact menu" class="dim popupLink" id="burger">
 			</div>
+		</div>
 
 
 		<!-- ================ICONS================ -->
-
-
+		<div id="icons">
 		<!-- Newspaper -->
-			<div class="fixed" 
-				data-50p-top-bottom="
-					z-index:1;
-					top: -150%;
-					left: 10%;
-					-ms-transform: translate(-50%, 0%);
-					-webkit-tranform: translate(-50%, 0%); 
-					transform: translate(-50%, 0%);"
-				data--75p-top-bottom="
-					top: -18%;"
-				data-anchor-target="#masthead">
-
+			<div id="newspaperContainer" class="fixed iconContainer centered">
+				<!-- Clickable -->
 				<a href="http://www.thomaswrotethis.com/" id="newspaperclicker" class="clicker" target="_blank" style="target-new: tab;"></a>
-
-				<img src="img/icons/newspaper.png" alt="newspaper" class="icon" id="newspaper">	
+				<!-- Icon -->
+				<img src="img/icons/newspaper.png" alt="newspaper" class="icon" id="newspaper">
+				<!-- Word -->
 				<img src="img/words/blog.png" alt="blog" class="words" id="blogword">
-				
 			</div>
-
+			<!-- Shadow -->
 			<div class="shadow centered" id="newspapershadow"></div>
-			
-
 
 		<!-- Suit -->
-			<div class="fixed"
-				data-50p-top-bottom="
-					z-index:1;
-					top: -150%;
-					left: 30%;
-					-ms-transform: translate(-50%, 0%);
-					-webkit-tranform: translate(-50%, 0%); 
-					transform: translate(-50%, 0%);"
-				data--75p-top-bottom="
-					top: -18%;"
-				data-anchor-target="#masthead">
-
+			<div id="suitContainer" class="fixed iconContainer centered">
+				<!-- Clickable -->
 				<a href="http://www.linkedin.com/in/thomasjedstrom" id="suitclicker" class="clicker" target="_blank" style="target-new: tab;"></a>
-
+				<!-- Icon -->
 				<img src="img/icons/suit.png" alt="suit" class="icon" id="suit">
+				<!-- Word -->
 				<img src="img/words/linkedin.png" alt="linkedin" class="words" id="linkedinword">
-				
 			</div>
-
+			<!-- Shadow -->
 			<div class="shadow centered" id="suitshadow"></div>
-			
-
 
 		<!-- Briefcase / Portfolio -->
-			<div class="fixed"
-				data-50p-top-bottom="
-					z-index:1;
-					top: -150%;
-					left: 50%;
-					-ms-transform: translate(-50%, 0%);
-					-webkit-tranform: translate(-50%, 0%); 
-					transform: translate(-50%, 0%);"
-				data--75p-top-bottom="
-					top: -18%;"
-				data-anchor-target="#masthead">
-				
-				<!-- <a href="/" id="briefcaseclicker" class="clicker" target="_blank" style="target-new: tab;"></a> -->
-				<div id="briefcaseclicker" class="clicker"></div>
-
+			<div id="briefcaseContainer" class="fixed iconContainer centered">
+				<!-- Clickable -->
+				<div id="briefcaseclicker" class="clicker popupLink"></div>
+				<!-- Icon -->
 				<img src="img/icons/briefcase.png" alt="briefcase" class="icon" id="briefcase">
+				<!-- Word -->
 				<img src="img/words/portfolio.png" alt="portfolio" class="words" id="portfolioword">
-
 			</div>
-
+			<!-- Shadow -->
 			<div class="shadow centered" id="briefcaseshadow"></div>
 
-			
-
 		<!-- Octocat -->
-			<div class="fixed"
-				data-50p-top-bottom="
-					z-index:1;
-					top: -150%;
-					left: 72%;
-					-ms-transform: translate(-50%, 0%);
-					-webkit-tranform: translate(-50%, 0%); 
-					transform: translate(-50%, 0%);"
-				data--75p-top-bottom="
-					top: -18%;"
-				data-anchor-target="#masthead">
-
+			<div id="octocatContainer" class="fixed iconContainer centered">
+				<!-- Clickable -->
 				<a href="http://www.github.com/thomasjedstrom" id="octocatclicker" class="clicker" target="_blank" style="target-new: tab;"></a>
-
+				<!-- Icon -->
 				<img src="img/icons/octocat.png" alt="star 1" class="icon" id="octocat">
+				<!-- Word -->
 				<img src="img/words/github.png" alt="music" class="words" id="githubword">
-
 			</div>
-
+			<!-- Shadow -->
 			<div class="shadow centered" id="octocatshadow"></div>
-			
 
 		<!-- PIANO -->
-			<div class="fixed"
-				data-50p-top-bottom="
-					z-index:1;
-					top: -150%;
-					left: 90%;
-					-ms-transform: translate(-50%, 0%);
-					-webkit-tranform: translate(-50%, 0%); 
-					transform: translate(-50%, 0%);"
-				data--75p-top-bottom="
-					top: -18%;"
-				data-anchor-target="#masthead">
-
-				<!-- <a href="/" id="pianoclicker" class="clicker" target="_blank" style="target-new: tab;"></a> -->
-				<div id="pianoclicker" class="clicker"></div>
-
+			<div id="pianoContainer" class="fixed iconContainer centered">
+				<!-- Clickable -->
+				<a href="http://wearemostlyghostly.bandcamp.com/" id="pianoclicker" class="clicker" target="_blank" style="target-new: tab;"></a>
+				<!-- Icon -->
 				<img src="img/icons/piano.png" alt="star 1" class="icon" id="piano">
+				<!-- Word -->
 				<img src="img/words/music.png" alt="music" class="words" id="musicword">
-
 			</div>
+			<!-- Shadow -->
 			<div class="shadow centered" id="pianoshadow"></div>
-			
-
-
-		</div>
-	</div>
-
-
-  <!-- POP UPS -->
-  <!-- Contact -->
-	<div id="contact-box" class="popup">
-		<div id="contact-content" class="popup-content fullcentered">
-			<span class="close">x</span>
-			<h3>Contact:</h3>
-			<span class="category"><b>#:</b></span><span>214-912-2649</span><br>
-			<span class="category"><b>email:</b></span><span>thomasjedstrom@gmail.com</span><br>
-		</div>
-	</div>
-	
-	<!-- Portfolio -->
-	<div id="portfolio-box" class="popup">
-		<div id="portfolio-content" class="popup-content fullcentered">
-			<span class="close">x</span>
-			<h3>Projects coming soon!</h3>
-		</div>
-	</div>
-
-	<!-- Music -->
-	<div id="music-box" class="popup">
-		<div id="music-content" class="popup-content fullcentered">
-			<span class="close">x</span>
-			<h3>Music page coming soon!</h3>
-		</div>
-	</div>
-
-
-</div>
-
-<!-- ============================  MOBILE  ======================================= -->
-
-
-<div id="mobile">
-
-
-	<!-- LANDING -->
-
-	<div id="landing"">
-
-		<div id="landingBanner" class="fade-out centered">
-			<div id="bannerText">
-				<h1 id="name">Thomas Edstrom</h1><br>
-				<h2 id="title">full-stack developer</h2>
-			</div>
-
 		</div>
 
-	</div>
 
-
-	<!-- SECTION TWO -->
-
-	<div id="sectionTwo">
-
-		<img src="img/thomas.jpg" alt="Thomas" id="thomasImage" class="centered">
-		
-		<div id="bioMobile" class="fixed centered"">
-			
-			<h3 class="bioHeader">Specialist in adaptability.</h3>
-			<p>As a <u><b>full-stack developer</b></u>, I have a passion for creating elegant solutions to complex problems, leveraging cutting edge technologies to turn software into an <u><b>experience.</b></u></p>
-			<p>On the rare occassion I'm not behind the computer, I love to read, make music, or talk some philosophy over coffee.</p>
-			<p>I currently reside in Dallas, TX with my family and friends and I'm always looking to create something new.  <span class="sendMeALine">Send me a line</span> and let's make something happen!</p>
-
-
-		</div>
-
-		<img src="img/marquee.gif" alt="marquee" class="centered" id="marqueeMobile">
-
-	</div>
-
-
-	<!-- SECTION THREE -->
-
-	<div id="sectionThree">
-		
 		<!-- TWINKLE STARS -->
-		<div class="stars"></div>
-		<div class="twinkling"></div>
-
-
-		<!-- LINKS -->
-
-		<!-- Blog -->
-		<a href="http://www.thomaswrotethis.com/" id="blogLink" class="clicker" target="_blank" style="target-new: tab;">
-			<img src="img/words/blog.png" alt="blog" class="words fullcentered" id="blogwordMobile">
-		</a>
-
-		<!-- LinkedIn -->
-		<a href="http://www.linkedin.com/in/thomasjedstrom" id="linkedinLink" class="clicker" target="_blank" style="target-new: tab;">
-			<img src="img/words/linkedin.png" alt="linkedin" class="words fullcentered" id="linkedinwordMobile">
-		</a>
-
-		<!-- Portfolio -->
-		<div id="portfolioClickerMobile" class="clicker">
-			<img src="img/words/portfolio.png" alt="portfolio" class="words fullcentered" id="portfoliowordMobile">
-		</div>
-
-		<!-- Github -->
-		<a href="http://www.github.com/thomasjedstrom" id="githubLink" class="clicker" target="_blank" style="target-new: tab;">
-			<img src="img/words/github.png" alt="music" class="words fullcentered" id="githubwordMobile">
-		</a>
-
-		<!-- Music -->
-		<div id="musicClickerMobile" class="clicker">
-			<img src="img/words/music.png" alt="music" class="words fullcentered" id="musicwordMobile">
-		</div>
-
-		<!-- Contact Me -->
-		<div id="contactMe" class="words fullcentered">
-			<h1>Contact Me!</h1>
-		</div>
+		<div class="fixed twinkling"></div>
 
 	</div>
+</div>
 
 
 
+<div id="mobileLinks">
 
- <!-- POP UPS -->
-	
+	<!-- Blog -->
+	<a href="http://www.thomaswrotethis.com/" id="blogLink" class="clicker" target="_blank" style="target-new: tab;">
+		<img src="img/words/blog.png" alt="blog" class="words fullcentered" id="blogwordMobile">
+	</a>
+
+	<!-- LinkedIn -->
+	<a href="http://www.linkedin.com/in/thomasjedstrom" id="linkedinLink" class="clicker" target="_blank" style="target-new: tab;">
+		<img src="img/words/linkedin.png" alt="linkedin" class="words fullcentered" id="linkedinwordMobile">
+	</a>
+
 	<!-- Portfolio -->
-	<div id="portfolio-boxMobile" class="popup">
-		<div id="portfolio-contentMobile" class="popup-content fullcentered">
-			<span class="close">x</span>
-			<h3>Projects coming soon!</h3>
-		</div>
+	<div id="portfolioClickerMobile" class="clicker">
+		<img src="img/words/portfolio.png" alt="portfolio" class="words fullcentered popupLink" id="portfoliowordMobile">
 	</div>
+
+	<!-- Github -->
+	<a href="http://www.github.com/thomasjedstrom" id="githubLink" class="clicker" target="_blank" style="target-new: tab;">
+		<img src="img/words/github.png" alt="music" class="words fullcentered" id="githubwordMobile">
+	</a>
 
 	<!-- Music -->
-	<div id="music-boxMobile" class="popup">
-		<div id="music-contentMobile" class="popup-content fullcentered">
-			<span class="close">x</span>
-			<h3>Music page coming soon!</h3>
-		</div>
-	</div>
+	<a href="http://wearemostlyghostly.bandcamp.com/" id="musicClickerMobile" class="clicker" target="_blank" style="target-new: tab;">
+		<img src="img/words/music.png" alt="music" class="words fullcentered" id="musicwordMobile">
+	</a>
 
-  	<!-- Contact -->
-	<div id="contact-boxMobile" class="popup">
-		<div id="contact-contentMobile" class="popup-content fullcentered">
-			<span class="close">x</span>
-			<h3>Contact:</h3>
-			<span class="category"><b>#:</b></span><span>214-912-2649</span><br>
-			<span class="category"><b>email:</b></span><span>thomasjedstrom@gmail.com</span><br>
-		</div>
-	</div>
-
-
-
-
+	<!-- Contact Me -->
+	<h1 id="contactMe" class="words fullcentered popupLink">CONTACT ME!</h1>
 
 </div>
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- ================= POPUPS ================= -->
+	<div class="popup" id="popupBG"></div>
+  	<!-- Contact -->
+	<div id="contact-content" class="popup-content fullcentered">
+		<span class="close">X</span>
+		<big id="phone">214-912-2649</big><br>
+		<span id="email"><big>T</big>homas<big>JE</big>dstrom<big>@</big>gmail.com</span><br>
+	</div>
+
+<!-- ======== Portfolio LAYER 1 ======== -->
+	<div id="portfolio-content" class="popup-content fullcentered">
+    <span class="close">X</span>
+    <p>This page is currently under construction but will be online again soon.</p>
+		<!-- <span id="railsTag" class="portfolioType">RAILS</span>
+		<span id="meanTag" class="portfolioType">MEAN</span>
+		<span id="djangoTag" class="portfolioType">DJANGO</span> -->
+	</div>
+
+<!-- ======== Portfolio LAYER 2 ======== -->
+	<div class="popup" id="portfolioBG"></div>
+	<!-- ======== RAILS LAYER 2 ======== -->
+	<div id="rails-content" class="popup-content fullcentered portfolioBox">
+		<span class="pclose">X</span>
+
+		<div class="projectContainer">
+			<div class="portfolioClicker">
+				<a href="http://onlinelending.thomasjedstrom.com" target="_blank" style="target-new: tab;">
+					<h2 class="portfolioTitle">ONLINE LENDING</h2>
+					<img src="img/thumbnails/rails_online_lending.jpg" alt="rails online lending" class="portfolioImage">
+				</a>
+			</div>
+			<a href="https://github.com/thomasjedstrom/RoR_OnlineLending" target="_blank" style="target-new: tab;">
+				<img src="img/icons/github.png" alt="github link" class="infoLink">
+			</a>
+			<img src="img/icons/info.svg" alt="info" class="infoLink" id="oliClicker">
+		</div>
+
+		<div class="projectContainer">
+			<div class="portfolioClicker">
+				<a href="http://thewall.thomasjedstrom.com" target="_blank" style="target-new: tab;">
+					<h2 class="portfolioTitle">THE WALL</h2>
+					<img src="img/thumbnails/rails_the_wall.jpg" alt="rails the wall" class="portfolioImage">
+				</a>
+			</div>
+			<a href="https://github.com/thomasjedstrom/RoR_TheWall" target="_blank" style="target-new: tab;">
+				<img src="img/icons/github.png" alt="github link" class="infoLink">
+			</a>
+			<img src="img/icons/info.svg" alt="info" class="infoLink" id="twiClicker">
+		</div>
+
+		<div class="projectContainer">
+			<div class="portfolioClicker">
+				<a href="http://eventtracking.thomasjedstrom.com" target="_blank" style="target-new: tab;">
+					<h2 class="portfolioTitle">EVENT TRACKING</h2>
+					<img src="img/thumbnails/rails_eventtracking.jpg" alt="rails event tracking" class="portfolioImage">
+				</a>
+			</div>
+			<a href="https://github.com/thomasjedstrom/RoR_EventTracking" target="_blank" style="target-new: tab;">
+				<img src="img/icons/github.png" alt="github link" class="infoLink">
+			</a>
+			<img src="img/icons/info.svg" alt="info" class="infoLink" id="etiClicker">
+		</div>
+
+		<div class="projectContainer">
+			<div class="portfolioClicker">
+				<a href="http://abtesting.thomasjedstrom.com" target="_blank" style="target-new: tab;">
+					<h2 class="portfolioTitle">AB TESTING</h2>
+					<img src="img/thumbnails/rails_abtesting.jpg" alt="rails ab testing" class="portfolioImage">
+				</a>
+			</div>
+			<a href="https://github.com/thomasjedstrom/RoR_ABTesting" target="_blank" style="target-new: tab;">
+				<img src="img/icons/github.png" alt="github link" class="infoLink">
+			</a>
+			<img src="img/icons/info.svg" alt="info" class="infoLink" id="atiClicker">
+		</div>
+
+		<div class="projectContainer">
+			<div class="portfolioClicker">
+				<a href="http://brightideas.thomasjedstrom.com" target="_blank" style="target-new: tab;">
+					<h2 class="portfolioTitle">BRIGHT IDEAS</h2>
+					<img src="img/thumbnails/rails_bright_ideas.jpg" alt="rails bright ideas" class="portfolioImage">
+				</a>
+			</div>
+			<a href="https://github.com/thomasjedstrom/RoR_BrightIdeas" target="_blank" style="target-new: tab;">
+				<img src="img/icons/github.png" alt="github link" class="infoLink">
+			</a>
+			<img src="img/icons/info.svg" alt="info" class="infoLink" id="biiClicker">
+		</div>
+
+		<div class="projectContainer">
+			<div class="portfolioClicker">
+				<a href="http://ninjagold.thomasjedstrom.com" target="_blank" style="target-new: tab;">
+					<h2 class="portfolioTitle">NINJA GOLD</h2>
+					<img src="img/thumbnails/rails_ninja_gold.jpg" alt="rails ninja gold" class="portfolioImage">
+				</a>
+			</div>
+			<a href="https://github.com/thomasjedstrom/RoR_NinjaGold" target="_blank" style="target-new: tab;">
+				<img src="img/icons/github.png" alt="github link" class="infoLink">
+			</a>
+			<img src="img/icons/info.svg" alt="info" class="infoLink" id="ngiClicker">
+		</div>
+	</div>
+
+	<!-- ======== MEAN LAYER 2 ======== -->
+	<div id="mean-content" class="popup-content fullcentered portfolioBox">
+		<span class="pclose">X</span>
+
+		<div class="projectContainer">
+			<div class="portfolioClicker">
+				<a href="http://discussionboard.thomasjedstrom.com" target="_blank" style="target-new: tab;">
+					<h2 class="portfolioTitle">DISCUSSION BOARD</h2>
+					<img src="img/thumbnails/mean_discussionboard.jpg" alt="mean discussionboard" class="portfolioImage">
+				</a>
+			</div>
+			<a href="https://github.com/thomasjedstrom/MEAN_DiscussionBoard" target="_blank" style="target-new: tab;">
+				<img src="img/icons/github.png" alt="github link" class="infoLink">
+			</a>
+			<img src="img/icons/info.svg" alt="info" class="infoLink" id="dbiClicker">
+		</div>
+
+		<div class="projectContainer">
+			<div class="portfolioClicker">
+				<a href="http://meanonlinestore.thomasjedstrom.com" target="_blank" style="target-new: tab;">
+					<h2 class="portfolioTitle">ONLINE STORE</h2>
+					<img src="img/thumbnails/mean_onlinestore.jpg" alt="mean online store" class="portfolioImage">
+				</a>
+			</div>
+			<a href="https://github.com/thomasjedstrom/MEAN_OnlineStore" target="_blank" style="target-new: tab;">
+				<img src="img/icons/github.png" alt="github link" class="infoLink">
+			</a>
+			<img src="img/icons/info.svg" alt="info" class="infoLink" id="osiClicker">
+		</div>
+
+		<div class="projectContainer">
+			<div class="portfolioClicker">
+				<a href="http://bucketlist.thomasjedstrom.com" target="_blank" style="target-new: tab;">
+					<h2 class="portfolioTitle">BUCKET LISTS</h2>
+					<img src="img/thumbnails/mean_bucketlists.jpg" alt="mean bucket lists" class="portfolioImage">
+				</a>
+			</div>
+			<a href="https://github.com/thomasjedstrom/MEAN_BucketLists" target="_blank" style="target-new: tab;">
+				<img src="img/icons/github.png" alt="github link" class="infoLink">
+			</a>
+			<img src="img/icons/info.svg" alt="info" class="infoLink" id="bliClicker">
+		</div>
+
+		<div class="projectContainer">
+			<div class="portfolioClicker">
+				<a href="http://surveys.thomasjedstrom.com" target="_blank" style="target-new: tab;">
+					<h2 class="portfolioTitle">SURVEYS</h2>
+					<img src="img/thumbnails/mean_surveys.jpg" alt="mean surveys" class="portfolioImage">
+				</a>
+			</div>
+			<a href="https://github.com/thomasjedstrom/MEAN_Surveys" target="_blank" style="target-new: tab;">
+				<img src="img/icons/github.png" alt="github link" class="infoLink">
+			</a>
+			<img src="img/icons/info.svg" alt="info" class="infoLink" id="siClicker">
+		</div>
+	</div>
+
+	<!-- ======== DJANGO LAYER 2 ======== -->
+	<div id="django-content" class="popup-content fullcentered portfolioBox">
+		<span class="pclose">X</span>
+		<div class="projectContainer">
+			<div class="portfolioClicker">
+				<a href="http://friends.thomasjedstrom.com" target="_blank" style="target-new: tab;">
+					<h2 class="portfolioTitle">DJANGO FRIENDS</h2>
+					<img src="img/thumbnails/django_friends.jpg" alt="django friends" class="portfolioImage">
+				</a>
+			</div>
+			<a href="https://github.com/thomasjedstrom/Django_Friends" target="_blank" style="target-new: tab;">
+				<img src="img/icons/github.png" alt="github link" class="infoLink">
+			</a>
+			<img src="img/icons/info.svg" alt="info" class="infoLink" id="fiClicker">
+		</div>
+	</div>
+
+<!-- ======== Portfolio LAYER 3 ======== -->
+	<div class="popup" id="infoBG"></div>
+	<!-- ======== RAILS LAYER 3======== -->
+	<div id="onlineLendingContent" class="popup-content fullcentered infoBox">
+		<span class="iclose">X</span>
+		<h2>ONLINE LENDING</h2>
+		<h3>RUBY ON RAILS</h3>
+		<ul>
+			<li>Ruby on Rails</li>
+			<li>PostgreSQL</li>
+			<li>Custom User Login/Registration</li>
+			<li>Authentication/Validation for Privileged Actions</li>
+			<li>Polymorphic, Many-to-Many Relationships</li>
+			<li>Advanced Active Record Queries</li>
+		</ul>
+		<p>From wireframe to deployed in under 4.5 hours.  The primary logical hurdles included crafting a custom, unified login for two user tables with custom error messages.  Per user (lender or borrower), a history is maintained through a polymorphic, many-to-many table where records are stored.  These records are then grouped by user to be displayed as a transaction history on the users dashboard.</p>
+	</div>
+
+	<div id="theWallContent" class="popup-content fullcentered infoBox">
+		<span class="iclose">X</span>
+		<h2>THE WALL</h2>
+		<h3>RUBY ON RAILS</h3>
+		<ul>
+			<li>Ruby on Rails</li>
+			<li>PostgreSQL</li>
+			<li>Custom User Login/Registration</li>
+			<li>Has_Many_Through Relationships</li>
+			<li>Authentication/Validation for Privileged Actions</li>
+			<li>BCrypt Encryption/Authentication</li>
+			<li>Pink Floyd Themed</li>
+		</ul>
+		<p>A forum/blog style app including user login/registration, the ability to create and delete posts as well as create and delete comments.  This app includes custom CSS styling and straightforward functionality.</p>
+	</div>
+
+	<div id="eventTrackingContent" class="popup-content fullcentered infoBox">
+		<span class="iclose">X</span>
+		<h2>EVENT TRACKING</h2>
+		<h3>RUBY ON RAILS</h3>
+		<ul>
+			<li>Ruby on Rails</li>
+			<li>PostgreSQL</li>
+			<li>Ahoy (Event Tracking) Gem</li>
+			<li>GroupDate Gem</li>
+			<li>GoogleCharts Gem</li>
+			<li>HighCharts Gem</li>
+			<li>ChartJS Gem</li>
+			<li>MomentJS Gem</li>
+			<li>GeoLocation</li>
+		</ul>
+		<p>A simple app aimed at tracking and displaying user information.  An assortment of chart/graphing plugins were used to produce meaningful representations of data collected.</p>
+	</div>
+
+	<div id="abTestingContent" class="popup-content fullcentered infoBox">
+		<span class="iclose">X</span>
+		<h2>AB TESTING</h2>
+		<h3>RUBY ON RAILS</h3>
+		<ul>
+			<li>Ruby on Rails</li>
+			<li>PostgreSQL</li>
+			<li>Vanity (AB Testing) Gem</li>
+		</ul>
+		<p>While technologies such as Optimizely provide AB Testing at a premium, Vanity is an open source gem used to gather user analytics for free.  This one page app displays a button explicitly showing which version of the test was received for demonstration purposes, however the uses can be made far more subtle and consistent through cookies or user authentication (such as when paired with Devise).</p>
+	</div>
+
+	<div id="brightIdeasContent" class="popup-content fullcentered infoBox">
+		<span class="iclose">X</span>
+		<h2>BRIGHT IDEAS</h2>
+		<h3>RUBY ON RAILS</h3>
+		<ul>
+			<li>Ruby on Rails</li>
+			<li>PostgreSQL</li>
+			<li>Full RESTful Routes</li>
+			<li>Custom Login/Registration</li>
+			<li>User Authentication</li>
+			<li>Likes</li>
+		</ul>
+		<p>A forum style app for leaving "Ideas" with the ability to "Like" and "Unlike" posts.  Includes user profiles and RESTful routes.</p>
+	</div>
+
+	<div id="ninjaGoldContent" class="popup-content fullcentered infoBox">
+		<span class="iclose">X</span>
+		<h2>NINJA GOLD</h2>
+		<h3>RUBY ON RAILS</h3>
+		<ul>
+			<li>Ruby on Rails</li>
+			<li>Session Storage</li>
+		</ul>
+		<p>A game involving accruing gold and risking it all.  As a ninja, you are able to farm, mine, rest, and gamble a little to build up a hefty stash.  A log is kept of all actions and is updated automatically with game play.</p>
+	</div>
+
+	<!-- ======== MEAN LAYER 3 ======== -->
+	<div id="discussionBoardContent" class="popup-content fullcentered infoBox">
+		<span class="iclose">X</span>
+		<h2>DISCUSSION BOARD</h2>
+		<h3>MEAN</h3>
+		<ul>
+			<li>AngularJS</li>
+			<li>ExpressJS</li>
+			<li>NodeJS</li>
+			<li>MongoDB</li>
+			<li>Mongoose</li>
+			<li>Mongoose UniqueValidator</li>
+			<li>Body Parser</li>
+			<li>BCrypt Encryption/Authentication</li>
+			<li>Bower</li>
+			<li>NPM</li>
+			<li>AngularMomentJS</li>
+			<li>AngularRoutes</li>
+		</ul>
+		<p>A forum style app including RESTful routes, CRUD, many-to-many relationships, comments ordered by votes, and real time duration time stamps.  Of the complex relationships, users may post topics, answers to topics, and comments on answers to topics as well as up and down vote answers.  Users' stats are viewable per profile page.</p>
+	</div>
+
+	<div id="onlineStoreContent" class="popup-content fullcentered infoBox">
+		<span class="iclose">X</span>
+		<h2>ONLINE STORE</h2>
+		<h3>MEAN</h3>
+		<ul>
+			<li>AngularJS</li>
+			<li>ExpressJS</li>
+			<li>NodeJS</li>
+			<li>MongoDB</li>
+			<li>Mongoose</li>
+			<li>Body Parser</li>
+			<li>Bower</li>
+			<li>NPM</li>
+			<li>AngularMomentJS</li>
+			<li>AngularRoutes</li>
+		</ul>
+		<p>An angular app simulating an online store, including Users, Products, and a many-to-many table for transaction history.  Advanced parsing techniques enable users to link pictures to products.</p>
+	</div>
+
+	<div id="bucketListsContent" class="popup-content fullcentered infoBox">
+		<span class="iclose">X</span>
+		<h2>BUCKET LISTS</h2>
+		<h3>MEAN</h3>
+		<ul>
+			<li>AngularJS</li>
+			<li>ExpressJS</li>
+			<li>NodeJS</li>
+			<li>MongoDB</li>
+			<li>Mongoose</li>
+			<li>Body Parser</li>
+			<li>Bower</li>
+			<li>NPM</li>
+			<li>AngularMomentJS</li>
+			<li>AngularRoutes</li>
+		</ul>
+		<p>From wireframe to deployed in under 3.5 hours, this is a "To-Do-List" style app with a twist.  Users are able to tag other users in their to-do items enabling either user to complete the task.  A profile page displays all completed and pending tasks per user.</p>
+	</div>
+
+	<div id="surveysContent" class="popup-content fullcentered infoBox">
+		<span class="iclose">X</span>
+		<h2>SURVEYS</h2>
+		<h3>MEAN</h3>
+		<ul>
+			<li>AngularJS</li>
+			<li>ExpressJS</li>
+			<li>NodeJS</li>
+			<li>MongoDB</li>
+			<li>Mongoose</li>
+			<li>Body Parser</li>
+			<li>Bower</li>
+			<li>NPM</li>
+			<li>AngularMomentJS</li>
+			<li>AngularRoutes</li>
+		</ul>
+		<p>A fun app for creating polls to quiz other users.  A user can create a survey question with 4 potential answers.  Other users are then able to vote on their favorite answer and view the highest ranked answers.</p>
+	</div>
+
+	<!-- ======== DJANGO LAYER 3======== -->
+	<div id="friendsContent" class="popup-content fullcentered infoBox">
+		<span class="iclose">X</span>
+		<h2>FRIENDS</h2>
+		<h3>DJANGO</h3>
+		<ul>
+			<li>Django</li>
+			<li>PostgreSQL</li>
+			<li>Custom User Login/Registration</li>
+			<li>Many-to-Many Relationships</li>
+		</ul>
+		<p>From wireframe to deployed in under 3.5 hours.  A simple Django app for creating users and adding / removing friends.  The complexity lies in the many-to-many relationships involved as well as self joins using PostgreSQL.</p>
+	</div>
 </body>
 </html>

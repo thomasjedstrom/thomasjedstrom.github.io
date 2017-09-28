@@ -1,0 +1,41 @@
+/*===================== PAGE I =======================*/
+#firstPage{
+	z-index: 30;
+	/*background-image: url('../img/masthead_background.jpg');*/
+	background: white;
+	background-size: cover;
+	background-attachment: fixed;
+	width: 100vw;
+	height: 100vh;
+}
+#firstPageBanner{
+	display: none;
+	position: relative;
+	top: 0%;
+	left: 50%;
+	background: rgba(255, 255, 255, 0.5);
+	padding: 10px;
+	border-radius: 5px;
+	box-shadow: 0px 0px 100px black;
+	text-align: center;
+}
+#firstPageBanner h1, h2{
+	display: inline-block;
+	font-family: 'Anton', sans-serif;
+	letter-spacing: 3px;
+}
+#textholder{
+	z-index: 31;
+	width: 30em;
+	height: 12em;
+}
+#textholder h1, h2{
+	margin: 1em;
+}
+#myName, #myTitle{
+	margin: 0%;
+}
+#enter_here{
+	position: absolute;
+	bottom: 2%;
+}
