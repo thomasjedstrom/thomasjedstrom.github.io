@@ -1,0 +1,70 @@
+/*===================== PAGE I =======================*/
+#firstPage{
+	z-index: 30;
+	/*background-image: url('../img/masthead_background.jpg');*/
+	background: white;
+	background-size: cover;
+	background-attachment: fixed;
+	width: 100vw;
+	height: 100vh;
+	@media screen and (max-width: 770px){
+		background-attachment: scroll;
+	}
+}
+#firstPageBanner{
+	display: none;
+	position: absolute;
+	top: 50vh;
+	left: 50vw;
+	transform: translate(-50%, -50%);
+
+
+	max-width: 500px;
+	background: rgba(255, 255, 255, 0.5);
+	padding: 10px;
+	border-radius: 5px;
+	box-shadow: 0px 0px 100px black;
+	text-align: center;
+	h1, h2{
+		display: inline-block;
+		font-family: 'Avenir-Book', sans-serif;
+		letter-spacing: 3px;
+	}
+	h1{
+		font-size: 26px;
+		@media all and (min-width: 480px){
+			font-size: 35px;
+		}
+	}
+}
+#textholder{
+	z-index: 31;
+	width: 30em;
+	height: 12em;
+	position: relative;
+}
+#titleHr{
+	width: 300px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%);
+}
+// #textholder h1, h2{
+// 	margin: 1em;
+// }
+#myName, #myTitle{
+	margin: 0%;
+}
+#myName{
+	margin-top: 50px;
+}
+#myTitle{
+	position: relative;
+	top: 26px;
+	font-size: 14px;
+}
+#enter_here{
+	position: absolute;
+	bottom: 2%;
+}

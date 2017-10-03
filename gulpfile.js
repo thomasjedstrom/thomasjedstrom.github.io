@@ -104,6 +104,7 @@ gulp.task('default',function() {
 	gulp.start('make-bootstrap-js');
 	gulp.start('copy');
 	gulp.watch('src/stylesheets/*.scss',['styles']);
+	gulp.watch('src/stylesheets/*/*.scss',['styles']);
 	gulp.watch('src/scripts/*.js',['js']);
 	gulp.watch('./config.json',['make-bootstrap-css', 'make-bootstrap-js']);
 });

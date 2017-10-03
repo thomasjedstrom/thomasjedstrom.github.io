@@ -1,0 +1,269 @@
+/*======== Left Section ========*/
+#self_portrait{
+	z-index: 22;
+	top: 50vh;
+	left: 1000vw;
+	max-width: 40vw;
+	max-height: 80vh;
+	height: auto;
+	width: auto;
+	border-radius: 15px;
+	visibility: hidden;
+	filter: drop-shadow(-15px 15px 10px #000);
+
+	@media all and (min-width: 540px) {
+		left: 25vw;
+		max-height: 60vh;
+	}
+	@media all and (min-width: 540px) and (min-height: 400px) {
+		left: 20vw;
+	}
+	@media all and (min-width: 650px) {
+		left: 25vw;
+		max-height: 365px;
+	}
+	@media all and (max-aspect-ratio: 2/1){
+		max-width: 22vw;
+	}
+}
+
+
+/*======== Right Section ========*/
+.rightSideContainer{
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	visibility: hidden;
+}
+.sideSignContainer{
+	top: 50vh;
+	right: 50vw;
+	z-index: 24;
+	width: 320px;
+	height: 320px;
+	transform: translate(50%, -50%);
+	@media all and (min-width: 540px) {
+		right: 29vw;
+	}
+	@media all and (min-width: 540px) and (min-height: 400px) {
+		right: 32vw;
+	}
+	@media all and (min-height: 400px) {
+		height: 375px;
+	}
+}
+
+
+#sideSign{
+
+	img{
+		z-index: 22;
+		width: auto;
+		height: 320px;
+		position: absolute;
+		right: -553px;
+		filter: drop-shadow(15px 15px 10px #000);
+
+		@media all and (min-height: 400px) {
+			height: 375px;
+			right: -648px;
+		}
+	}
+}
+.sideSignContent{
+	z-index: 23;
+	position: absolute;
+	right: 6%;
+	top: 0;
+	color: white;
+
+	@media all and (min-height: 400px) {
+		right: 8%;
+	}
+
+	h1{
+		margin-bottom: 0px;
+		margin-top: 27px;
+		font-weight: 300;
+		line-height: 30px;
+		display: none;
+		@media all and (min-height: 400px){
+			display: block;
+		}
+	}
+	h5{
+		font-weight: 100;
+		margin: 0px;
+		font-size: 10px;
+		display: none;
+		@media all and (min-height: 400px){
+			display: block;
+		}
+	}
+	hr{
+		width: 100px;
+		display: none;
+		@media all and (min-height: 400px){
+			display: block;
+		}
+	}
+	ul{
+		margin-top: 24px;
+		@media all and (min-height: 400px){
+			margin-top: 8px
+		}
+	}
+	li{
+		font-size: 11px;
+		line-height: 21px;
+		@media all and (min-height: 400px){
+			line-height: 19px;
+		}
+	}
+	.active{
+		font-style: italic;
+	}
+}
+
+
+
+.blackBox{
+	background: black;
+	border-radius: 15px;
+	position: absolute;
+	top: 5%;
+	right: 22px;
+	height: 290px;
+	width: 280px;
+	z-index: 21;
+	color: white;
+	font-style: italic;
+	font-size: 12px;
+	display: none;
+	&.active{
+		display: block;
+	}
+	@media all and (min-height: 400px){
+		height: 350px;
+	}
+
+	img{
+		margin: 0px auto 0px;
+		max-width: 40px;
+		max-height: 20px;
+		@media all and (min-height: 400px){
+			max-width: 50px;
+			max-height: 30px;
+			margin-top: 4px;
+		}
+	}
+	p{
+		margin-top: 10px;
+	}
+}
+.stackIcon{
+	width: 130px;
+	text-align: center;
+	margin: 15px 0px 23px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// #stats{
+// 	z-index: 21;
+// 	top: 50vh;
+// 	left: 21%;
+// 	width: 240px;
+// 	max-width: 280px;
+// 	border-radius: 15px;
+// 	background: black;
+// 	color: white;
+// 	padding-top: 12px;
+// 	visibility: hidden;
+// 	@media all and (min-width: 840px){
+// 		visibility: visible;
+// 	}
+
+// 	@media all and (min-height: 500px){
+// 		top: 60vh;
+// 	}
+// 	@media all and (min-height: 600px){
+// 		top: 65vh;
+// 	}
+
+// 	// @media all and (min-height: 700px) and (min-width: 540px){
+// 	// 	visibility: visible;
+// 	// }
+// }
+// .stats{
+// 	&--title{
+// 		margin: 0px auto 10px;
+// 		font-size: 20px;
+// 	}
+// 	&--title-hr{
+// 		width: 50%;
+// 		margin: 0px auto;
+// 	}
+// }
+// .stat{
+// 	display: flex;
+// 	text-align: center;
+// 	margin: 20px auto;
+// 	align-items: center;
+// 	&--label{
+// 		width: 40%;
+// 		display: inline-block;
+// 		font-size: 14px;
+// 	}
+// 	&--value{
+// 		width: 60%;
+// 		display: inline-flex;
+// 		flex-wrap: wrap;
+// 		justify-content: center;
+// 		align-content: center;
+// 		align-items: center;
+
+// 		&-small{
+// 			font-size: 10px;
+// 			margin-bottom: -3px;
+// 			display: block;
+// 			width: 100%;
+// 			line-height: 16px;
+// 		}
+// 		&-big{
+// 			font-size: 16px;
+// 			width: 100%;
+// 		}
+// 	}
+// 	hr{
+// 		width: 20px;
+// 		height: 1px;
+// 	}
+// }

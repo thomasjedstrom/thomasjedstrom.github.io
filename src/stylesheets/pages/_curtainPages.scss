@@ -1,0 +1,36 @@
+/*===================== CURTAIN PAGES =====================*/
+#secondPage{
+	width: 100vw;
+	height: 100vh;
+	z-index: 20;
+	background: #000 url('../img/floor/woodfloor.jpg') no-repeat fixed bottom;
+	background-size: 100vw 10vh;
+}
+#back_to_landing{
+	z-index: 25;
+	top: 1%;
+	@media all and (max-height: 550px){
+		display: none
+	}
+}
+#to_connections{
+	z-index: 22;
+	bottom: 2%;
+	@media all and (max-height: 550px){
+		display: none
+	}
+}
+/*============= Curtain =============*/
+.curtain{
+	z-index: 21;
+	width: 50vw;
+	height: 100vh;
+}
+#curtain1{
+	top: 0%;
+	left: 0%;
+}
+#curtain2{
+	top: 0%;
+	left: 50%;
+}

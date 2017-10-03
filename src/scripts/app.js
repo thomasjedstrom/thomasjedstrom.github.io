@@ -8,13 +8,19 @@ $(function () {
 	// variables
 	var $curtainL	= $('#curtain1'),
 		$curtainR	= $('#curtain2'),
-		$fader 		= $('.fader'),
+		$fader1		= $('.fader1'),
+		$fader2		= $('.fader2'),
 		$bgHanging	= $('.bg-star'),
 		$icon 		= $('.iconContainer'),
 		$enter		= $('#enter_here'),
 		$btl		= $('#back_to_landing'),
 		$more		= $('#to_connections'),
 		$btb		= $('#back_to_bio');
+
+	var $page1 = $('#firstPage'),
+		$page2 = $('#curtainPage1'),
+		$page3 = $('#curtainPage2'),
+		$page4 = $('#thirdPage');
 
 	// initialize fullPage
 	$('#fullpage').fullpage({
@@ -23,23 +29,31 @@ $(function () {
 		onLeave: function(index, nextIndex, direction) {
 			// page2 - page3
 			if( index == 2 && nextIndex == 3 ) {
+				$fader1.fadeOut('slow');
+				$fader2.css("visibility", "visible");
+				$fader2.fadeIn('slow');
+
+			// page3 - page4
+			}else if( index == 3 && nextIndex == 4 ) {
 				$curtainL.animate({'left': "-=50vw"}, "slow").addClass('animated');
 				$curtainR.animate({'left': "+=50vw"}, "slow").addClass('animated');
-				$fader.fadeOut('slow');
+				$fader2.fadeOut('slow');
 				$bgHanging.animate({'top': "+=50vh"}, "slow").addClass('animated');
 				$icon.animate({'top': "+=127vh"}, 1200).addClass('animated');
 				$btl.animate({'top': "-=30vh"}, "slow").addClass('animated');
 				$more.animate({'bottom': "-=30vh"}, "slow").addClass('animated');
 
-			// Page 3 - Page 2
-			}else if( index == 3 && direction == 'up') {
+			// Page 4 - Page 3
+			}else if( index == 4 && direction == 'up') {
 				if($curtainL.hasClass('animated')){
 					$curtainL.animate({'left': "+=50vw"}, "slow");
 				}
 				if($curtainL.hasClass('animated')){
 					$curtainR.animate({'left': "-=50vw"}, "slow");
 				}
-				$fader.fadeIn('slow');
+				$fader2.css("visibility", "visible");
+				$fader2.hide();
+				$fader2.fadeIn('slow');
 				if($bgHanging.hasClass('animated')){
 					$bgHanging.animate({'top': "-=50vh"}, "slow");
 				}
@@ -52,9 +66,37 @@ $(function () {
 				if($more.hasClass('animated')){
 					$more.animate({'bottom': "+=30vh"}, "slow");
 				}
+
+			// Page 3 - Page 2
+			}else if( index == 3 && direction == 'up') {
+				$fader1.css("visibility", "visible");
+				$fader1.hide();
+				$fader1.fadeIn('slow');
+				$fader2.fadeOut('slow');
 			}
+		},
+		afterRender: function(){
+			setTimeout(function(){
+				if(($page2.hasClass('active')) || ($page1.hasClass('active'))){
+					$fader1.css("visibility", "visible");
+					$fader2.hide();
+				}else if($page3.hasClass('active')){
+					$fader1.hide();
+					$fader2.css("visibility", "visible");
+				}else if($page4.hasClass('active')){
+					$curtainL.css('left', "-50vw").addClass('animated');
+					$curtainR.css('left', "100vw").addClass('animated');
+					$bgHanging.css('top', "+=50vh").addClass('animated');
+					$icon.css('top', "+=127vh").addClass('animated');
+					$btl.css('top', "-=30vh").addClass('animated');
+					$more.css('bottom', "-=30vh").addClass('animated');
+				}
+			}, 120
+			)
 		}
 	});
+
+
 
 	$enter.click(function(e){
 		e.preventDefault();
@@ -75,12 +117,40 @@ $(function () {
 
 	// firstPage fade in effects
 	$('#firstPageBanner')	.fadeIn(2000).css("display", "inline-block");
-	$('#myName')			.css('display', 'inline-block').hide().delay(1500).fadeIn(3000);
-	$('#myTitle')			.css('display', 'inline-block').hide().delay(2500).fadeIn(3000);
+	$('#myName')			.css('display', 'inline-block').hide().delay(1000).fadeIn(3000);
+	$('#titleHr')			.css('display', 'inline-block').hide().delay(1500).fadeIn(3000);
+	$('#myTitle')			.css('display', 'inline-block').hide().delay(2000).fadeIn(3000);
 	// firstPage fade out effects
 	$(window).scroll(()=>{
 		$(".fade-out")		.css("opacity", 2 - $(window).scrollTop() / 250);
 	});
+
+
+
+	// Side Sign toggle black box effect
+	var $stackList = $("#stackList");
+	var $designStack = $("#designStack");
+	var $active = $designStack;
+
+	$stackList.find('a').click(function(e){
+		e.preventDefault();
+		if($(this).hasClass('active')){
+			return;
+		}
+
+		// swap active state for box
+		$("." + $active[0].id + "Box" ).hide("slide", { direction: "right" }, 200);
+		$("." + $(this)[0].id + "Box").show("slide", { direction: "right" }, 300);
+
+		// swap active state for links
+		$active.removeClass('active');
+		$(this).addClass('active');
+		$active = $(this);
+
+	})
+
+
+
 
 
 
@@ -97,8 +167,19 @@ $(function () {
 	$('#pianoclicker')		.mouseout(()=>{$('#pianoshadow').fadeOut("slow")})
 
 
+	// $("#briefcaseclicker").click(()=>window.location.href = 'Thomas-Edstrom-Resume.pdf');
+	// $("#resumewordMobile").click(()=>window.location.href = 'Thomas-Edstrom-Resume.pdf');
 
-// POPUPS LAYER 1
+
+
+
+
+
+
+
+
+
+	// POPUPS LAYER 1
 	const puBG = $('#popupBG')
 	$('.popupLink').click(()=>puBG.fadeIn('slow'));
 	$(".close").click(function(){
@@ -114,7 +195,9 @@ $(function () {
 
 	const portfolio 			= $("#portfolio-content");
 	portfolio.css("display", "flex").hide()
-	$("#briefcaseclicker")	.click(()=>portfolio.fadeIn('slow'));
+
+
+	// $("#briefcaseclicker")	.click(()=>portfolio.fadeIn('slow'));
 	$("#portfoliowordMobile").click(()=>portfolio.fadeIn('slow'));
 
 

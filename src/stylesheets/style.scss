@@ -1,90 +1,21 @@
-@import "./global/global";
-@import "./global/helpers";
-@import "./global/variables";
+@import "./global/_mixins";
+@import "./global/_fonts";
+@import "./global/_global";
+@import "./global/_helpers";
+@import "./global/_variables";
 
-@import "./components/modals";
-@import "./components/navigation";
-@import "./components/portfolio";
+@import "./components/_modals";
+@import "./components/_navigation";
+@import "./components/_portfolio";
 
-@import "./pages/loadingPage";
-@import "./pages/page1";
-@import "./pages/page2";
-@import "./pages/page3";
-
-
-/*================ASPECT RATIOS====================*/
-@media screen and (min-aspect-ratio: 3/2){
-	#bio{
-		width: 40vw;
-	}
-	#marquee{
-		height: auto;
-		width: 25vw;
-	}
-	#self_portrait{
-		width: 20vw;
-		height: auto;
-		max-height: 80vh
-	}
-}
-@media screen and (max-aspect-ratio: 3/2) and (min-aspect-ratio: 1/1){
-	#self_portrait, #marquee{
-		left: 78%;
-		height: auto;
-	}
-	#self_portrait{
-		top: 32%;
-	}
-	#marquee{
-		width: 35vw;
-		max-width: 320px;
-		top: 70%;
-	}
-	#bio{
-		width: 40vw;
-		left: 25%;
-		box-sizing: border-box;
-	}
-}
-@media screen and (max-aspect-ratio: 1/1){
-	#self_portrait, #marquee{
-		left: 50%;
-		height: 25vh;
-		width: auto;
-	}
-	#self_portrait{
-		top: 20%;
-	}
-	#marquee{
-		top: 80%;
-	}
-	#bio{
-		width: 90vw;
-		top: 50%;
-		left: 50%;
-	}
-	#bio p:nth-child(2){
-		margin-top: 0px;
-	}
-	#bio p:last-child{
-		margin-bottom: 0px;
-	}
-	#bioHeader{
-		margin: 0px;
-	}
-	#back_to_landing, #to_connections{
-		display: none;
-	}
-}
-
-
+@import "./pages/_loadingPage";
+@import "./pages/_page1";
+@import "./pages/_curtainPages";
+@import "./pages/_curtainPage1";
+@import "./pages/_curtainPage2";
+@import "./pages/_page3";
 
 /*================MAX WIDTH====================*/
-@media screen and (max-width: 1550px) {
-	#bio{
-		font-size: 1.3em;
-	}
-}
 @media screen and (max-width: 1170px){
 	#secondPage{
 		background: transparent;
@@ -95,13 +26,8 @@
 	}
 
 	/*PAGE I*/
-	#textholder{
-		width: 90vw;
-	}
 
 	/*PAGE II*/
-
-
 
 	/*PAGE III*/
 	#bgHanging, #icons, #back_to_bio{
@@ -125,7 +51,7 @@
 	#linkedinwordMobile{
 		top: 28.3%;
 	}
-	#portfoliowordMobile{
+	#resumewordMobile{
 		top: 44%;
 	}
 	#githubwordMobile{
@@ -158,9 +84,6 @@
 	}
 }
 @media screen and (max-width: 770px){
-	#firstPage{
-		background-attachment: scroll;
-	}
 	/*PopUps*/
 	.portfolioBox{
 		position: relative;
@@ -210,120 +133,44 @@
 		text-decoration: underline;
 	}
 }
-@media screen and (max-width: 700px){
-	#bioHeader{
-		display: none;
-	}
-}
-@media screen and (max-width: 450px){
-	#marquee{
-		max-width: 85vw;
-		height: auto;
-	}
-	#self_portrait{
-		max-width: 45vw;
-		height: auto;
-	}
-	#bio{
-		font-size: 1em;
-	}
-	#enter_here{
-		display: none;
-	}
-}
-@media screen and (max-width: 280px){
-	#bio{
-		font-size: 1em;
-	}
-}
+
 
 /*================MAX HEIGHT====================*/
 
-@media screen and (max-height: 890px){
-	#bio{
-		font-size: 1em;
-	}
-	#bio p:nth-child(2){
-		margin-top: 0px;
-	}
-	#bio p:last-child{
-		margin-bottom: 0px;
-	}
-	#bioHeader{
-		margin: 0px;
-	}
-}
 @media screen and (max-height: 760px){
-	#enter_here{
-		height: 12vh;
-		width: auto;
-	}
 	#contactMe{
 		font-size: 1.8em;
 	}
 }
-@media screen and (max-height: 600px){
-	#bioHeader{
-		display: none;
-	}
-	#textholder{
-		height: 9em;
-	}
-	#myName{
-		font-size: 1.5em;
-	}
-	#myTitle{
-		font-size: 1em;
-	}
-}
+
 @media screen and (max-height: 480px){
 	#back_to_landing, #to_connections{
 		display: none;
 	}
 }
-@media screen and (max-height: 420px){
-	#bio{
-		font-size: .8em;
-	}
-}
 @media screen and (max-height: 350px){
-	#self_portrait{
-		max-width: 20vw;
-		width: auto;
-	}
+	// #self_portrait{
+	// 	max-width: 20vw;
+	// 	width: auto;
+	// }
 }
 /*================MAX HEIGHT & WIDTH====================*/
-@media screen and (max-height: 770px) and (max-width: 330px){
-	#bio{
-		font-size: .8em;
-	}
-}
 @media screen and (max-height: 600px) and (max-width: 330px){
-	#marquee{
-		max-height: 22vh;
-		width: auto;
-		top: 85%;
-	}
-	#self_portrait{
-		max-height: 22vh;
-		width: auto;
-		top: 15%;
-	}
+	// #self_portrait{
+	// 	max-height: 22vh;
+	// 	width: auto;
+	// 	top: 15%;
+	// }
 }
 @media screen and (max-height: 770px) and (max-width: 450px){
 	.pclose{
 		top: 15%;
 	}
-	#marquee{
-		max-height: 22vh;
-		width: auto;
-		top: 85%;
-	}
-	#self_portrait{
-		max-height: 22vh;
-		width: auto;
-		top: 15%;
-	}
+	// #self_portrait{
+	// 	max-height: 22vh;
+	// 	width: auto;
+	// 	top: 15%;
+	// }
 	#contact-content{
 		font-size: 1.3em;
 	}

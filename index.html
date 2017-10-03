@@ -9,13 +9,13 @@
 	<!-- <link rel="shortcut icon" type="image/png" href="./favicon.png"/> -->
 	<link rel="icon" type="image/png" href="src/img/marquee_star/marquee_star.png">
 
-	<link href="https://fonts.googleapis.com/css?family=Anton|Average+Sans" rel="stylesheet">
 	<!-- <link rel="stylesheet" href="./dist/bootstrap.css"> -->
 	<link rel="stylesheet" href="./dist/jquery.fullpage.min.css">
 	<link rel="stylesheet" href="./dist/style.css">
 
 	<script src="./dist/jquery.min.js"></script>
 	<script src="./dist/jquery.fullPage.min.js"></script>
+	<script src="https://code.jquery.com/ui/1.12.0/jquery-ui.min.js" integrity="sha256-eGE6blurk5sHj+rmkfsGYeKyZx3M4bG+ZlFyA7Kns7E=" crossorigin="anonymous"></script>
 	<!-- <script src="./dist/bootstrap.js"></script> -->
 	<!-- <script src="./dist/jquery.fittext.js"></script>
 	<script src="./dist/jquery.lettering.js"></script>
@@ -48,51 +48,433 @@
 		<div id="firstPageBanner" class="fade-out fullcentered">
 			<div id="textholder">
 				<h1 id="myName">THOMAS EDSTROM</h1><br>
+				<hr id="titleHr">
 				<h2 id="myTitle">FULL-STACK DEVELOPER</h2>
 			</div>
 		</div>
 		<img src="src/img/navigation/enter.png" alt="Enter Here" id="enter_here" class="btn centered">
 	</div>
 
-<!-- ================= PAGE II ================= -->
-	<div id="secondPage" class="section">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- ================= PAGE II.1 ================= -->
+	<div id="curtainPage1" class="section">
 
 		<!-- NAVIGATION BUTTON = Back (to landing page) -->
 		<img src="src/img/navigation/back.png" alt="Back" id="back_to_landing" class="btn centered fixed">
-
 
 		<!-- CURTAINS -->
 		<img src="src/img/curtain/curtain1.jpg" alt="curtain1" class="curtain fixed" id="curtain1">
 		<img src="src/img/curtain/curtain2.jpg" alt="curtain2" class="curtain fixed" id="curtain2">
 
 
-		<!-- BIO SECTION -->
-		<div id="bioSection">
-
-			<div id="myDiv" class="is-animated"></div>
-
-
-			<!-- PORTRAIT -->
-			<img src="src/img/thomas.jpg" alt="Picture of Thomas" id="self_portrait" class="fixed fullcentered fader">
-
-			<!-- BIO -->
-			<div id="bio" class="fixed fullcentered fader">
-				<h3 id="bioHeader">INCREASE PROFITS, DECREASE EXPENSES.</h3>
-				<p>I make people money.  That pretty much sums it up.</p>
-				<p>On the rare occassion I'm not behind the computer, I love to read, make music, or talk philosophy over coffee.</p>
-				<p>I currently reside in Dallas, TX and I'm always looking to create something new.  <element id="sendMeALine" class="popupLink">Send me a line</element> and let's make something happen!</p>
+		<!-- STATS -->
+		<!-- <div id="stats" class="fixed fullcentered fader">
+			<h2 class="stats--title">Thomas Edstrom</h2>
+			<hr class="stats--title-hr">
+			<div class="stat">
+				<p class="stat--label">Location</p>
+				<div class="stat--value">
+					<span class="stat--value-small">Oak Cliff</span>
+					<span class="stat--value-big">Dallas, TX</span>
+				</div>
 			</div>
+			<div class="stat">
+				<p class="stat--label">Education</p>
+				<div class="stat--value">
+					<span class="stat--value-small">Graduate w/Honors</span>
+					<span class="stat--value-big">Coding Dojo</span>
+					<hr>
+					<span class="stat--value-small">B.S. A.E.T.</span>
+					<span class="stat--value-big">Belmont University</span>
+				</div>
+			</div>
+			<div class="stat">
+				<p class="stat--label">Career Path</p>
+				<div class="stat--value">
+					<span class="stat--value-big">Software Architect</span>
+				</div>
+			</div>
+		</div> -->
 
-			<!-- MARQUEE -->
-			<img src="src/img/marquee.gif" alt="marquee" class="fixed fullcentered fader" id="marquee">
+		<div id="hangingSign" class="fixed fader1">
+			<h1>Set your expectations higher.</h1>
+			<span>Backend to Front</span>
+			<p class="signature">-Thomas Edstrom.</p>
+		</div>
+
+
+		<div class="testimonialsContainer">
+			<div id="testimonials" class="fixed fader1">
+				<div class="testimonial">
+					<img src="./src/img/testimonials/tom.png" alt="Tom" class="testimonial--image"><br>
+					<span class="testimonial--blurp">"Versatility, willingness to take on the hard stuff, and technical expertise differentiates Thomas from the average."</span><br>
+					<span class="testimonial--signature">Tom Williamson</span>
+					<span class="testimonial--signature">Director of App Dev</span>
+				</div>
+				<div class="testimonial">
+					<img src="./src/img/testimonials/david.png" alt="David" class="testimonial--image"><br>
+					<span class="testimonial--blurp">"Incredibly self-sufficient.  Thomas is someone who can take a project from beginning to end, even without supervision."</span><br>
+					<span class="testimonial--signature">David Andrews</span>
+					<span class="testimonial--signature">Manager of Software Engineering</span>
+				</div>
+				<div class="testimonial">
+					<img src="./src/img/testimonials/gina.png" alt="Gina" class="testimonial--image"><br>
+					<span class="testimonial--blurp">"Truly a pleasure to work with Thomas!  It's rare to find a developer that's as communicative and personable."</span><br>
+					<span class="testimonial--signature">Gina Ozmer</span>
+					<span class="testimonial--signature">Project Manager</span>
+				</div>
+			</div>
 		</div>
 
 		<!-- NAVIGATION BUTTON = More -->
 		<img src="src/img/navigation/more.png" alt="onward ho!" id="to_connections" class="btn centered fixed">
 	</div>
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- ================= PAGE II.2 ================= -->
+	<div id="curtainPage2" class="section">
+
+		<!-- CURTAINS -->
+		<!-- <img src="src/img/curtain/curtain1.jpg" alt="curtain1" class="curtain fixed" id="curtain1">
+		<img src="src/img/curtain/curtain2.jpg" alt="curtain2" class="curtain fixed" id="curtain2"> -->
+
+		<!-- PORTRAIT -->
+		<img src="src/img/head-lightbulb.png" alt="Picture of Thomas" id="self_portrait" class="fixed fullcentered fader2">
+
+
+
+
+
+		<!-- BLACK BOX -->
+		<div class="rightSideContainer">
+
+			<div class="sideSignContainer fixed fader2">
+
+				<!-- SIDE SIGN -->
+				<div id="sideSign">
+
+					<!-- SIDE SIGN CONTENT -->
+					<div class="sideSignContent">
+						<h1>The Stack</h1>
+						<h5>So Far...</h5>
+						<hr>
+						<ul id="stackList">
+							<a href="" id="designStack" class="active"><li>Design</li></a>
+							<a href="" id="cssStack"><li>CSS</li></a>
+							<a href="" id="cssArchitectureStack"><li>CSS Architecture</li></a>
+							<a href="" id="preCompilersStack"><li>PreCompilers</li></a>
+							<a href="" id="feFrameworksStack"><li>FE Frameworks</li></a>
+							<a href="" id="ideStack"><li>IDE's</li></a>
+							<a href="" id="socketsStack"><li>Sockets</li></a>
+							<a href="" id="dbStack"><li>DB's</li></a>
+							<a href="" id="beLanguagesStack"><li>BE Languages</li></a>
+							<a href="" id="beFrameworksStack"><li>BE Frameworks</li></a>
+							<a href="" id="cloudStack"><li>Cloud Environments</li></a>
+							<a href="" id="osStack"><li>OS</li></a>
+							<a href="" id="versionControlStack"><li>Version Control</li></a>
+						</ul>
+					</div>
+
+					<img src="src/img/sideSign.png" alt="sideSign">
+
+				</div>
+
+				<div class="blackBox designStackBox active">
+					<div class="stackIcon">
+						<img src="./src/img/stackIcons/design/sketch.png" alt="sketch">
+						<p>Sketch</p>
+					</div>
+					<div class="stackIcon">
+						<img src="./src/img/stackIcons/design/ai.png" alt="illustrator">
+						<p>Illustrator</p>
+					</div>
+					<div class="stackIcon">
+						<img src="./src/img/stackIcons/design/ps.png" alt="photoshop">
+						<p>Photoshop</p>
+					</div>
+					<div class="stackIcon">
+						<img src="./src/img/stackIcons/design/invision.png" alt="invision">
+						<p>inVision</p>
+					</div>
+				</div>
+				<div class="blackBox cssStackBox">
+					<div class="stackIcon">
+						<img src="./src/img/stackIcons/css/bootstrap.png" alt="bootstrap">
+						<p>Bootstrap</p>
+					</div>
+					<div class="stackIcon">
+						<img src="./src/img/stackIcons/css/foundation.png" alt="foundation">
+						<p>Foundation</p>
+					</div>
+					<div class="stackIcon">
+						<img src="./src/img/stackIcons/css/sass.png" alt="sass">
+						<p>SASS</p>
+					</div>
+					<div class="stackIcon">
+						<img src="./src/img/stackIcons/css/less.png" alt="less">
+						<p>LESS</p>
+					</div>
+				</div>
+				<div class="blackBox cssArchitectureStackBox">
+					<div class="stackIcon">
+						<img src="./src/img/stackIcons/cssArchitecture/smacss.png" alt="smacss">
+						<p>SMACSS</p>
+					</div>
+					<div class="stackIcon">
+						<img src="./src/img/stackIcons/cssArchitecture/bem.png" alt="bem">
+						<p>BEM</p>
+					</div>
+				</div>
+				<div class="blackBox preCompilersStackBox">
+					<div class="stackIcon">
+						<img src="./src/img/stackIcons/preCompilers/gulp.png" alt="gulp">
+						<p>Gulp</p>
+					</div>
+					<div class="stackIcon">
+						<img src="./src/img/stackIcons/preCompilers/grunt.png" alt="grunt">
+						<p>Grunt</p>
+					</div>
+					<div class="stackIcon">
+						<img src="./src/img/stackIcons/preCompilers/webpack.png" alt="webpack">
+						<p>Webpack</p>
+					</div>
+					<div class="stackIcon">
+						<img src="./src/img/stackIcons/preCompilers/codekit.png" alt="codekit">
+						<p>Codekit</p>
+					</div>
+				</div>
+				<div class="blackBox feFrameworksStackBox">
+					<div class="stackIcon">
+						<img src="./src/img/stackIcons/feFrameworks/angular.png" alt="angular">
+						<p>Angular</p>
+					</div>
+					<div class="stackIcon">
+						<img src="./src/img/stackIcons/feFrameworks/knockout.png" alt="knockout">
+						<p>Knockout</p>
+					</div>
+				</div>
+				<div class="blackBox ideStackBox">
+					<div class="stackIcon">
+						<img src="./src/img/stackIcons/ides/visualstudio.png" alt="visualstudio">
+						<p>VisualStudio</p>
+					</div>
+					<div class="stackIcon">
+						<img src="./src/img/stackIcons/ides/eclipse.png" alt="eclipse">
+						<p>Eclipse</p>
+					</div>
+				</div>
+				<div class="blackBox socketsStackBox">
+					<div class="stackIcon">
+						<img src="./src/img/stackIcons/sockets/socket.png" alt="socket">
+						<p>Socket.io</p>
+					</div>
+					<div class="stackIcon">
+						<img src="./src/img/stackIcons/sockets/signalR.png" alt="signalR">
+						<p>SignalR</p>
+					</div>
+				</div>
+				<div class="blackBox dbStackBox">
+					<div class="stackIcon">
+						<img src="./src/img/stackIcons/dbs/sqlServer.png" alt="sqlServer">
+						<p>SQL</p>
+					</div>
+					<div class="stackIcon">
+						<img src="./src/img/stackIcons/dbs/mongo.png" alt="mongo">
+						<p>Mongo</p>
+					</div>
+					<div class="stackIcon">
+						<img src="./src/img/stackIcons/dbs/postgres.png" alt="postgres">
+						<p>Postgres</p>
+					</div>
+					<div class="stackIcon">
+						<img src="./src/img/stackIcons/dbs/redis.png" alt="redis">
+						<p>Redis</p>
+					</div>
+				</div>
+				<div class="blackBox beLanguagesStackBox">
+					<div class="stackIcon">
+						<img src="./src/img/stackIcons/beLanguages/c.png" alt="c#">
+						<p>C#</p>
+					</div>
+					<div class="stackIcon">
+						<img src="./src/img/stackIcons/beLanguages/node.png" alt="node">
+						<p>Node</p>
+					</div>
+					<div class="stackIcon">
+						<img src="./src/img/stackIcons/beLanguages/ruby.png" alt="ruby">
+						<p>Ruby</p>
+					</div>
+					<div class="stackIcon">
+						<img src="./src/img/stackIcons/beLanguages/python.png" alt="python">
+						<p>Python</p>
+					</div>
+				</div>
+				<div class="blackBox beFrameworksStackBox">
+					<div class="stackIcon">
+						<img src="./src/img/stackIcons/beFrameworks/aspnet.png" alt="aspnet">
+						<p>ASP.NET</p>
+					</div>
+					<div class="stackIcon">
+						<img src="./src/img/stackIcons/beFrameworks/wordpress.png" alt="wordpress">
+						<p>Wordpress</p>
+					</div>
+					<div class="stackIcon">
+						<img src="./src/img/stackIcons/beFrameworks/rails.png" alt="rails">
+						<p>Rails</p>
+					</div>
+					<div class="stackIcon">
+						<img src="./src/img/stackIcons/beFrameworks/express.png" alt="express">
+						<p>Express</p>
+					</div>
+				</div>
+				<div class="blackBox cloudStackBox">
+					<div class="stackIcon">
+						<img src="./src/img/stackIcons/cloudEnvironments/azure.png" alt="azure">
+						<p>Azure</p>
+					</div>
+					<div class="stackIcon">
+						<img src="./src/img/stackIcons/cloudEnvironments/aws.png" alt="aws">
+						<p>AWS</p>
+					</div>
+					<div class="stackIcon">
+						<img src="./src/img/stackIcons/cloudEnvironments/docker.png" alt="docker">
+						<p>Docker</p>
+					</div>
+					<div class="stackIcon">
+						<img src="./src/img/stackIcons/cloudEnvironments/apache.png" alt="apache">
+						<p>Apache</p>
+					</div>
+				</div>
+				<div class="blackBox osStackBox">
+					<div class="stackIcon">
+						<img src="./src/img/stackIcons/os/mac.png" alt="mac">
+						<p>Mac</p>
+					</div>
+					<div class="stackIcon">
+						<img src="./src/img/stackIcons/os/windows.png" alt="windows">
+						<p>Windows</p>
+					</div>
+					<div class="stackIcon">
+						<img src="./src/img/stackIcons/os/linux.png" alt="linux">
+						<p>Linux</p>
+					</div>
+				</div>
+				<div class="blackBox versionControlStackBox">
+					<div class="stackIcon">
+						<img src="./src/img/stackIcons/versionControl/github.png" alt="github">
+						<p>GitHub</p>
+					</div>
+					<div class="stackIcon">
+						<img src="./src/img/stackIcons/versionControl/bitbucket.png" alt="bitbucket">
+						<p>Bitbucket</p>
+					</div>
+					<div class="stackIcon">
+						<img src="./src/img/stackIcons/versionControl/tfs.png" alt="tfs">
+						<p>TFS</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 <!-- ================= PAGE III ================= -->
-	<div id="thirdpage" class="section">
+	<div id="thirdPage" class="section">
 
 		<!-- NAVIGATION BUTTON = Back -->
 		<img src="src/img/navigation/bio.png" alt="back go bio" id="back_to_bio" class="btn centered fixed">
@@ -143,14 +525,15 @@
 			<!-- Shadow -->
 			<div class="shadow centered" id="suitshadow"></div>
 
-		<!-- Briefcase / Portfolio -->
+		<!-- Briefcase / Resume -->
 			<div id="briefcaseContainer" class="fixed iconContainer centered">
 				<!-- Clickable -->
-				<div id="briefcaseclicker" class="clicker popupLink"></div>
+				<a href="Thomas-Edstrom-Resume.pdf" id="briefcaseclicker" class="clicker" target="_blank" style="target-new: tab;"></a>
+				<!-- <div id="briefcaseclicker" class="clicker popupLink"></div> -->
 				<!-- Icon -->
 				<img src="src/img/icons/briefcase.png" alt="briefcase" class="icon" id="briefcase">
 				<!-- Word -->
-				<img src="src/img/words/portfolio.png" alt="portfolio" class="words" id="portfolioword">
+				<img src="src/img/words/resume.png" alt="resume" class="words" id="resumeword">
 			</div>
 			<!-- Shadow -->
 			<div class="shadow centered" id="briefcaseshadow"></div>
@@ -201,10 +584,10 @@
 		<img src="src/img/words/linkedin.png" alt="linkedin" class="words fullcentered" id="linkedinwordMobile">
 	</a>
 
-	<!-- Portfolio -->
-	<div id="portfolioClickerMobile" class="clicker">
-		<img src="src/img/words/portfolio.png" alt="portfolio" class="words fullcentered popupLink" id="portfoliowordMobile">
-	</div>
+	<!-- Resume -->
+	<a href="Thomas-Edstrom-Resume.pdf" id="resumeClickerMobile" class="clicker" target="_blank" style="target-new: tab;">
+		<img src="src/img/words/resume.png" alt="resume" class="words fullcentered" id="resumewordMobile">
+	</a>
 
 	<!-- Github -->
 	<a href="http://www.github.com/thomasjedstrom" id="githubLink" class="clicker" target="_blank" style="target-new: tab;">
