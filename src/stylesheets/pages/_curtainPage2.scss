@@ -42,6 +42,9 @@
 	width: 320px;
 	height: 320px;
 	transform: translate(50%, -50%);
+	@media all and (max-height: 736px) {
+		top: 47vh;
+	}
 	@media all and (min-width: 540px) {
 		right: 29vw;
 	}
@@ -122,6 +125,10 @@
 	}
 	.active{
 		font-style: italic;
+	}
+	a{
+		text-decoration: none;
+		color: white;
 	}
 }
 
